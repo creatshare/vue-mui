@@ -1,7 +1,10 @@
 # vue-mui
 一个用于移动端的vue组件系列
 ## 使用方法 ##
-
+首先引入css
+```HTML
+<link rel="stylesheet" href="./dist/mui.css">
+```
 ### CommonJS ###
 例：
 ```HTML
