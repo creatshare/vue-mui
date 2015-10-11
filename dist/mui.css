@@ -1,0 +1,65 @@
+/**
+ * 模态框组件
+ */
+/**
+ * 遮罩层
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+.btn-active {
+  background-color: #ddd;
+}
+.t-dimmer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.t-modal {
+  position: fixed;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  margin-left: -125px;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.t-modal__header {
+  padding: 15px 10px 15px;
+}
+.t-modal__header--tt {
+  margin-bottom: 15px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+.t-modal__header--ct {
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.54);
+}
+.t-modal__footer {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #ddd;
+}
+.t-modal__footer--btn {
+  display: table-cell;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  box-sizing: border-box;
+  border-left: 1px solid #ddd;
+}
+.t-modal__footer--btn:first-child {
+  border-left: 0;
+}
+.t-modal__footer--btn:active {
+  background-color: #ddd;
+}
