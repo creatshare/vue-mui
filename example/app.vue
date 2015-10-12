@@ -4,7 +4,7 @@
 @s87 : rgba(0,0,0,.87);
 @s54 : rgba(0,0,0,.54);
 html,body{
-	background-color: #eee;
+	background-color: #252528;
 }
 .test-btn{
 	display: block;
@@ -28,11 +28,9 @@ i{
 	background-color: #ddd;
 }
 .info{
-	width: 600px;
+	width: 50%;
 	margin: 0 auto;
 	background-color: #fff;
-	border-left: 1px solid @border-color;
-	border-right: 1px solid @border-color;
 	&__header{
 		h1{
 			padding: @base-padding;
@@ -42,6 +40,7 @@ i{
 			border-bottom: 1px solid @border-color;
 		}
 		p{
+			color: @s54;
 			padding: @base-padding;
 		}
 	}
@@ -98,12 +97,14 @@ i{
 </style>
 
 <template>
-<div class="info info-modal">
-	<div class="info__header">
+<aside></aside>
+<menu></menu>
+<div class="info">
+	<div class="info__header" id="m-modal">
 		<h1>Modal</h1>
 		<p>模态框，用来模拟浏览器的<i>alert</i><i>confirm</i></p>
 	</div>
-	<div class="info__bd">
+	<div class="info__bd" id="m-modal-alert">
 		<h2>模拟Alert</h2>
 		<div class="info__demo">
 			<alert></alert>
@@ -161,7 +162,7 @@ module.exports = {
 		</table>
 	</div>
 	<!-- confirm -->
-		<div class="info__bd">
+	<div class="info__bd" id="m-modal-confirm">
 		<h2>模拟Confirm</h2>
 		<div class="info__demo">
 			<confirm></confirm>
@@ -250,6 +251,8 @@ module.exports = {
 
 <script>
 var dir = './test/';
+var aside = require('./aside.vue');
+var menu = require('./menu.vue');
 var alertTest = require(dir + 'alertTest.vue');
 var confirmTest = require(dir + 'confirmTest.vue');
 var prismcss = require('./lib/prism.css')
@@ -260,6 +263,8 @@ module.exports = {
 		hlt.initHighlightingOnLoad();
 	},
 	components : {
+		'aside' : aside,
+		'menu' : menu,
 		'alert' : alertTest,
 		'confirm' : confirmTest
 	}

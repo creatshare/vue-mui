@@ -10355,7 +10355,7 @@
 	
 	
 	// module
-	exports.push([module.id, "html,\nbody {\n  background-color: #eee;\n}\n.test-btn {\n  display: block;\n  width: 100px;\n  height: 32px;\n  line-height: 32px;\n  margin: 10px;\n  text-align: center;\n  color: #fff;\n  cursor: pointer;\n}\ni {\n  display: inline-block;\n  padding: 3px 5px;\n  margin: 0 3px;\n  font-size: 14px;\n  font-style: normal;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  color: #DC5E5E;\n  background-color: #ddd;\n}\n.info {\n  width: 600px;\n  margin: 0 auto;\n  background-color: #fff;\n  border-left: 1px solid #eee;\n  border-right: 1px solid #eee;\n}\n.info__header h1 {\n  padding: 20px;\n  line-height: 38px;\n  font-size: 30px;\n  font-weight: 700;\n  border-bottom: 1px solid #eee;\n}\n.info__header p {\n  padding: 20px;\n}\n.info__bd {\n  padding: 20px;\n}\n.info__bd h2 {\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 2;\n}\n.info__demo {\n  border: 1px solid #eee;\n}\n.info__opt {\n  width: 100%;\n  margin: 20px auto;\n  border: 1px solid #eee;\n  font-size: 14px;\n}\n.info__opt tr {\n  line-height: 32px;\n}\n.info__opt tr + tr {\n  border-top: 1px solid #eee;\n}\n.info__opt th {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.87);\n  font-weight: 700;\n}\n.info__opt th + th,\n.info__opt td + td {\n  border-left: 1px solid #eee;\n}\n.info__opt td {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.54);\n}\n@media screen and (max-width: 600px) {\n  .info {\n    width: auto;\n    border: 0;\n  }\n}\n", ""]);
+	exports.push([module.id, "html,\nbody {\n  background-color: #252528;\n}\n.test-btn {\n  display: block;\n  width: 100px;\n  height: 32px;\n  line-height: 32px;\n  margin: 10px;\n  text-align: center;\n  color: #fff;\n  cursor: pointer;\n}\ni {\n  display: inline-block;\n  padding: 3px 5px;\n  margin: 0 3px;\n  font-size: 14px;\n  font-style: normal;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  color: #DC5E5E;\n  background-color: #ddd;\n}\n.info {\n  width: 50%;\n  margin: 0 auto;\n  background-color: #fff;\n}\n.info__header h1 {\n  padding: 20px;\n  line-height: 38px;\n  font-size: 30px;\n  font-weight: 700;\n  border-bottom: 1px solid #eee;\n}\n.info__header p {\n  color: rgba(0, 0, 0, 0.54);\n  padding: 20px;\n}\n.info__bd {\n  padding: 20px;\n}\n.info__bd h2 {\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 2;\n}\n.info__demo {\n  border: 1px solid #eee;\n}\n.info__opt {\n  width: 100%;\n  margin: 20px auto;\n  border: 1px solid #eee;\n  font-size: 14px;\n}\n.info__opt tr {\n  line-height: 32px;\n}\n.info__opt tr + tr {\n  border-top: 1px solid #eee;\n}\n.info__opt th {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.87);\n  font-weight: 700;\n}\n.info__opt th + th,\n.info__opt td + td {\n  border-left: 1px solid #eee;\n}\n.info__opt td {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.54);\n}\n@media screen and (max-width: 600px) {\n  .info {\n    width: auto;\n    border: 0;\n  }\n}\n", ""]);
 	
 	// exports
 
@@ -10646,6 +10646,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var dir = './test/';
+	var aside = __webpack_require__(102);
+	var menu = __webpack_require__(108);
 	var alertTest = __webpack_require__(79)(dir + 'alertTest.vue');
 	var confirmTest = __webpack_require__(88)(dir + 'confirmTest.vue');
 	var prismcss = __webpack_require__(97)
@@ -10656,6 +10658,8 @@
 			hlt.initHighlightingOnLoad();
 		},
 		components : {
+			'aside' : aside,
+			'menu' : menu,
 			'alert' : alertTest,
 			'confirm' : confirmTest
 		}
@@ -11037,7 +11041,131 @@
 /* 100 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info info-modal\">\n\t<div class=\"info__header\">\n\t\t<h1>Modal</h1>\n\t\t<p>模态框，用来模拟浏览器的<i>alert</i><i>confirm</i></p>\n\t</div>\n\t<div class=\"info__bd\">\n\t\t<h2>模拟Alert</h2>\n\t\t<div class=\"info__demo\">\n\t\t\t<alert></alert>\n\t\t\t<pre>\n\t\t\t\t<code class=\"language-markup\">\n\t\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<alert show=\"{{@show}}\" \n\t   title=\"{{title}}\" \n\t   content=\"{{content}}\"></alert>\n\t\t\t\t\t</script>\n\t\t\t\t</code>\n\t\t\t</pre>\n\t\t\t<pre>\n\t\t\t\t<code class=\"language-javascript\">\nvar Alert = require(components/alert.vue');\n\nmodule.exports = {\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : '测试标题',\n\t\t\tcontent : '测试内容'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'alert' : Alert\n\t}\n}\n\t\t\t\t</code>\n\t\t\t</pre>\n\t\t</div>\n\n\t\t<table class=\"info__opt\">\n\t\t\t<tr>\n\t\t\t\t<th>名称</th>\n\t\t\t\t<th>类型</th>\n\t\t\t\t<th>说明</th>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>show</td>\n\t\t\t\t<td>Boolean</td>\n\t\t\t\t<td>是否显示组件</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>title</td>\n\t\t\t\t<td>String（可选）</td>\n\t\t\t\t<td>alert 标题</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>content</td>\n\t\t\t\t<td>String</td>\n\t\t\t\t<td>alert 内容</td>\n\t\t\t</tr>\n\t\t</table>\n\t</div>\n\t<!-- confirm -->\n\t\t<div class=\"info__bd\">\n\t\t<h2>模拟Confirm</h2>\n\t\t<div class=\"info__demo\">\n\t\t\t<confirm></confirm>\n\t\t\t<pre>\n\t\t\t\t<code class=\"language-markup\">\n\t\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<confirm show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\" on-confirm=\"{{onConfirm}}\" on-cancel=\"{{onCancel}}\"></confirm>\n\t\t\t\t\t</script>\n\t\t\t\t</code>\n\t\t\t</pre>\n\t\t\t<pre>\n\t\t\t\t<code class=\"language-javascript\">\nvar Confirm = require('../../components/confirm.vue');\n\nmodule.exports = {\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : '测试标题',\n\t\t\tcontent : '测试内容'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'confirm' : Confirm\n\t},\n\tmethods : {\n\t\t/**\n\t\t * [点击确定之后的回调]\n\t\t * @return {[type]} [description]\n\t\t */\n\t\tonConfirm : function(){\n\t\t\talert('点击了确定')\n\t\t},\n\t\t/**\n\t\t * [点击取消之后的回调]\n\t\t * @return {[type]} [description]\n\t\t */\n\t\tonCancel : function(){\n\t\t\talert('点击了取消')\n\t\t}\n\t}\n\t\n}\n\t\t\t\t</code>\n\t\t\t</pre>\n\t\t</div>\n\t\t\n\t\t<table class=\"info__opt\">\n\t\t\t<tr>\n\t\t\t\t<th>名称</th>\n\t\t\t\t<th>类型</th>\n\t\t\t\t<th>说明</th>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>show</td>\n\t\t\t\t<td>Boolean</td>\n\t\t\t\t<td>是否显示组件</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>title</td>\n\t\t\t\t<td>String（可选）</td>\n\t\t\t\t<td>confirm 标题</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>content</td>\n\t\t\t\t<td>String</td>\n\t\t\t\t<td>confirm 内容</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>on-confirm</td>\n\t\t\t\t<td>Function</td>\n\t\t\t\t<td>点击确定之后的回调函数</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>on-cancel</td>\n\t\t\t\t<td>Function</td>\n\t\t\t\t<td>点击取消之后的回调函数</td>\n\t\t\t</tr>\n\t\t</table>\n\n\t</div>\n</div>";
+	module.exports = "<aside></aside>\n<menu></menu>\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-modal\">\n\t\t<h1>Modal</h1>\n\t\t<p>模态框，用来模拟浏览器的<i>alert</i><i>confirm</i></p>\n\t</div>\n\t<div class=\"info__bd\" id=\"m-modal-alert\">\n\t\t<h2>模拟Alert</h2>\n\t\t<div class=\"info__demo\">\n\t\t\t<alert></alert>\n\t\t\t<pre>\n\t\t\t\t<code class=\"language-markup\">\n\t\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<alert show=\"{{@show}}\" \n\t   title=\"{{title}}\" \n\t   content=\"{{content}}\"></alert>\n\t\t\t\t\t</script>\n\t\t\t\t</code>\n\t\t\t</pre>\n\t\t\t<pre>\n\t\t\t\t<code class=\"language-javascript\">\nvar Alert = require(components/alert.vue');\n\nmodule.exports = {\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : '测试标题',\n\t\t\tcontent : '测试内容'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'alert' : Alert\n\t}\n}\n\t\t\t\t</code>\n\t\t\t</pre>\n\t\t</div>\n\n\t\t<table class=\"info__opt\">\n\t\t\t<tr>\n\t\t\t\t<th>名称</th>\n\t\t\t\t<th>类型</th>\n\t\t\t\t<th>说明</th>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>show</td>\n\t\t\t\t<td>Boolean</td>\n\t\t\t\t<td>是否显示组件</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>title</td>\n\t\t\t\t<td>String（可选）</td>\n\t\t\t\t<td>alert 标题</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>content</td>\n\t\t\t\t<td>String</td>\n\t\t\t\t<td>alert 内容</td>\n\t\t\t</tr>\n\t\t</table>\n\t</div>\n\t<!-- confirm -->\n\t<div class=\"info__bd\" id=\"m-modal-confirm\">\n\t\t<h2>模拟Confirm</h2>\n\t\t<div class=\"info__demo\">\n\t\t\t<confirm></confirm>\n\t\t\t<pre>\n\t\t\t\t<code class=\"language-markup\">\n\t\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<confirm show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\" on-confirm=\"{{onConfirm}}\" on-cancel=\"{{onCancel}}\"></confirm>\n\t\t\t\t\t</script>\n\t\t\t\t</code>\n\t\t\t</pre>\n\t\t\t<pre>\n\t\t\t\t<code class=\"language-javascript\">\nvar Confirm = require('../../components/confirm.vue');\n\nmodule.exports = {\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : '测试标题',\n\t\t\tcontent : '测试内容'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'confirm' : Confirm\n\t},\n\tmethods : {\n\t\t/**\n\t\t * [点击确定之后的回调]\n\t\t * @return {[type]} [description]\n\t\t */\n\t\tonConfirm : function(){\n\t\t\talert('点击了确定')\n\t\t},\n\t\t/**\n\t\t * [点击取消之后的回调]\n\t\t * @return {[type]} [description]\n\t\t */\n\t\tonCancel : function(){\n\t\t\talert('点击了取消')\n\t\t}\n\t}\n\t\n}\n\t\t\t\t</code>\n\t\t\t</pre>\n\t\t</div>\n\t\t\n\t\t<table class=\"info__opt\">\n\t\t\t<tr>\n\t\t\t\t<th>名称</th>\n\t\t\t\t<th>类型</th>\n\t\t\t\t<th>说明</th>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>show</td>\n\t\t\t\t<td>Boolean</td>\n\t\t\t\t<td>是否显示组件</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>title</td>\n\t\t\t\t<td>String（可选）</td>\n\t\t\t\t<td>confirm 标题</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>content</td>\n\t\t\t\t<td>String</td>\n\t\t\t\t<td>confirm 内容</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>on-confirm</td>\n\t\t\t\t<td>Function</td>\n\t\t\t\t<td>点击确定之后的回调函数</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>on-cancel</td>\n\t\t\t\t<td>Function</td>\n\t\t\t\t<td>点击取消之后的回调函数</td>\n\t\t\t</tr>\n\t\t</table>\n\n\t</div>\n</div>";
+
+/***/ },
+/* 101 */,
+/* 102 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(105)
+	module.exports = __webpack_require__(103)
+	module.exports.template = __webpack_require__(104)
+
+
+/***/ },
+/* 103 */
+/***/ function(module, exports) {
+
+
+
+/***/ },
+/* 104 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"aside\">\n\t<a href=\"/\">Home</a>\n\t<a href=\"https://github.com/mennghao/vue-mui\" target=\"_blank\">Github</a>\n\t<a href=\"./dist/vue-mui-min.js\">Download</a>\n</div>";
+
+/***/ },
+/* 105 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(106);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(77)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./aside.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./aside.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 106 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(76)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".aside {\n  position: fixed;\n  top: 50px;\n  right: 10%;\n  border: 1px solid rgba(255, 255, 255, 0.54);\n  border-radius: 3px;\n}\n.aside:before,\n.aside:after {\n  position: absolute;\n  top: -50px;\n  left: 25%;\n  display: block;\n  content: '';\n  height: 50px;\n  border-left: 1px solid rgba(255, 255, 255, 0.54);\n}\n.aside:after {\n  right: 25%;\n  left: auto;\n}\n.aside a {\n  color: rgba(255, 255, 255, 0.54);\n  display: block;\n  line-height: 36px;\n  margin: 10px;\n}\n.aside a:hover {\n  color: #ffffff;\n}\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 107 */,
+/* 108 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(109)
+	module.exports = __webpack_require__(111)
+	module.exports.template = __webpack_require__(112)
+
+
+/***/ },
+/* 109 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(110);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(77)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./menu.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./menu.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 110 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(76)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".menu {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 200px;\n  height: 100%;\n  font-size: 14px;\n}\n.menu h2 {\n  padding: 20px 20px 0;\n  color: #fff;\n}\n.menu__index {\n  padding: 20px;\n}\n.menu__index > li {\n  cursor: pointer;\n}\n.menu__index > li a {\n  display: block;\n  padding-left: 10px;\n  color: #fff;\n  border-left: 4px solid #4c9cee;\n}\n.menu__children {\n  padding: 10px 20px;\n}\n.menu__children li {\n  margin-bottom: 10px;\n}\n.menu__children li a {\n  border-left: 2px solid #4c9;\n}\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 111 */
+/***/ function(module, exports) {
+
+
+
+/***/ },
+/* 112 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"menu\">\n<h2>目录</h2>\n<ul class=\"menu__index\">\n\t<li>\n\t\t<a href=\"#m-modal\">Modal 组件</a>\n\n\t\t<ul class=\"menu__index menu__children\">\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-alert\">alert</a>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-confirm\">confirm</a>\n\t\t\t</li>\n\t\t</ul>\n\t</li>\n</ul>\n</div>";
 
 /***/ }
 /******/ ]);
