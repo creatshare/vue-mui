@@ -1,12 +1,17 @@
 # vue-mui
-一个用于移动端的vue组件系列
-## 使用方法 ##
-首先引入css
+mobile components for Vue.js
+
+## Document ##
+[Here](http://mui.yaobieting.com/example/index.html)
+
+## Usage ##
+import mui.css
 ```HTML
 <link rel="stylesheet" href="./dist/mui.css">
 ```
+
 ### CommonJS ###
-例：
+example：
 ```HTML
 <template>
 <a class="test-btn test-btn-confirm" v-on="click:show=true">confirm</a>
@@ -48,8 +53,9 @@ module.exports = {
 }
 ```
 
-### 浏览器中 ###
+### Browser ###
 ```HTML
+<div id="app"></div>
 <script type="text/javascript" src="./dist/vue.js"></script>
 <script type="text/javascript" src="./dist/vue-mui.js"></script>
 ```
@@ -63,6 +69,3 @@ var app = new Vue({
     }
 })
 ```
-
-## 文档地址 ##
-[文档](http://mui.yaobieting.com/example/index.html)
