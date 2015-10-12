@@ -69,6 +69,9 @@
 			<li>
 				<a href="#m-panel-panel">panel</a>
 			</li>
+			<li>
+				<a href="#m-panel-accordion">accordion</a>
+			</li>
 		</ul>
 	</li>
 </ul>

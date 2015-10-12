@@ -32,6 +32,12 @@ i{
     color: #DC5E5E;
 	background-color: #ddd;
 }
+.hint{
+	font-size: 14px;
+    margin-top: 20px;
+    line-height: 30px;
+    color: @s54;
+}
 .info{
 	width: 50%;
 	margin: 0 auto;
@@ -133,7 +139,7 @@ i{
 	</div>
 	
 	<panel></panel>
-
+	<accordion></accordion>
 
 </div>
 
@@ -151,6 +157,7 @@ var confirmTest = require(dir + 'confirmTest.vue');
 var promptTest = require(dir + 'promptTest.vue');
 //panel
 var panelTest = require(dir + 'panelTest.vue');
+var accordionTest = require(dir + 'accordionTest.vue');
 
 
 module.exports = {
@@ -160,7 +167,8 @@ module.exports = {
 		'alert' : alertTest,
 		'confirm' : confirmTest,
 		'prompt' : promptTest,
-		'panel' : panelTest
+		'panel' : panelTest,
+		'accordion' : accordionTest
 	}
 }
 </script>

@@ -10,7 +10,7 @@
 </style>
 
 <template>
-<div class="t-panel" v->
+<div class="t-panel">
 	<header class="t-panel__hd" v-on="click:toggle" v-text="title"></header>
 	<div class="t-panel__bd" v-el="panel" v-show="show" v-transition="toggle">
 		<div class="t-panel__bd--ct">
@@ -30,7 +30,7 @@ module.exports = {
 	props : {
 		type : {
 			type : String,
-			default : 'normal' // normal普通 fold折叠
+			default : 'normal' // normal || fold
 		},
 		show : {
 			type : Boolean,
@@ -48,6 +48,7 @@ module.exports = {
 		toggle : function(){
 			if (this.type !== 'normal') {
 				this.show = !this.show;
+				this.$dispatch('toggle', this); //send event for accordion
 			}
 		},
 		//if type is normal, body is open

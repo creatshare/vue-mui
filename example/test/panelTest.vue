@@ -62,7 +62,7 @@ new Vue({
 			<td>面板标题</td>
 		</tr>
 	</table>
-	<p><i>说明:</i>正文内容可添加在<i>panel</i>标签内</p>
+	<div class="hint"><i>说明:</i>正文内容可添加在<i>panel</i>标签内</div>
 
 </div>
 </template>

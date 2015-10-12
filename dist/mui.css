@@ -65,6 +65,10 @@
   background-color: #ddd;
 }
 
+header,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .t-panel {
   font-size: 14px;
   border: 1px solid #ddd;
@@ -73,7 +77,7 @@
 }
 .t-panel__hd {
   padding: 0 .5rem;
-  line-height: 2;
+  line-height: 2.5;
   color: rgba(0, 0, 0, 0.87);
   background-color: #f5f5f5;
   border-bottom: 1px solid #ddd;
