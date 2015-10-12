@@ -1,6 +1,8 @@
 <style lang="less">
-@border-color: #ddd;
+@border-color: #eee;
 @base-padding: 20px;
+@s87 : rgba(0,0,0,.87);
+@s54 : rgba(0,0,0,.54);
 html,body{
 	background-color: #eee;
 }
@@ -12,6 +14,7 @@ html,body{
 	margin: 10px;
 	text-align: center;
 	color: #fff;
+	cursor: pointer;
 }
 i{
     display: inline-block;
@@ -54,6 +57,36 @@ i{
 
 	&__demo{
 		border: 1px solid @border-color;
+	}
+
+	&__opt{
+		width: 100%;
+		margin: 20px auto;
+		border: 1px solid @border-color;
+		font-size: 14px;
+
+		tr{
+			line-height: 32px;
+		}
+
+		tr+tr{
+			border-top: 1px solid @border-color;
+		}
+
+		th{
+			padding: 0 10px;
+			color: @s87;
+			font-weight: 700;
+		}
+
+		th+th,
+		td+td{
+			border-left: 1px solid @border-color;
+		}
+		td{
+			padding: 0 10px;
+			color: @s54;
+		}
 	}
 }
 @media screen and (max-width : 600px) {
@@ -103,6 +136,29 @@ module.exports = {
 				</code>
 			</pre>
 		</div>
+
+		<table class="info__opt">
+			<tr>
+				<th>名称</th>
+				<th>类型</th>
+				<th>说明</th>
+			</tr>
+			<tr>
+				<td>show</td>
+				<td>Boolean</td>
+				<td>是否显示组件</td>
+			</tr>
+			<tr>
+				<td>title</td>
+				<td>String（可选）</td>
+				<td>alert 标题</td>
+			</tr>
+			<tr>
+				<td>content</td>
+				<td>String</td>
+				<td>alert 内容</td>
+			</tr>
+		</table>
 	</div>
 	<!-- confirm -->
 		<div class="info__bd">
@@ -153,6 +209,40 @@ module.exports = {
 				</code>
 			</pre>
 		</div>
+		
+		<table class="info__opt">
+			<tr>
+				<th>名称</th>
+				<th>类型</th>
+				<th>说明</th>
+			</tr>
+			<tr>
+				<td>show</td>
+				<td>Boolean</td>
+				<td>是否显示组件</td>
+			</tr>
+			<tr>
+				<td>title</td>
+				<td>String（可选）</td>
+				<td>confirm 标题</td>
+			</tr>
+			<tr>
+				<td>content</td>
+				<td>String</td>
+				<td>confirm 内容</td>
+			</tr>
+			<tr>
+				<td>on-confirm</td>
+				<td>Function</td>
+				<td>点击确定之后的回调函数</td>
+			</tr>
+			<tr>
+				<td>on-cancel</td>
+				<td>Function</td>
+				<td>点击取消之后的回调函数</td>
+			</tr>
+		</table>
+
 	</div>
 </div>
 

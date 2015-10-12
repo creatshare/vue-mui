@@ -64,6 +64,5 @@ var app = new Vue({
 })
 ```
 
-## 演示地址 ##
-手机浏览
-http://mui.yaobieting.com/example/
+## 文档地址 ##
+[文档](http://mui.yaobieting.com/example/index.html)
