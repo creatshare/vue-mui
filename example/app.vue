@@ -61,6 +61,10 @@ i{
 
 	&__demo{
 		border: 1px solid @border-color;
+
+		&--show{
+			padding: 10px 15px;
+		}
 	}
 
 	&__opt{
@@ -98,6 +102,9 @@ i{
 		width: auto;
 		border: 0;
 	}
+	.aside,.menu{
+		display: none;
+	}
 }
 </style>
 
@@ -119,6 +126,16 @@ i{
 
 
 </div>
+<div class="info">
+	<div class="info__header" id="m-panel">
+		<h1>Panel</h1>
+		<p>面板，包含<i>普通面板</i><i>折叠面板</i>等。</p>
+	</div>
+	
+	<panel></panel>
+
+
+</div>
 
 </template>
 
@@ -132,6 +149,8 @@ var prismjs = require('./lib/prism.js'); //语法高亮
 var alertTest = require(dir + 'alertTest.vue');
 var confirmTest = require(dir + 'confirmTest.vue');
 var promptTest = require(dir + 'promptTest.vue');
+//panel
+var panelTest = require(dir + 'panelTest.vue');
 
 
 module.exports = {
@@ -140,7 +159,8 @@ module.exports = {
 		'menu' : menu,
 		'alert' : alertTest,
 		'confirm' : confirmTest,
-		'prompt' : promptTest
+		'prompt' : promptTest,
+		'panel' : panelTest
 	}
 }
 </script>

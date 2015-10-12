@@ -1,0 +1,19 @@
+.t-panel {
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  background-color: #fff;
+}
+.t-panel__hd {
+  padding: 0 .5rem;
+  line-height: 2;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+.t-panel__bd {
+  border-bottom: 1px solid #ddd;
+}
+.t-panel__bd--ct {
+  padding: 10px;
+}

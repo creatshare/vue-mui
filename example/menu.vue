@@ -62,6 +62,15 @@
 			</li>
 		</ul>
 	</li>
+	<li>
+		<a href="#m-panel">Panel 组件</a>
+
+		<ul class="menu__index menu__children">
+			<li>
+				<a href="#m-panel-panel">panel</a>
+			</li>
+		</ul>
+	</li>
 </ul>
 </div>
 </template>

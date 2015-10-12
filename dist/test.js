@@ -44,9 +44,9 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Vue = __webpack_require__(10);
+	var Vue = __webpack_require__(12);
 	
-	var app = new Vue(__webpack_require__(77)).$mount('#app');
+	var app = new Vue(__webpack_require__(79)).$mount('#app');
 
 /***/ },
 /* 1 */,
@@ -58,10 +58,12 @@
 /* 7 */,
 /* 8 */,
 /* 9 */,
-/* 10 */
+/* 10 */,
+/* 11 */,
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	var extend = _.extend
 	
 	/**
@@ -86,7 +88,7 @@
 	 * Mixin global API
 	 */
 	
-	extend(Vue, __webpack_require__(20))
+	extend(Vue, __webpack_require__(22))
 	
 	/**
 	 * Vue and every constructor that extends Vue has an
@@ -99,9 +101,9 @@
 	
 	Vue.options = {
 	  replace: true,
-	  directives: __webpack_require__(36),
-	  elementDirectives: __webpack_require__(58),
-	  filters: __webpack_require__(61),
+	  directives: __webpack_require__(38),
+	  elementDirectives: __webpack_require__(60),
+	  filters: __webpack_require__(63),
 	  transitions: {},
 	  components: {},
 	  partials: {}
@@ -133,42 +135,42 @@
 	 * Mixin internal instance methods
 	 */
 	
-	extend(p, __webpack_require__(63))
-	extend(p, __webpack_require__(64))
 	extend(p, __webpack_require__(65))
-	extend(p, __webpack_require__(69))
+	extend(p, __webpack_require__(66))
+	extend(p, __webpack_require__(67))
 	extend(p, __webpack_require__(71))
+	extend(p, __webpack_require__(73))
 	
 	/**
 	 * Mixin public API methods
 	 */
 	
-	extend(p, __webpack_require__(72))
-	extend(p, __webpack_require__(73))
 	extend(p, __webpack_require__(74))
 	extend(p, __webpack_require__(75))
 	extend(p, __webpack_require__(76))
+	extend(p, __webpack_require__(77))
+	extend(p, __webpack_require__(78))
 	
 	module.exports = _.Vue = Vue
 
 
 /***/ },
-/* 11 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var lang = __webpack_require__(12)
+	var lang = __webpack_require__(14)
 	var extend = lang.extend
 	
 	extend(exports, lang)
-	extend(exports, __webpack_require__(13))
-	extend(exports, __webpack_require__(14))
-	extend(exports, __webpack_require__(17))
-	extend(exports, __webpack_require__(18))
+	extend(exports, __webpack_require__(15))
+	extend(exports, __webpack_require__(16))
 	extend(exports, __webpack_require__(19))
+	extend(exports, __webpack_require__(20))
+	extend(exports, __webpack_require__(21))
 
 
 /***/ },
-/* 12 */
+/* 14 */
 /***/ function(module, exports) {
 
 	/**
@@ -484,7 +486,7 @@
 
 
 /***/ },
-/* 13 */
+/* 15 */
 /***/ function(module, exports) {
 
 	// can we use __proto__?
@@ -575,11 +577,11 @@
 
 
 /***/ },
-/* 14 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var config = __webpack_require__(16)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var config = __webpack_require__(18)
 	
 	/**
 	 * Query an element selector if it's not an element already.
@@ -851,10 +853,10 @@
 	    : document.createTextNode(persist ? ' ' : '')
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -951,7 +953,7 @@
 
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1081,11 +1083,11 @@
 
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var config = __webpack_require__(16)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var config = __webpack_require__(18)
 	var extend = _.extend
 	
 	/**
@@ -1442,13 +1444,13 @@
 	  return asset
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
 	
 	/**
 	 * Check if an element is a component, if yes return its
@@ -1573,10 +1575,10 @@
 	  return Object.prototype.toString.call(val).slice(8, -1)
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 19 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1585,7 +1587,7 @@
 	
 	if (process.env.NODE_ENV !== 'production') {
 	
-	  var config = __webpack_require__(16)
+	  var config = __webpack_require__(18)
 	  var hasConsole = typeof console !== 'undefined'
 	
 	  /**
@@ -1644,14 +1646,14 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 20 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var config = __webpack_require__(16)
+	var _ = __webpack_require__(13)
+	var config = __webpack_require__(18)
 	
 	/**
 	 * Expose useful internals
@@ -1660,14 +1662,14 @@
 	exports.util = _
 	exports.config = config
 	exports.nextTick = _.nextTick
-	exports.compiler = __webpack_require__(21)
+	exports.compiler = __webpack_require__(23)
 	
 	exports.parsers = {
-	  path: __webpack_require__(31),
-	  text: __webpack_require__(24),
-	  template: __webpack_require__(33),
-	  directive: __webpack_require__(26),
-	  expression: __webpack_require__(30)
+	  path: __webpack_require__(33),
+	  text: __webpack_require__(26),
+	  template: __webpack_require__(35),
+	  directive: __webpack_require__(28),
+	  expression: __webpack_require__(32)
 	}
 	
 	/**
@@ -1782,27 +1784,27 @@
 
 
 /***/ },
-/* 21 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	
-	_.extend(exports, __webpack_require__(22))
-	_.extend(exports, __webpack_require__(35))
+	_.extend(exports, __webpack_require__(24))
+	_.extend(exports, __webpack_require__(37))
 
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var compileProps = __webpack_require__(23)
-	var config = __webpack_require__(16)
-	var textParser = __webpack_require__(24)
-	var dirParser = __webpack_require__(26)
-	var templateParser = __webpack_require__(33)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var compileProps = __webpack_require__(25)
+	var config = __webpack_require__(18)
+	var textParser = __webpack_require__(26)
+	var dirParser = __webpack_require__(28)
+	var templateParser = __webpack_require__(35)
 	var resolveAsset = _.resolveAsset
-	var componentDef = __webpack_require__(34)
+	var componentDef = __webpack_require__(36)
 	
 	// terminal directives
 	var terminalDirectives = [
@@ -2426,19 +2428,19 @@
 	  return a > b ? 1 : -1
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 23 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var textParser = __webpack_require__(24)
-	var propDef = __webpack_require__(27)
-	var propBindingModes = __webpack_require__(16)._propBindingModes
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var textParser = __webpack_require__(26)
+	var propDef = __webpack_require__(29)
+	var propBindingModes = __webpack_require__(18)._propBindingModes
 	
 	// regexes
-	var identRE = __webpack_require__(31).identRE
+	var identRE = __webpack_require__(33).identRE
 	var dataAttrRE = /^data-/
 	var settablePathRE = /^[A-Za-z_$][\w$]*(\.[A-Za-z_$][\w$]*|\[[^\[\]]+\])*$/
 	var literalValueRE = /^(true|false)$|^\d.*/
@@ -2616,15 +2618,15 @@
 	    : def
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 24 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Cache = __webpack_require__(25)
-	var config = __webpack_require__(16)
-	var dirParser = __webpack_require__(26)
+	var Cache = __webpack_require__(27)
+	var config = __webpack_require__(18)
+	var dirParser = __webpack_require__(28)
 	var regexEscapeRE = /[-.*+?^${}()|[\]\/\\]/g
 	var cache, tagRE, htmlRE, firstChar, lastChar
 	
@@ -2803,7 +2805,7 @@
 
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports) {
 
 	/**
@@ -2921,11 +2923,11 @@
 
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var Cache = __webpack_require__(25)
+	var _ = __webpack_require__(13)
+	var Cache = __webpack_require__(27)
 	var cache = new Cache(1000)
 	var argRE = /^[^\{\?]+$|^'[^']*'$|^"[^"]*"$/
 	var filterTokenRE = /[^\s'"]+|'[^']*'|"[^"]*"/g
@@ -3107,7 +3109,7 @@
 
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// NOTE: the prop internal directive is compiled and linked
@@ -3115,9 +3117,9 @@
 	// The purpose is to make the initial prop values available
 	// inside `created` hooks and `data` functions.
 	
-	var _ = __webpack_require__(11)
-	var Watcher = __webpack_require__(28)
-	var bindingModes = __webpack_require__(16)._propBindingModes
+	var _ = __webpack_require__(13)
+	var Watcher = __webpack_require__(30)
+	var bindingModes = __webpack_require__(18)._propBindingModes
 	
 	module.exports = {
 	
@@ -3175,14 +3177,14 @@
 
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var config = __webpack_require__(16)
-	var Dep = __webpack_require__(29)
-	var expParser = __webpack_require__(30)
-	var batcher = __webpack_require__(32)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var config = __webpack_require__(18)
+	var Dep = __webpack_require__(31)
+	var expParser = __webpack_require__(32)
+	var batcher = __webpack_require__(34)
 	var uid = 0
 	
 	/**
@@ -3491,13 +3493,13 @@
 	
 	module.exports = Watcher
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 29 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	var uid = 0
 	
 	/**
@@ -3561,12 +3563,12 @@
 
 
 /***/ },
-/* 30 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var Path = __webpack_require__(31)
-	var Cache = __webpack_require__(25)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var Path = __webpack_require__(33)
+	var Cache = __webpack_require__(27)
 	var expressionCache = new Cache(1000)
 	
 	var allowedKeywords =
@@ -3829,14 +3831,14 @@
 	    exp.slice(0, 5) !== 'Math.'
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var Cache = __webpack_require__(25)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var Cache = __webpack_require__(27)
 	var pathCache = new Cache(1000)
 	var identRE = exports.identRE = /^[$_a-zA-Z]+[\w$]*$/
 	
@@ -4184,14 +4186,14 @@
 	  )
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var config = __webpack_require__(16)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var config = __webpack_require__(18)
 	
 	// we have two separate queues: one for directive updates
 	// and one for user watcher registered via $watch().
@@ -4289,14 +4291,14 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var Cache = __webpack_require__(25)
+	var _ = __webpack_require__(13)
+	var Cache = __webpack_require__(27)
 	var templateCache = new Cache(1000)
 	var idSelectorCache = new Cache(1000)
 	
@@ -4586,12 +4588,12 @@
 
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var config = __webpack_require__(16)
-	var templateParser = __webpack_require__(33)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var config = __webpack_require__(18)
+	var templateParser = __webpack_require__(35)
 	
 	module.exports = {
 	
@@ -4934,15 +4936,15 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 35 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var config = __webpack_require__(16)
-	var templateParser = __webpack_require__(33)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var config = __webpack_require__(18)
+	var templateParser = __webpack_require__(35)
 	
 	/**
 	 * Process an element or a DocumentFragment based on a
@@ -5085,43 +5087,43 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// manipulation directives
-	exports.text = __webpack_require__(37)
-	exports.html = __webpack_require__(38)
-	exports.attr = __webpack_require__(39)
-	exports.show = __webpack_require__(40)
-	exports['class'] = __webpack_require__(42)
-	exports.el = __webpack_require__(43)
-	exports.ref = __webpack_require__(44)
-	exports.cloak = __webpack_require__(45)
-	exports.style = __webpack_require__(46)
-	exports.transition = __webpack_require__(47)
+	exports.text = __webpack_require__(39)
+	exports.html = __webpack_require__(40)
+	exports.attr = __webpack_require__(41)
+	exports.show = __webpack_require__(42)
+	exports['class'] = __webpack_require__(44)
+	exports.el = __webpack_require__(45)
+	exports.ref = __webpack_require__(46)
+	exports.cloak = __webpack_require__(47)
+	exports.style = __webpack_require__(48)
+	exports.transition = __webpack_require__(49)
 	
 	// event listener directives
-	exports.on = __webpack_require__(50)
-	exports.model = __webpack_require__(51)
+	exports.on = __webpack_require__(52)
+	exports.model = __webpack_require__(53)
 	
 	// logic control directives
-	exports.repeat = __webpack_require__(56)
-	exports['if'] = __webpack_require__(57)
+	exports.repeat = __webpack_require__(58)
+	exports['if'] = __webpack_require__(59)
 	
 	// internal directives that should not be used directly
 	// but we still want to expose them for advanced usage.
-	exports._component = __webpack_require__(34)
-	exports._prop = __webpack_require__(27)
+	exports._component = __webpack_require__(36)
+	exports._prop = __webpack_require__(29)
 
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	
 	module.exports = {
 	
@@ -5138,11 +5140,11 @@
 
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var templateParser = __webpack_require__(33)
+	var _ = __webpack_require__(13)
+	var templateParser = __webpack_require__(35)
 	
 	module.exports = {
 	
@@ -5184,7 +5186,7 @@
 
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports) {
 
 	// xlink
@@ -5249,10 +5251,10 @@
 
 
 /***/ },
-/* 40 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var transition = __webpack_require__(41)
+	var transition = __webpack_require__(43)
 	
 	module.exports = function (value) {
 	  var el = this.el
@@ -5263,10 +5265,10 @@
 
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	
 	/**
 	 * Append with transition.
@@ -5397,10 +5399,10 @@
 
 
 /***/ },
-/* 42 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	var addClass = _.addClass
 	var removeClass = _.removeClass
 	
@@ -5473,7 +5475,7 @@
 
 
 /***/ },
-/* 43 */
+/* 45 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5491,10 +5493,10 @@
 
 
 /***/ },
-/* 44 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
 	
 	module.exports = {
 	
@@ -5517,13 +5519,13 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 45 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var config = __webpack_require__(16)
+	var config = __webpack_require__(18)
 	
 	module.exports = {
 	  bind: function () {
@@ -5536,10 +5538,10 @@
 
 
 /***/ },
-/* 46 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	var prefixes = ['-webkit-', '-moz-', '-ms-']
 	var camelPrefixes = ['Webkit', 'Moz', 'ms']
 	var importantRE = /!important;?$/
@@ -5652,11 +5654,11 @@
 
 
 /***/ },
-/* 47 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var Transition = __webpack_require__(48)
+	var _ = __webpack_require__(13)
+	var Transition = __webpack_require__(50)
 	
 	module.exports = {
 	
@@ -5684,11 +5686,11 @@
 
 
 /***/ },
-/* 48 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var queue = __webpack_require__(49)
+	var _ = __webpack_require__(13)
+	var queue = __webpack_require__(51)
 	var addClass = _.addClass
 	var removeClass = _.removeClass
 	var transitionEndEvent = _.transitionEndEvent
@@ -6047,10 +6049,10 @@
 
 
 /***/ },
-/* 49 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	var queue = []
 	var queued = false
 	
@@ -6088,10 +6090,10 @@
 
 
 /***/ },
-/* 50 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
 	
 	module.exports = {
 	
@@ -6151,19 +6153,19 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 51 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
 	
 	var handlers = {
-	  text: __webpack_require__(52),
-	  radio: __webpack_require__(53),
-	  select: __webpack_require__(54),
-	  checkbox: __webpack_require__(55)
+	  text: __webpack_require__(54),
+	  radio: __webpack_require__(55),
+	  select: __webpack_require__(56),
+	  checkbox: __webpack_require__(57)
 	}
 	
 	module.exports = {
@@ -6240,13 +6242,13 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 52 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	
 	module.exports = {
 	
@@ -6381,10 +6383,10 @@
 
 
 /***/ },
-/* 53 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	
 	module.exports = {
 	
@@ -6420,12 +6422,12 @@
 
 
 /***/ },
-/* 54 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var Watcher = __webpack_require__(28)
-	var dirParser = __webpack_require__(26)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var Watcher = __webpack_require__(30)
+	var dirParser = __webpack_require__(28)
 	
 	module.exports = {
 	
@@ -6660,13 +6662,13 @@
 	  return -1
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 55 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	
 	module.exports = {
 	
@@ -6711,17 +6713,17 @@
 
 
 /***/ },
-/* 56 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var config = __webpack_require__(16)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var config = __webpack_require__(18)
 	var isObject = _.isObject
 	var isPlainObject = _.isPlainObject
-	var textParser = __webpack_require__(24)
-	var expParser = __webpack_require__(30)
-	var templateParser = __webpack_require__(33)
-	var compiler = __webpack_require__(21)
+	var textParser = __webpack_require__(26)
+	var expParser = __webpack_require__(32)
+	var templateParser = __webpack_require__(35)
+	var compiler = __webpack_require__(23)
 	var uid = 0
 	
 	// async component resolution states
@@ -7485,17 +7487,17 @@
 	    type === 'boolean'
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 57 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var compiler = __webpack_require__(21)
-	var templateParser = __webpack_require__(33)
-	var transition = __webpack_require__(41)
-	var Cache = __webpack_require__(25)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var compiler = __webpack_require__(23)
+	var templateParser = __webpack_require__(35)
+	var transition = __webpack_require__(43)
+	var Cache = __webpack_require__(27)
 	var cache = new Cache(1000)
 	
 	module.exports = {
@@ -7617,22 +7619,22 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 58 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.content = __webpack_require__(59)
-	exports.partial = __webpack_require__(60)
+	exports.content = __webpack_require__(61)
+	exports.partial = __webpack_require__(62)
 
 
 /***/ },
-/* 59 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var clone = __webpack_require__(33).clone
+	var _ = __webpack_require__(13)
+	var clone = __webpack_require__(35).clone
 	
 	// This is the elementDirective that handles <content>
 	// transclusions. It relies on the raw content of an
@@ -7745,18 +7747,18 @@
 
 
 /***/ },
-/* 60 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var templateParser = __webpack_require__(33)
-	var textParser = __webpack_require__(24)
-	var compiler = __webpack_require__(21)
-	var Cache = __webpack_require__(25)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var templateParser = __webpack_require__(35)
+	var textParser = __webpack_require__(26)
+	var compiler = __webpack_require__(23)
+	var Cache = __webpack_require__(27)
 	var cache = new Cache(1000)
 	
 	// v-partial reuses logic from v-if
-	var vIf = __webpack_require__(57)
+	var vIf = __webpack_require__(59)
 	
 	module.exports = {
 	
@@ -7822,13 +7824,13 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 61 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	
 	/**
 	 * Stringify value.
@@ -7973,15 +7975,15 @@
 	 * Install special array filters
 	 */
 	
-	_.extend(exports, __webpack_require__(62))
+	_.extend(exports, __webpack_require__(64))
 
 
 /***/ },
-/* 62 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var Path = __webpack_require__(31)
+	var _ = __webpack_require__(13)
+	var Path = __webpack_require__(33)
 	
 	/**
 	 * Filter filter for v-repeat
@@ -8080,10 +8082,10 @@
 
 
 /***/ },
-/* 63 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var mergeOptions = __webpack_require__(11).mergeOptions
+	var mergeOptions = __webpack_require__(13).mergeOptions
 	
 	/**
 	 * The main init sequence. This is called for every
@@ -8175,10 +8177,10 @@
 
 
 /***/ },
-/* 64 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
 	var inDoc = _.inDoc
 	
 	/**
@@ -8318,17 +8320,17 @@
 	  this.$emit('hook:' + hook)
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 65 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var compiler = __webpack_require__(21)
-	var Observer = __webpack_require__(66)
-	var Dep = __webpack_require__(29)
-	var Watcher = __webpack_require__(28)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var compiler = __webpack_require__(23)
+	var Observer = __webpack_require__(68)
+	var Dep = __webpack_require__(31)
+	var Watcher = __webpack_require__(30)
 	
 	/**
 	 * Setup the scope of an instance, which contains:
@@ -8607,18 +8609,18 @@
 	  })
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 66 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var config = __webpack_require__(16)
-	var Dep = __webpack_require__(29)
-	var arrayMethods = __webpack_require__(67)
+	var _ = __webpack_require__(13)
+	var config = __webpack_require__(18)
+	var Dep = __webpack_require__(31)
+	var arrayMethods = __webpack_require__(69)
 	var arrayKeys = Object.getOwnPropertyNames(arrayMethods)
-	__webpack_require__(68)
+	__webpack_require__(70)
 	
 	/**
 	 * Observer class that are attached to each observed
@@ -8850,10 +8852,10 @@
 
 
 /***/ },
-/* 67 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	var arrayProto = Array.prototype
 	var arrayMethods = Object.create(arrayProto)
 	
@@ -8954,10 +8956,10 @@
 
 
 /***/ },
-/* 68 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	var objProto = Object.prototype
 	
 	/**
@@ -9042,12 +9044,12 @@
 
 
 /***/ },
-/* 69 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var Directive = __webpack_require__(70)
-	var compiler = __webpack_require__(21)
+	var _ = __webpack_require__(13)
+	var Directive = __webpack_require__(72)
+	var compiler = __webpack_require__(23)
 	
 	/**
 	 * Transclude, compile and link element.
@@ -9248,14 +9250,14 @@
 
 
 /***/ },
-/* 70 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var config = __webpack_require__(16)
-	var Watcher = __webpack_require__(28)
-	var textParser = __webpack_require__(24)
-	var expParser = __webpack_require__(30)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var config = __webpack_require__(18)
+	var Watcher = __webpack_require__(30)
+	var textParser = __webpack_require__(26)
+	var expParser = __webpack_require__(32)
 	function noop () {}
 	
 	/**
@@ -9506,13 +9508,13 @@
 	
 	module.exports = Directive
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 71 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
 	
 	/**
 	 * Apply a list of filter (descriptors) to a value.
@@ -9606,17 +9608,17 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 72 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Watcher = __webpack_require__(28)
-	var Path = __webpack_require__(31)
-	var textParser = __webpack_require__(24)
-	var dirParser = __webpack_require__(26)
-	var expParser = __webpack_require__(30)
+	var Watcher = __webpack_require__(30)
+	var Path = __webpack_require__(33)
+	var textParser = __webpack_require__(26)
+	var dirParser = __webpack_require__(28)
+	var expParser = __webpack_require__(32)
 	var filterRE = /[^|]\|[^|]/
 	
 	/**
@@ -9774,11 +9776,11 @@
 
 
 /***/ },
-/* 73 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
-	var transition = __webpack_require__(41)
+	var _ = __webpack_require__(13)
+	var transition = __webpack_require__(43)
 	
 	/**
 	 * Convenience on-instance nextTick. The callback is
@@ -10006,10 +10008,10 @@
 
 
 /***/ },
-/* 74 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	
 	/**
 	 * Listen on the given `event` with `fn`.
@@ -10186,10 +10188,10 @@
 
 
 /***/ },
-/* 75 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(11)
+	var _ = __webpack_require__(13)
 	
 	/**
 	 * Create a child instance that prototypally inherits
@@ -10241,11 +10243,11 @@
 
 
 /***/ },
-/* 76 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(11)
-	var compiler = __webpack_require__(21)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(13)
+	var compiler = __webpack_require__(23)
 	
 	/**
 	 * Set instance target element and kick off the compilation
@@ -10313,28 +10315,28 @@
 	  return compiler.compile(el, this.$options, true)(this, el, host)
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 77 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(78)
-	module.exports = __webpack_require__(82)
-	module.exports.template = __webpack_require__(125)
+	__webpack_require__(80)
+	module.exports = __webpack_require__(84)
+	module.exports.template = __webpack_require__(138)
 
 
 /***/ },
-/* 78 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(79);
+	var content = __webpack_require__(81);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(81)(content, {});
+	var update = __webpack_require__(83)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10351,21 +10353,21 @@
 	}
 
 /***/ },
-/* 79 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(80)();
+	exports = module.exports = __webpack_require__(82)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "html,\nbody {\n  background-color: #252528;\n}\n.test-btn {\n  display: block;\n  width: 100px;\n  height: 32px;\n  line-height: 32px;\n  margin: 10px;\n  text-align: center;\n  color: #fff;\n  cursor: pointer;\n}\n.test-btn-blue {\n  background-color: #4c9cee;\n}\ni {\n  display: inline-block;\n  padding: 3px 5px;\n  margin: 0 3px;\n  font-size: 12px;\n  line-height: 12px;\n  font-style: normal;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  color: #DC5E5E;\n  background-color: #ddd;\n}\n.info {\n  width: 50%;\n  margin: 0 auto;\n  background-color: #fff;\n}\n.info__header h1 {\n  padding: 20px;\n  line-height: 38px;\n  font-size: 30px;\n  font-weight: 700;\n  border-bottom: 1px solid #eee;\n}\n.info__header p {\n  color: rgba(0, 0, 0, 0.54);\n  padding: 20px;\n}\n.info__bd {\n  padding: 20px;\n}\n.info__bd h2 {\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 2;\n}\n.info__demo {\n  border: 1px solid #eee;\n}\n.info__opt {\n  width: 100%;\n  margin: 20px auto;\n  border: 1px solid #eee;\n  font-size: 14px;\n}\n.info__opt tr {\n  line-height: 32px;\n}\n.info__opt tr + tr {\n  border-top: 1px solid #eee;\n}\n.info__opt th {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.87);\n  font-weight: 700;\n}\n.info__opt th + th,\n.info__opt td + td {\n  border-left: 1px solid #eee;\n}\n.info__opt td {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.54);\n}\n@media screen and (max-width: 600px) {\n  .info {\n    width: auto;\n    border: 0;\n  }\n}\n", ""]);
+	exports.push([module.id, "html,\nbody {\n  background-color: #252528;\n}\n.test-btn {\n  display: block;\n  width: 100px;\n  height: 32px;\n  line-height: 32px;\n  margin: 10px;\n  text-align: center;\n  color: #fff;\n  cursor: pointer;\n}\n.test-btn-blue {\n  background-color: #4c9cee;\n}\ni {\n  display: inline-block;\n  padding: 3px 5px;\n  margin: 0 3px;\n  font-size: 12px;\n  line-height: 12px;\n  font-style: normal;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  color: #DC5E5E;\n  background-color: #ddd;\n}\n.info {\n  width: 50%;\n  margin: 0 auto;\n  background-color: #fff;\n}\n.info__header h1 {\n  padding: 20px;\n  line-height: 38px;\n  font-size: 30px;\n  font-weight: 700;\n  border-bottom: 1px solid #eee;\n}\n.info__header p {\n  color: rgba(0, 0, 0, 0.54);\n  padding: 20px;\n}\n.info__bd {\n  padding: 20px;\n}\n.info__bd h2 {\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 2;\n}\n.info__demo {\n  border: 1px solid #eee;\n}\n.info__demo--show {\n  padding: 10px 15px;\n}\n.info__opt {\n  width: 100%;\n  margin: 20px auto;\n  border: 1px solid #eee;\n  font-size: 14px;\n}\n.info__opt tr {\n  line-height: 32px;\n}\n.info__opt tr + tr {\n  border-top: 1px solid #eee;\n}\n.info__opt th {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.87);\n  font-weight: 700;\n}\n.info__opt th + th,\n.info__opt td + td {\n  border-left: 1px solid #eee;\n}\n.info__opt td {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.54);\n}\n@media screen and (max-width: 600px) {\n  .info {\n    width: auto;\n    border: 0;\n  }\n  .aside,\n  .menu {\n    display: none;\n  }\n}\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 80 */
+/* 82 */
 /***/ function(module, exports) {
 
 	/*
@@ -10421,7 +10423,7 @@
 
 
 /***/ },
-/* 81 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -10646,18 +10648,20 @@
 
 
 /***/ },
-/* 82 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var dir = './test/';
-	var aside = __webpack_require__(83);
-	var menu = __webpack_require__(88);
-	var prismcss = __webpack_require__(93)
-	var prismjs = __webpack_require__(95); //语法高亮
+	var aside = __webpack_require__(85);
+	var menu = __webpack_require__(90);
+	var prismcss = __webpack_require__(95)
+	var prismjs = __webpack_require__(97); //语法高亮
 	
-	var alertTest = __webpack_require__(96)(dir + 'alertTest.vue');
-	var confirmTest = __webpack_require__(105)(dir + 'confirmTest.vue');
-	var promptTest = __webpack_require__(114)(dir + 'promptTest.vue');
+	var alertTest = __webpack_require__(98)(dir + 'alertTest.vue');
+	var confirmTest = __webpack_require__(107)(dir + 'confirmTest.vue');
+	var promptTest = __webpack_require__(116)(dir + 'promptTest.vue');
+	//panel
+	var panelTest = __webpack_require__(127)(dir + 'panelTest.vue');
 	
 	
 	module.exports = {
@@ -10666,30 +10670,31 @@
 			'menu' : menu,
 			'alert' : alertTest,
 			'confirm' : confirmTest,
-			'prompt' : promptTest
+			'prompt' : promptTest,
+			'panel' : panelTest
 		}
 	}
 
 /***/ },
-/* 83 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(84)
-	module.exports = __webpack_require__(86)
-	module.exports.template = __webpack_require__(87)
+	__webpack_require__(86)
+	module.exports = __webpack_require__(88)
+	module.exports.template = __webpack_require__(89)
 
 
 /***/ },
-/* 84 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(85);
+	var content = __webpack_require__(87);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(81)(content, {});
+	var update = __webpack_require__(83)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10706,10 +10711,10 @@
 	}
 
 /***/ },
-/* 85 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(80)();
+	exports = module.exports = __webpack_require__(82)();
 	// imports
 	
 	
@@ -10720,37 +10725,37 @@
 
 
 /***/ },
-/* 86 */
+/* 88 */
 /***/ function(module, exports) {
 
 
 
 /***/ },
-/* 87 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"aside\">\n\t<a href=\"/\">Home</a>\n\t<a href=\"https://github.com/mennghao/vue-mui\" target=\"_blank\">Github</a>\n\t<a href=\"./dist/vue-mui-min.js\">Download</a>\n</div>";
 
 /***/ },
-/* 88 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(89)
-	module.exports = __webpack_require__(91)
-	module.exports.template = __webpack_require__(92)
+	__webpack_require__(91)
+	module.exports = __webpack_require__(93)
+	module.exports.template = __webpack_require__(94)
 
 
 /***/ },
-/* 89 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(90);
+	var content = __webpack_require__(92);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(81)(content, {});
+	var update = __webpack_require__(83)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10767,10 +10772,10 @@
 	}
 
 /***/ },
-/* 90 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(80)();
+	exports = module.exports = __webpack_require__(82)();
 	// imports
 	
 	
@@ -10781,28 +10786,28 @@
 
 
 /***/ },
-/* 91 */
-/***/ function(module, exports) {
-
-
-
-/***/ },
-/* 92 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"menu\">\n<h2>目录</h2>\n<ul class=\"menu__index\">\n\t<li>\n\t\t<a href=\"#m-modal\">Modal 组件</a>\n\n\t\t<ul class=\"menu__index menu__children\">\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-alert\">alert</a>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-confirm\">confirm</a>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-prompt\">prompt</a>\n\t\t\t</li>\n\t\t</ul>\n\t</li>\n</ul>\n</div>";
-
-/***/ },
 /* 93 */
+/***/ function(module, exports) {
+
+
+
+/***/ },
+/* 94 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"menu\">\n<h2>目录</h2>\n<ul class=\"menu__index\">\n\t<li>\n\t\t<a href=\"#m-modal\">Modal 组件</a>\n\n\t\t<ul class=\"menu__index menu__children\">\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-alert\">alert</a>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-confirm\">confirm</a>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-prompt\">prompt</a>\n\t\t\t</li>\n\t\t</ul>\n\t</li>\n\t<li>\n\t\t<a href=\"#m-panel\">Panel 组件</a>\n\n\t\t<ul class=\"menu__index menu__children\">\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-panel-panel\">panel</a>\n\t\t\t</li>\n\t\t</ul>\n\t</li>\n</ul>\n</div>";
+
+/***/ },
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(94);
+	var content = __webpack_require__(96);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(81)(content, {});
+	var update = __webpack_require__(83)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10819,10 +10824,10 @@
 	}
 
 /***/ },
-/* 94 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(80)();
+	exports = module.exports = __webpack_require__(82)();
 	// imports
 	
 	
@@ -10833,7 +10838,7 @@
 
 
 /***/ },
-/* 95 */
+/* 97 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* http://prismjs.com/download.html?themes=prism-dark&languages=markup+css+clike+javascript */
@@ -10846,11 +10851,11 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 96 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/alertTest.vue": 97
+		"./test/alertTest.vue": 99
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -10863,29 +10868,29 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 96;
+	webpackContext.id = 98;
 
 
 /***/ },
-/* 97 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(98)
-	module.exports = __webpack_require__(100)
-	module.exports.template = __webpack_require__(104)
+	__webpack_require__(100)
+	module.exports = __webpack_require__(102)
+	module.exports.template = __webpack_require__(106)
 
 
 /***/ },
-/* 98 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(99);
+	var content = __webpack_require__(101);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(81)(content, {});
+	var update = __webpack_require__(83)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10902,10 +10907,10 @@
 	}
 
 /***/ },
-/* 99 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(80)();
+	exports = module.exports = __webpack_require__(82)();
 	// imports
 	
 	
@@ -10916,10 +10921,10 @@
 
 
 /***/ },
-/* 100 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Alert = __webpack_require__(101);
+	var Alert = __webpack_require__(103);
 	
 	module.exports = {
 		data : function(){
@@ -10935,15 +10940,15 @@
 	}
 
 /***/ },
-/* 101 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(102)
-	module.exports.template = __webpack_require__(103)
+	module.exports = __webpack_require__(104)
+	module.exports.template = __webpack_require__(105)
 
 
 /***/ },
-/* 102 */
+/* 104 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -10982,23 +10987,23 @@
 	}
 
 /***/ },
-/* 103 */
+/* 105 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-modal\" v-show=\"show\" v-el=\"modal\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 104 */
+/* 106 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"info__bd\" id=\"m-modal-alert\">\n\t<h2>模拟Alert</h2>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-alert\" v-on=\"click:show=true\">alert</a>\n\t\t<div class=\"t-dimmer\" v-show=\"show\"></div>\n\t\t<alert show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\"></alert>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<alert show=\"{{@show}}\" \n   title=\"{{title}}\" \n   content=\"{{content}}\"></alert>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Alert = require(components/alert.vue');\n\nmodule.exports = {\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : '测试标题',\n\t\t\tcontent : '测试内容'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'alert' : Alert\n\t}\n}\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>名称</th>\n\t\t\t<th>类型</th>\n\t\t\t<th>说明</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td>是否显示组件</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String（可选）</td>\n\t\t\t<td>alert 标题</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td>alert 内容</td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
-/* 105 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/confirmTest.vue": 106
+		"./test/confirmTest.vue": 108
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -11011,29 +11016,29 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 105;
+	webpackContext.id = 107;
 
 
 /***/ },
-/* 106 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(107)
-	module.exports = __webpack_require__(109)
-	module.exports.template = __webpack_require__(113)
+	__webpack_require__(109)
+	module.exports = __webpack_require__(111)
+	module.exports.template = __webpack_require__(115)
 
 
 /***/ },
-/* 107 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(108);
+	var content = __webpack_require__(110);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(81)(content, {});
+	var update = __webpack_require__(83)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11050,10 +11055,10 @@
 	}
 
 /***/ },
-/* 108 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(80)();
+	exports = module.exports = __webpack_require__(82)();
 	// imports
 	
 	
@@ -11064,10 +11069,10 @@
 
 
 /***/ },
-/* 109 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Confirm = __webpack_require__(110);
+	var Confirm = __webpack_require__(112);
 	
 	module.exports = {
 		data : function(){
@@ -11100,15 +11105,15 @@
 	}
 
 /***/ },
-/* 110 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(111)
-	module.exports.template = __webpack_require__(112)
+	module.exports = __webpack_require__(113)
+	module.exports.template = __webpack_require__(114)
 
 
 /***/ },
-/* 111 */
+/* 113 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11153,23 +11158,23 @@
 	}
 
 /***/ },
-/* 112 */
+/* 114 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-modal\" v-show=\"show\" v-el=\"modal\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onCancel\">取消</a>\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onConfirm\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 113 */
+/* 115 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"info__bd\" id=\"m-modal-confirm\">\n\t<h2>模拟Confirm</h2>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-confirm\" v-on=\"click:show=true\">confirm</a>\n\t\t<div class=\"t-dimmer\" v-show=\"show\"></div>\n\t\t<confirm show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\" on-confirm=\"{{onConfirm}}\" on-cancel=\"{{onCancel}}\"></confirm>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<confirm show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\" on-confirm=\"{{onConfirm}}\" on-cancel=\"{{onCancel}}\"></confirm>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Confirm = require('../../components/confirm.vue');\n\nmodule.exports = {\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : '测试标题',\n\t\t\tcontent : '测试内容'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'confirm' : Confirm\n\t},\n\tmethods : {\n\t\t/**\n\t\t * [点击确定之后的回调]\n\t\t * @return {[type]} [description]\n\t\t */\n\t\tonConfirm : function(){\n\t\t\talert('点击了确定')\n\t\t},\n\t\t/**\n\t\t * [点击取消之后的回调]\n\t\t * @return {[type]} [description]\n\t\t */\n\t\tonCancel : function(){\n\t\t\talert('点击了取消')\n\t\t}\n\t}\n\t\n}\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>名称</th>\n\t\t\t<th>类型</th>\n\t\t\t<th>说明</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td>是否显示组件</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String（可选）</td>\n\t\t\t<td>confirm 标题</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td>confirm 内容</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-confirm</td>\n\t\t\t<td>Function</td>\n\t\t\t<td>点击确定之后的回调函数</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-cancel</td>\n\t\t\t<td>Function</td>\n\t\t\t<td>点击取消之后的回调函数</td>\n\t\t</tr>\n\t</table>\n\n</div>";
 
 /***/ },
-/* 114 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/promptTest.vue": 115
+		"./test/promptTest.vue": 117
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -11182,29 +11187,29 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 114;
+	webpackContext.id = 116;
 
 
 /***/ },
-/* 115 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(116)
-	module.exports = __webpack_require__(118)
-	module.exports.template = __webpack_require__(124)
+	__webpack_require__(118)
+	module.exports = __webpack_require__(120)
+	module.exports.template = __webpack_require__(126)
 
 
 /***/ },
-/* 116 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(117);
+	var content = __webpack_require__(119);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(81)(content, {});
+	var update = __webpack_require__(83)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11221,10 +11226,10 @@
 	}
 
 /***/ },
-/* 117 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(80)();
+	exports = module.exports = __webpack_require__(82)();
 	// imports
 	
 	
@@ -11235,10 +11240,10 @@
 
 
 /***/ },
-/* 118 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Prompt = __webpack_require__(119);
+	var Prompt = __webpack_require__(121);
 	
 	module.exports = {
 		data : function(){
@@ -11270,25 +11275,25 @@
 	}
 
 /***/ },
-/* 119 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(120)
-	module.exports = __webpack_require__(122)
-	module.exports.template = __webpack_require__(123)
+	__webpack_require__(122)
+	module.exports = __webpack_require__(124)
+	module.exports.template = __webpack_require__(125)
 
 
 /***/ },
-/* 120 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(121);
+	var content = __webpack_require__(123);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(81)(content, {});
+	var update = __webpack_require__(83)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11305,10 +11310,10 @@
 	}
 
 /***/ },
-/* 121 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(80)();
+	exports = module.exports = __webpack_require__(82)();
 	// imports
 	
 	
@@ -11319,7 +11324,7 @@
 
 
 /***/ },
-/* 122 */
+/* 124 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11369,22 +11374,213 @@
 	}
 
 /***/ },
-/* 123 */
+/* 125 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-modal\" v-show=\"show\" v-el=\"modal\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-prompt-ipt\">\n\t\t<input type=\"text\" v-model=\"key\">\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onCancel\">取消</a>\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: fnConfirm\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 124 */
+/* 126 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"info__bd\" id=\"m-modal-prompt\">\n\t<h2>模拟Prompt</h2>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-blue\" v-on=\"click:show=true\">prompt</a>\n\t\t<div class=\"t-dimmer\" v-show=\"show\"></div>\n\t\t<prompt show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\" on-confirm=\"{{onConfirm}}\" on-cancel=\"{{onCancel}}\"></prompt>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<prompt show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\" on-confirm=\"{{onConfirm}}\" on-cancel=\"{{onCancel}}\"></prompt>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Prompt = require('../../components/prompt.vue');\n\nmodule.exports = {\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : '测试标题',\n\t\t\tcontent : '测试内容'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'prompt' : Prompt\n\t},\n\tmethods : {\n\t\t/**\n\t\t * [点击确定之后的回调]\n\t\t * @return {[type]} [description]\n\t\t */\n\t\tonConfirm : function(data){\n\t\t\talert('你输入了' + data)\n\t\t},\n\t\t/**\n\t\t * [点击取消之后的回调]\n\t\t * @return {[type]} [description]\n\t\t */\n\t\tonCancel : function(){\n\t\t\talert('点击了取消')\n\t\t}\n\t}\n}\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>名称</th>\n\t\t\t<th>类型</th>\n\t\t\t<th>说明</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td>是否显示组件</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String（可选）</td>\n\t\t\t<td>prompt 标题</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td>prompt 内容</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-confirm</td>\n\t\t\t<td>Function</td>\n\t\t\t<td>点击确定之后的回调函数<br/>该函数接收一个<i>参数</i>,接收的<i>参数</i>为输入内容</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-cancel</td>\n\t\t\t<td>Function</td>\n\t\t\t<td>点击取消之后的回调函数</td>\n\t\t</tr>\n\t</table>\n\n</div>";
 
 /***/ },
-/* 125 */
+/* 127 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./test/panelTest.vue": 128
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 127;
+
+
+/***/ },
+/* 128 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(129)
+	module.exports = __webpack_require__(131)
+	module.exports.template = __webpack_require__(137)
+
+
+/***/ },
+/* 129 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(130);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(83)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./panelTest.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./panelTest.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 130 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(82)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".demo-pannel + .demo-pannel {\n  margin-top: 10px;\n}\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 131 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Panel = __webpack_require__(132);
+	
+	module.exports = {
+		components : {
+			'panel' : Panel
+		}
+	}
+
+/***/ },
+/* 132 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(133)
+	module.exports = __webpack_require__(135)
+	module.exports.template = __webpack_require__(136)
+
+
+/***/ },
+/* 133 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(134);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(83)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./pannel.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./pannel.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 134 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(82)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".toggle-transition {\n  transition: height .5s ease;\n  overflow: hidden;\n}\n.toggle-enter,\n.toggle-leave {\n  height: 0!important;\n}\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 135 */
 /***/ function(module, exports) {
 
-	module.exports = "<aside></aside>\n<menu></menu>\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-modal\">\n\t\t<h1>Modal</h1>\n\t\t<p>模态框，用来模拟浏览器的<i>alert</i><i>confirm</i></p>\n\t</div>\n\t\n\t<alert></alert>\n\n\t<confirm></confirm>\n\n\t<prompt></prompt>\n\n\n\n</div>";
+	module.exports = {
+		data : function(){
+			return {
+				height : ''
+			}
+		},
+		props : {
+			type : {
+				type : String,
+				default : 'normal' // normal普通 fold折叠
+			},
+			show : {
+				type : Boolean,
+				default : true
+			},
+			title : {
+				type : String
+			}
+		},
+		//get target height
+		ready : function(){
+			this.init();
+		},
+		methods : {
+			toggle : function(){
+				if (this.type !== 'normal') {
+					this.show = !this.show;
+				}
+			},
+			//if type is normal, body is open
+			init : function(){
+				if (this.type === 'normal') {
+					this.show = true;
+				} else {
+					var target = this.$$.panel;
+	
+					target.style.display = 'block';
+					target.style.height = target.getBoundingClientRect().height + 'px';
+					if (!this.show) target.style.display = 'none';
+				}
+			}
+		}
+	}
+
+/***/ },
+/* 136 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"t-panel\" v->\n\t<header class=\"t-panel__hd\" v-on=\"click:toggle\" v-text=\"title\"></header>\n\t<div class=\"t-panel__bd\" v-el=\"panel\" v-show=\"show\" v-transition=\"toggle\">\n\t\t<div class=\"t-panel__bd--ct\">\n\t\t\t<content></content>\t\n\t\t</div>\n\t</div>\n</div>";
+
+/***/ },
+/* 137 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"info__bd\" id=\"m-panel-panel\">\n\t<h2>panel</h2>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 普通面板 -->\n\t\t\t\t<panel show=\"false\" title=\"普通面板\">\n\t\t\t\t\t<div>测试一下</div>\n\t\t\t\t</panel>\n\t\t\t</div>\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 折叠面板 -->\n\t\t\t\t<panel show=\"false\" title=\"折叠面板\" type=\"fold\">\n\t\t\t\t\t<div>测试一下</div>\n\t\t\t\t</panel>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<panel type=\"normal\" title=\"title\">\n\t...code...\n</panel>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('../../components/pannel.vue');\n\nnew Vue({\n\tcomponents : {\n\t\t'panel' : Panel\n\t}\n})\t\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>名称</th>\n\t\t\t<th>类型</th>\n\t\t\t<th>说明</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>type</td>\n\t\t\t<td>String</td>\n\t\t\t<td>面板类型<i>可选</i>默认值为normal<br/>normal-默认面板<br/>fold-折叠面板</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td>面板标题</td>\n\t\t</tr>\n\t</table>\n\t<p><i>说明:</i>正文内容可添加在<i>panel</i>标签内</p>\n\n</div>";
+
+/***/ },
+/* 138 */
+/***/ function(module, exports) {
+
+	module.exports = "<aside></aside>\n<menu></menu>\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-modal\">\n\t\t<h1>Modal</h1>\n\t\t<p>模态框，用来模拟浏览器的<i>alert</i><i>confirm</i></p>\n\t</div>\n\t\n\t<alert></alert>\n\n\t<confirm></confirm>\n\n\t<prompt></prompt>\n\n\n\n</div>\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-panel\">\n\t\t<h1>Panel</h1>\n\t\t<p>面板，包含<i>普通面板</i><i>折叠面板</i>等。</p>\n\t</div>\n\t\n\t<panel></panel>\n\n\n</div>";
 
 /***/ }
 /******/ ]);
