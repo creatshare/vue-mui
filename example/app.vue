@@ -143,6 +143,16 @@ i{
 
 </div>
 
+<div class="info">
+	<div class="info__header" id="m-btn">
+		<h1>Button</h1>
+		<p>一组按钮</p>
+	</div>
+	
+	<btn></btn>
+
+</div>
+
 </template>
 
 <script>
@@ -158,6 +168,8 @@ var promptTest = require(dir + 'promptTest.vue');
 //panel
 var panelTest = require(dir + 'panelTest.vue');
 var accordionTest = require(dir + 'accordionTest.vue');
+//button
+var btnTest = require(dir + 'btnTest.vue');
 
 
 module.exports = {
@@ -168,7 +180,8 @@ module.exports = {
 		'confirm' : confirmTest,
 		'prompt' : promptTest,
 		'panel' : panelTest,
-		'accordion' : accordionTest
+		'accordion' : accordionTest,
+		'btn' : btnTest
 	}
 }
 </script>

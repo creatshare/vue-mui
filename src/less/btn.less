@@ -1,0 +1,52 @@
+@import 'base.less';
+.t-btn{
+	position: relative;
+	display: block;
+	line-height: 2.5;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	border-radius: 3px;
+
+	&--normal{
+		background-color: @color-blue;
+
+		&:active{
+			background-color: #3895F5;
+		}
+	}
+
+	&--warn{
+		background-color: @color-red;
+
+		&:active{
+			background-color: #ef3737;
+		}
+	}
+
+	&--default{
+		color: @font-color-87;
+		background-color: #f5f5f5;
+
+		&:active{
+			background-color: #ddd;
+		}
+	}
+
+	&:after{
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 200%;
+		height: 200%;
+		-webkit-transform: scale(.5);
+	    transform: scale(.5);
+	    -webkit-transform-origin: 0 0;
+	    transform-origin: 0 0;
+	    border: 1px solid rgba(0,0,0,.2);
+		border-radius: 6px;
+		box-sizing: border-box;
+	}
+}

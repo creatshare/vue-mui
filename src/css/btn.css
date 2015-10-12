@@ -1,0 +1,44 @@
+.t-btn {
+  position: relative;
+  display: block;
+  line-height: 2.5;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+}
+.t-btn--normal {
+  background-color: #4c9cee;
+}
+.t-btn--normal:active {
+  background-color: #3895F5;
+}
+.t-btn--warn {
+  background-color: #ef4f4f;
+}
+.t-btn--warn:active {
+  background-color: #ef3737;
+}
+.t-btn--default {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+}
+.t-btn--default:active {
+  background-color: #ddd;
+}
+.t-btn:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
