@@ -11324,7 +11324,10 @@
 
 	module.exports = {
 		data : function(){
-			key : ''
+			return {
+				key : '',
+				status : 0
+			}
 		},
 		props : {
 			show : {
@@ -11344,7 +11347,20 @@
 				type : Function
 			}
 		},
+		watch : {
+			'show' : function(val){
+				if (val && this.status === 0) {
+					this.fixed();
+					this.status = 1;
+				}
+			}
+		},
 		methods : {
+			fixed : function(){
+				var target = this.$$.modal,
+					top = target.getBoundingClientRect().height / 2;
+				target.style.marginTop = '-'+top+'px';
+			},
 			//将输入内容传入回调函数
 			fnConfirm : function(){
 				this.onConfirm(this.key);
