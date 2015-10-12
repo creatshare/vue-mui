@@ -15,12 +15,17 @@ html,body{
 	text-align: center;
 	color: #fff;
 	cursor: pointer;
+
+	&-blue{
+		background-color: #4c9cee;
+	}
 }
 i{
     display: inline-block;
     padding: 3px 5px;
     margin: 0 3px;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 12px;
     font-style: normal;
     border-radius: 3px;
     border: 1px solid #ccc;
@@ -104,147 +109,15 @@ i{
 		<h1>Modal</h1>
 		<p>模态框，用来模拟浏览器的<i>alert</i><i>confirm</i></p>
 	</div>
-	<div class="info__bd" id="m-modal-alert">
-		<h2>模拟Alert</h2>
-		<div class="info__demo">
-			<alert></alert>
-			<pre>
-				<code class="language-markup">
-					<script type="language-mark-up">
-<div class="t-dimmer" v-show="show"></div>
-<alert show="{{@show}}" 
-	   title="{{title}}" 
-	   content="{{content}}"></alert>
-					</script>
-				</code>
-			</pre>
-			<pre>
-				<code class="language-javascript">
-var Alert = require(components/alert.vue');
-
-module.exports = {
-	data : function(){
-		return {
-			show : false,
-			title : '测试标题',
-			content : '测试内容'
-		}
-	},
-	components : {
-		'alert' : Alert
-	}
-}
-				</code>
-			</pre>
-		</div>
-
-		<table class="info__opt">
-			<tr>
-				<th>名称</th>
-				<th>类型</th>
-				<th>说明</th>
-			</tr>
-			<tr>
-				<td>show</td>
-				<td>Boolean</td>
-				<td>是否显示组件</td>
-			</tr>
-			<tr>
-				<td>title</td>
-				<td>String（可选）</td>
-				<td>alert 标题</td>
-			</tr>
-			<tr>
-				<td>content</td>
-				<td>String</td>
-				<td>alert 内容</td>
-			</tr>
-		</table>
-	</div>
-	<!-- confirm -->
-	<div class="info__bd" id="m-modal-confirm">
-		<h2>模拟Confirm</h2>
-		<div class="info__demo">
-			<confirm></confirm>
-			<pre>
-				<code class="language-markup">
-					<script type="language-mark-up">
-<div class="t-dimmer" v-show="show"></div>
-<confirm show="{{@show}}" title="{{title}}" content="{{content}}" on-confirm="{{onConfirm}}" on-cancel="{{onCancel}}"></confirm>
-					</script>
-				</code>
-			</pre>
-			<pre>
-				<code class="language-javascript">
-var Confirm = require('../../components/confirm.vue');
-
-module.exports = {
-	data : function(){
-		return {
-			show : false,
-			title : '测试标题',
-			content : '测试内容'
-		}
-	},
-	components : {
-		'confirm' : Confirm
-	},
-	methods : {
-		/**
-		 * [点击确定之后的回调]
-		 * @return {[type]} [description]
-		 */
-		onConfirm : function(){
-			alert('点击了确定')
-		},
-		/**
-		 * [点击取消之后的回调]
-		 * @return {[type]} [description]
-		 */
-		onCancel : function(){
-			alert('点击了取消')
-		}
-	}
 	
-}
-				</code>
-			</pre>
-		</div>
-		
-		<table class="info__opt">
-			<tr>
-				<th>名称</th>
-				<th>类型</th>
-				<th>说明</th>
-			</tr>
-			<tr>
-				<td>show</td>
-				<td>Boolean</td>
-				<td>是否显示组件</td>
-			</tr>
-			<tr>
-				<td>title</td>
-				<td>String（可选）</td>
-				<td>confirm 标题</td>
-			</tr>
-			<tr>
-				<td>content</td>
-				<td>String</td>
-				<td>confirm 内容</td>
-			</tr>
-			<tr>
-				<td>on-confirm</td>
-				<td>Function</td>
-				<td>点击确定之后的回调函数</td>
-			</tr>
-			<tr>
-				<td>on-cancel</td>
-				<td>Function</td>
-				<td>点击取消之后的回调函数</td>
-			</tr>
-		</table>
+	<alert></alert>
 
-	</div>
+	<confirm></confirm>
+
+	<prompt></prompt>
+
+
+
 </div>
 
 </template>
@@ -253,20 +126,21 @@ module.exports = {
 var dir = './test/';
 var aside = require('./aside.vue');
 var menu = require('./menu.vue');
-var alertTest = require(dir + 'alertTest.vue');
-var confirmTest = require(dir + 'confirmTest.vue');
 var prismcss = require('./lib/prism.css')
 var prismjs = require('./lib/prism.js'); //语法高亮
 
+var alertTest = require(dir + 'alertTest.vue');
+var confirmTest = require(dir + 'confirmTest.vue');
+var promptTest = require(dir + 'promptTest.vue');
+
+
 module.exports = {
-	ready : function(){
-		hlt.initHighlightingOnLoad();
-	},
 	components : {
 		'aside' : aside,
 		'menu' : menu,
 		'alert' : alertTest,
-		'confirm' : confirmTest
+		'confirm' : confirmTest,
+		'prompt' : promptTest
 	}
 }
 </script>

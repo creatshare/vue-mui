@@ -57,6 +57,9 @@
 			<li>
 				<a href="#m-modal-confirm">confirm</a>
 			</li>
+			<li>
+				<a href="#m-modal-prompt">prompt</a>
+			</li>
 		</ul>
 	</li>
 </ul>
