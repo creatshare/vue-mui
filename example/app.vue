@@ -161,10 +161,11 @@ i{
 <div class="info">
 	<div class="info__header" id="m-progress">
 		<h1>Progress</h1>
-		<p>进度条,loading弹窗等</p>
+		<p>进度条</p>
 	</div>
 	
 	<progress></progress>
+
 
 </div>
 
@@ -199,7 +200,7 @@ module.exports = {
 		'panel' : panelTest,
 		'accordion' : accordionTest,
 		'btn' : btnTest,
-		'progress' : progressTest
+		'progress' : progressTest,
 	}
 }
 </script>

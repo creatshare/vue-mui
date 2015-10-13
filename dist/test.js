@@ -10685,7 +10685,7 @@
 			'panel' : panelTest,
 			'accordion' : accordionTest,
 			'btn' : btnTest,
-			'progress' : progressTest
+			'progress' : progressTest,
 		}
 	}
 
@@ -12214,7 +12214,7 @@
 /* 175 */
 /***/ function(module, exports) {
 
-	module.exports = "<aside></aside>\n<menu></menu>\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-modal\">\n\t\t<h1>Modal</h1>\n\t\t<p>模态框，用来模拟浏览器的<i>alert</i><i>confirm</i></p>\n\t</div>\n\t\n\t<alert></alert>\n\n\t<confirm></confirm>\n\n\t<prompt></prompt>\n\n\n\n</div>\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-panel\">\n\t\t<h1>Panel</h1>\n\t\t<p>面板，包含<i>普通面板</i><i>折叠面板</i>等。</p>\n\t</div>\n\t\n\t<panel></panel>\n\t<accordion></accordion>\n\n</div>\n\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-btn\">\n\t\t<h1>Button</h1>\n\t\t<p>一组按钮</p>\n\t</div>\n\t\n\t<btn></btn>\n\n</div>\n\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-progress\">\n\t\t<h1>Progress</h1>\n\t\t<p>进度条,loading弹窗等</p>\n\t</div>\n\t\n\t<progress></progress>\n\n</div>";
+	module.exports = "<aside></aside>\n<menu></menu>\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-modal\">\n\t\t<h1>Modal</h1>\n\t\t<p>模态框，用来模拟浏览器的<i>alert</i><i>confirm</i></p>\n\t</div>\n\t\n\t<alert></alert>\n\n\t<confirm></confirm>\n\n\t<prompt></prompt>\n\n\n\n</div>\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-panel\">\n\t\t<h1>Panel</h1>\n\t\t<p>面板，包含<i>普通面板</i><i>折叠面板</i>等。</p>\n\t</div>\n\t\n\t<panel></panel>\n\t<accordion></accordion>\n\n</div>\n\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-btn\">\n\t\t<h1>Button</h1>\n\t\t<p>一组按钮</p>\n\t</div>\n\t\n\t<btn></btn>\n\n</div>\n\n<div class=\"info\">\n\t<div class=\"info__header\" id=\"m-progress\">\n\t\t<h1>Progress</h1>\n\t\t<p>进度条</p>\n\t</div>\n\t\n\t<progress></progress>\n\n\n</div>";
 
 /***/ }
 /******/ ]);
