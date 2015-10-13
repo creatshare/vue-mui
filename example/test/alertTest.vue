@@ -11,7 +11,6 @@
 	<div class="info__demo">
 		
 		<a class="test-btn test-btn-alert" v-on="click:show=true">alert</a>
-		<div class="t-dimmer" v-show="show"></div>
 		<alert show="{{@show}}" title="{{title}}" content="{{content}}"></alert>
 
 		<pre>

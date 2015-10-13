@@ -1,5 +1,6 @@
 
 <template>
+<div class="t-dimmer" v-show="show"></div>
 <div class="t-modal" v-show="show" v-el="modal">
 	<div class="t-modal__header">
 		<h3 class="t-modal__header--tt" v-show="title !== ''" v-text="title"></h3>
@@ -15,7 +16,7 @@
 module.exports = {
 	data : function(){
 		return {
-			status : 0
+			name : 'fix-position'
 		}
 	},
 	props : {
@@ -33,17 +34,9 @@ module.exports = {
 	},
 	watch : {
 		'show' : function(val){
-			if (val && this.status === 0) {
-				this.fixed();
-				this.status = 1;
-			}
-		}
-	},
-	methods : {
-		fixed : function(){
-			var target = this.$$.modal,
-				top = target.getBoundingClientRect().height / 2;
-			target.style.marginTop = '-'+top+'px';
+			var $body = document.body;
+
+			val === true ? $body.classList.add(this.name) : $body.classList.remove(this.name);
 		}
 	}
 }

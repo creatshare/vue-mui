@@ -9,6 +9,9 @@
 	margin:0;
 	padding: 0;
 }
+.fix-position{
+	overflow: hidden;
+}
 .btn-active{
 	background-color: #ddd;
 }
@@ -19,17 +22,21 @@
 	top: 0;
 	left: 0;
 	background-color: rgba(0,0,0,.5);
+	z-index: 999;
+	pointer-events: none;
 }
 .t-modal{
 	position: fixed;
-	width: 250px;
+	width: 80%;
 	top: 50%;
 	left: 50%;
-	margin-left: -125px;
 	font-size: @font-size;
 	background-color: @base-color;
 	border-radius: 3px;
 	overflow: hidden;
+	z-index: 1000;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
 
 	&__header{
 			padding: 15px 10px 15px;
@@ -47,26 +54,48 @@
 	}
 
 	&__footer{
+		position: relative;
 		display: table;
 		width: 100%;
 		border-collapse: collapse;
-		border-top: 1px solid @border-color;
+
+		&:before{
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			border-top: 1px solid @border-color;
+			-webkit-transform: scaleY(.5);
+			transform: scaleY(.5);
+			transform-origin: 0 0;
+			z-index: 1001;
+		}
 
 		&--btn{
+			position: relative;
 			display: table-cell;
 			height: @base-height;
 			line-height: @base-height;
 			text-align: center;
 			color: @font-color-87;
 			box-sizing: border-box;
-			border-left: 1px solid @border-color;
+			overflow: hidden;
 
-			&:first-child{
-				border-left: 0;
-			}
-
-			&:active{
-				.btn-active
+			&:nth-child(2):after{
+				display: block;
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1px;
+				height: 100%;
+				border-left: 1px solid @border-color;
+				-webkit-transform: scaleX(.5);
+				transform: scaleX(.5);
+				transform-origin: 0 0;
 			}
 		}
 	}

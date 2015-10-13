@@ -86,12 +86,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = {
 		data : function(){
 			return {
-				status : 0
+				name : 'fix-position'
 			}
 		},
 		props : {
 			show : {
 				type : Boolean,
+				default : false,
 				twoWay : true
 			},
 			title : {
@@ -103,17 +104,9 @@ return /******/ (function(modules) { // webpackBootstrap
 		},
 		watch : {
 			'show' : function(val){
-				if (val && this.status === 0) {
-					this.fixed();
-					this.status = 1;
-				}
-			}
-		},
-		methods : {
-			fixed : function(){
-				var target = this.$$.modal,
-					top = target.getBoundingClientRect().height / 2;
-				target.style.marginTop = '-'+top+'px';
+				var $body = document.body;
+	
+				val === true ? $body.classList.add(this.name) : $body.classList.remove(this.name);
 			}
 		}
 	}
@@ -122,7 +115,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"t-modal\" v-show=\"show\" v-el=\"modal\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false\">确定</a>\n\t</div>\n</div>";
+	module.exports = "<div class=\"t-dimmer\" v-show=\"show\"></div>\n<div class=\"t-modal\" v-show=\"show\" v-el=\"modal\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
 /* 11 */
@@ -137,14 +130,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = {
-		data : function(){
-			return {
-				status : 0
-			}
-		},
 		props : {
 			show : {
 				type : Boolean,
+				default: false,
 				twoWay : true
 			},
 			title : {
@@ -162,17 +151,9 @@ return /******/ (function(modules) { // webpackBootstrap
 		},
 		watch : {
 			'show' : function(val){
-				if (val && this.status === 0) {
-					this.fixed();
-					this.status = 1;
-				}
-			}
-		},
-		methods : {
-			fixed : function(){
-				var target = this.$$.modal,
-					top = target.getBoundingClientRect().height / 2;
-				target.style.marginTop = '-'+top+'px';
+				var $body = document.body;
+	
+				val === true ? $body.classList.add(this.name) : $body.classList.remove(this.name);
 			}
 		}
 	}
@@ -520,13 +501,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = {
 		data : function(){
 			return {
-				key : '',
-				status : 0
+				key : ''
 			}
 		},
 		props : {
 			show : {
 				type : Boolean,
+				default: false,
 				twoWay : true
 			},
 			title : {
@@ -544,18 +525,12 @@ return /******/ (function(modules) { // webpackBootstrap
 		},
 		watch : {
 			'show' : function(val){
-				if (val && this.status === 0) {
-					this.fixed();
-					this.status = 1;
-				}
+				var $body = document.body;
+	
+				val === true ? $body.classList.add(this.name) : $body.classList.remove(this.name);
 			}
 		},
 		methods : {
-			fixed : function(){
-				var target = this.$$.modal,
-					top = target.getBoundingClientRect().height / 2;
-				target.style.marginTop = '-'+top+'px';
-			},
 			//将输入内容传入回调函数
 			fnConfirm : function(){
 				this.onConfirm(this.key);
@@ -975,6 +950,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			},
 			setSize : function(val){
 				this.$el.style.transform = 'translate3d(-'+ val +'%,0,0)'
+				this.$el.style.webkitTransform = 'translate3d(-'+ val +'%,0,0)'
 			}
 		}
 	}

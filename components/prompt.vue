@@ -31,8 +31,7 @@
 module.exports = {
 	data : function(){
 		return {
-			key : '',
-			status : 0
+			key : ''
 		}
 	},
 	props : {
@@ -56,18 +55,12 @@ module.exports = {
 	},
 	watch : {
 		'show' : function(val){
-			if (val && this.status === 0) {
-				this.fixed();
-				this.status = 1;
-			}
+			var $body = document.body;
+
+			val === true ? $body.classList.add(this.name) : $body.classList.remove(this.name);
 		}
 	},
 	methods : {
-		fixed : function(){
-			var target = this.$$.modal,
-				top = target.getBoundingClientRect().height / 2;
-			target.style.marginTop = '-'+top+'px';
-		},
 		//将输入内容传入回调函数
 		fnConfirm : function(){
 			this.onConfirm(this.key);

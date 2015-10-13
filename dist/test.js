@@ -11032,7 +11032,7 @@
 	module.exports = {
 		data : function(){
 			return {
-				status : 0
+				name : 'fix-position'
 			}
 		},
 		props : {
@@ -11050,17 +11050,9 @@
 		},
 		watch : {
 			'show' : function(val){
-				if (val && this.status === 0) {
-					this.fixed();
-					this.status = 1;
-				}
-			}
-		},
-		methods : {
-			fixed : function(){
-				var target = this.$$.modal,
-					top = target.getBoundingClientRect().height / 2;
-				target.style.marginTop = '-'+top+'px';
+				var $body = document.body;
+	
+				val === true ? $body.classList.add(this.name) : $body.classList.remove(this.name);
 			}
 		}
 	}
@@ -11069,13 +11061,13 @@
 /* 111 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"t-modal\" v-show=\"show\" v-el=\"modal\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false\">确定</a>\n\t</div>\n</div>";
+	module.exports = "<div class=\"t-dimmer\" v-show=\"show\"></div>\n<div class=\"t-modal\" v-show=\"show\" v-el=\"modal\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
 /* 112 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-modal-alert\">\n\t<h2>Alert</h2>\n\t<p class=\"info__bd--hint\">A rendered 'alert' with title, content, and set of actions in the footer.</p>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-alert\" v-on=\"click:show=true\">alert</a>\n\t\t<div class=\"t-dimmer\" v-show=\"show\"></div>\n\t\t<alert show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\"></alert>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<alert show=\"{{@show}}\" \n   \t   title=\"{{title}}\" \n   \t   content=\"{{content}}\"></alert>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Alert = require(components/alert.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : 'This is title',\n\t\t\tcontent : 'This is content'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'alert' : Alert\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i>Title of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td>Content of component</td>\n\t\t</tr>\n\t</table>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-modal-alert\">\n\t<h2>Alert</h2>\n\t<p class=\"info__bd--hint\">A rendered 'alert' with title, content, and set of actions in the footer.</p>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-alert\" v-on=\"click:show=true\">alert</a>\n\t\t<alert show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\"></alert>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<alert show=\"{{@show}}\" \n   \t   title=\"{{title}}\" \n   \t   content=\"{{content}}\"></alert>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Alert = require(components/alert.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : 'This is title',\n\t\t\tcontent : 'This is content'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'alert' : Alert\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i>Title of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td>Content of component</td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
 /* 113 */
@@ -11196,11 +11188,6 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		data : function(){
-			return {
-				status : 0
-			}
-		},
 		props : {
 			show : {
 				type : Boolean,
@@ -11222,17 +11209,9 @@
 		},
 		watch : {
 			'show' : function(val){
-				if (val && this.status === 0) {
-					this.fixed();
-					this.status = 1;
-				}
-			}
-		},
-		methods : {
-			fixed : function(){
-				var target = this.$$.modal,
-					top = target.getBoundingClientRect().height / 2;
-				target.style.marginTop = '-'+top+'px';
+				var $body = document.body;
+	
+				val === true ? $body.classList.add(this.name) : $body.classList.remove(this.name);
 			}
 		}
 	}
@@ -11410,8 +11389,7 @@
 	module.exports = {
 		data : function(){
 			return {
-				key : '',
-				status : 0
+				key : ''
 			}
 		},
 		props : {
@@ -11435,18 +11413,12 @@
 		},
 		watch : {
 			'show' : function(val){
-				if (val && this.status === 0) {
-					this.fixed();
-					this.status = 1;
-				}
+				var $body = document.body;
+	
+				val === true ? $body.classList.add(this.name) : $body.classList.remove(this.name);
 			}
 		},
 		methods : {
-			fixed : function(){
-				var target = this.$$.modal,
-					top = target.getBoundingClientRect().height / 2;
-				target.style.marginTop = '-'+top+'px';
-			},
 			//将输入内容传入回调函数
 			fnConfirm : function(){
 				this.onConfirm(this.key);
@@ -12197,6 +12169,7 @@
 			},
 			setSize : function(val){
 				this.$el.style.transform = 'translate3d(-'+ val +'%,0,0)'
+				this.$el.style.webkitTransform = 'translate3d(-'+ val +'%,0,0)'
 			}
 		}
 	}

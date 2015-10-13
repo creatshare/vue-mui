@@ -101,6 +101,7 @@ module.exports = {
 		},
 		setSize : function(val){
 			this.$el.style.transform = 'translate3d(-'+ val +'%,0,0)'
+			this.$el.style.webkitTransform = 'translate3d(-'+ val +'%,0,0)'
 		}
 	}
 }

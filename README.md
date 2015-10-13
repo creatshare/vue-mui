@@ -1,7 +1,7 @@
 # vue-mui
 mobile components for Vue.js
 
-## Document ##
+## Documentation ##
 [Here](http://mui.yaobieting.com/document/index.html)
 
 ## Usage ##
