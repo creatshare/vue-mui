@@ -34,7 +34,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Panel = require('../../components/pannel.vue');
+var Panel = require('../../components/panel.vue');
 
 new Vue({
 	components : {
@@ -68,7 +68,7 @@ new Vue({
 </template>
 
 <script>
-var Panel = require('../../components/pannel.vue');
+var Panel = require('../../components/panel.vue');
 
 module.exports = {
 	components : {

@@ -55,24 +55,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-		Alert : __webpack_require__(4),
-		Confirm : __webpack_require__(7),
-		Prompt : __webpack_require__(10)
+		Alert : __webpack_require__(8),
+		Confirm : __webpack_require__(11),
+		Prompt : __webpack_require__(14),
+		Panel : __webpack_require__(21),
+		Accordion : __webpack_require__(26),
+		Button : __webpack_require__(31),
+		Progress : __webpack_require__(36)
 	}
 
 /***/ },
 /* 1 */,
 /* 2 */,
 /* 3 */,
-/* 4 */
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(5)
-	module.exports.template = __webpack_require__(6)
+	module.exports = __webpack_require__(9)
+	module.exports.template = __webpack_require__(10)
 
 
 /***/ },
-/* 5 */
+/* 9 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -111,21 +119,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 6 */
+/* 10 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-modal\" v-show=\"show\" v-el=\"modal\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 7 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(8)
-	module.exports.template = __webpack_require__(9)
+	module.exports = __webpack_require__(12)
+	module.exports.template = __webpack_require__(13)
 
 
 /***/ },
-/* 8 */
+/* 12 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -170,31 +178,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 9 */
+/* 13 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-modal\" v-show=\"show\" v-el=\"modal\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onCancel\">取消</a>\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onConfirm\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 10 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(11)
-	module.exports = __webpack_require__(15)
-	module.exports.template = __webpack_require__(16)
+	__webpack_require__(15)
+	module.exports = __webpack_require__(19)
+	module.exports.template = __webpack_require__(20)
 
 
 /***/ },
-/* 11 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(12);
+	var content = __webpack_require__(16);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(14)(content, {});
+	var update = __webpack_require__(18)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -211,10 +219,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 12 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(13)();
+	exports = module.exports = __webpack_require__(17)();
 	// imports
 	
 	
@@ -225,7 +233,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 13 */
+/* 17 */
 /***/ function(module, exports) {
 
 	/*
@@ -281,7 +289,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 14 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -506,7 +514,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 15 */
+/* 19 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -556,10 +564,426 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 16 */
+/* 20 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-modal\" v-show=\"show\" v-el=\"modal\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-prompt-ipt\">\n\t\t<input type=\"text\" v-model=\"key\">\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onCancel\">取消</a>\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: fnConfirm\">确定</a>\n\t</div>\n</div>";
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(22)
+	module.exports = __webpack_require__(24)
+	module.exports.template = __webpack_require__(25)
+
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(23);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(18)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./panel.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./panel.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(17)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".toggle-transition {\n  transition: height .5s ease;\n  overflow: hidden;\n}\n.toggle-enter,\n.toggle-leave {\n  height: 0!important;\n}\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 24 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		data : function(){
+			return {
+				height : ''
+			}
+		},
+		props : {
+			type : {
+				type : String,
+				default : 'normal' // normal || fold
+			},
+			show : {
+				type : Boolean,
+				default : true
+			},
+			title : {
+				type : String
+			}
+		},
+		//get target height
+		ready : function(){
+			this.init();
+		},
+		methods : {
+			toggle : function(){
+				if (this.type !== 'normal') {
+					this.show = !this.show;
+					this.$dispatch('toggle', this); //send event for accordion
+				}
+			},
+			//if type is normal, body is open
+			init : function(){
+				if (this.type === 'normal') {
+					this.show = true;
+				} else {
+					var target = this.$$.panel;
+	
+					target.style.display = 'block';
+					target.style.height = target.getBoundingClientRect().height + 'px';
+					if (!this.show) target.style.display = 'none';
+				}
+			}
+		}
+	}
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"t-panel\">\n\t<header class=\"t-panel__hd\" v-on=\"click:toggle\" v-text=\"title\"></header>\n\t<div class=\"t-panel__bd\" v-el=\"panel\" v-show=\"show\" v-transition=\"toggle\">\n\t\t<div class=\"t-panel__bd--ct\">\n\t\t\t<content></content>\t\n\t\t</div>\n\t</div>\n</div>";
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(27)
+	module.exports = __webpack_require__(29)
+	module.exports.template = __webpack_require__(30)
+
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(28);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(18)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./accordion.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./accordion.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(17)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".t-accordion .t-panel + .t-panel {\n  border-top: 0;\n}\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		ready : function(){
+			this.init();
+			this.listen();
+		},
+		methods : {
+			//just first child show
+			init : function(){
+				this.$children.forEach(function(x, i){
+					if (i > 0) {
+						x.show = false;
+					}
+				})
+			},
+			listen : function(){
+				var that = this;
+				that.$on('toggle', function(child){
+					that.$children.forEach(function(x){
+						if (child !== x) {
+							x.show = false;
+						}
+					})
+				})
+			}
+		}
+	}
+
+/***/ },
+/* 30 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"t-accordion\">\n\t<content></content>\n</div>";
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(32)
+	module.exports = __webpack_require__(34)
+	module.exports.template = __webpack_require__(35)
+
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(33);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(18)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./button.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./button.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(17)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		props : {
+			type : {
+				type : String,
+				default : 'normal'
+			},
+			onClick : {
+				type : Function
+			},
+			opt : {
+				type : null,
+				default : ''
+			}
+		},
+		methods : {
+			callback : function(){
+				this.opt === '' ? this.onClick() : this.onClick(this.opt);
+			}
+		}
+	}
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+	module.exports = "<a class=\"t-btn\" v-class=\"'t-btn--'+type\" v-on=\"click:callback\">button</a>";
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(37)
+	module.exports = __webpack_require__(39)
+	module.exports.template = __webpack_require__(40)
+
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(38);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(18)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./progress.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./progress.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(17)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".t-progress-bar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  z-index: 999;\n  -webkit-transition: all 200ms ease;\n  transition: all 200ms ease;\n}\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 39 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		data : function(){
+			return {
+				timer : null,
+				size : 100
+			}
+		},
+		props : {
+			color : {
+				type : String,
+				default : '#4c9cee'
+			},
+			status : {
+				type : String, //hide start done
+				default : 'hide'
+			},
+			num : {
+				type : Number,
+				default : 100
+			}
+		},
+		watch : {
+			'status' : function(val) {
+				var that = this;
+				return {
+					'hide' : that.hide,
+					'start' : that.start,
+					'done' : that.done
+				}[val].call(that);
+			},
+			/**
+			 * [if the num change, set progress bar size ,restart progress bar]
+			 * @param  {[type]} val [description]
+			 * @return {[type]}     [description]
+			 */
+			'num' : function(val){
+				if (val !== 100) {
+					clearInterval(this.timer);
+					this.size = 100 - this.num; //get size by num
+					this.setSize(this.size);
+					this.start();
+				} else {
+					this.done();
+				}
+				
+			}
+		},
+		methods : {
+			start : function(){
+				var that = this,
+					count = that.size,
+					target = that.$el;
+	
+				target.style.display = 'block';
+	
+				that.timer = setInterval(function(){
+	
+					if (count > 10) {
+						count -= 1;
+						that.setSize.call(that, count);
+					} else {
+						clearInterval(this.timer);
+					}
+					
+				}, 1000)
+			},
+			done : function(){
+				var that = this,
+					target = that.$el;
+	
+				that.setSize.call(that, 0);
+				clearInterval(this.timer);
+				setTimeout(function(){
+					target.style.display = 'none';
+					that.setSize.call(that, 100); //fix position
+					that.size = 100;
+				}, 200)
+			},
+			hide : function(){
+				this.$el.style.display = 'none';
+			},
+			setSize : function(val){
+				this.$el.style.transform = 'translate3d(-'+ val +'%,0,0)'
+			}
+		}
+	}
+
+/***/ },
+/* 40 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"t-progress-bar\" v-style=\"background-color:color,\n\t\t\t\t\t\t\t\t\t transform:'translate3d(-100%,0,0)',\n\t\t\t\t\t\t\t\t\t display:'none'\"></div>";
 
 /***/ }
 /******/ ])
