@@ -11,14 +11,20 @@
 		<div class="info__demo--show">
 			<div class="demo-pannel">
 				<!-- 演示 普通面板 -->
-				<panel show="false" title="普通面板">
-					<div>测试一下</div>
+				<panel show="false" title="default panel">
+					<div>
+						<p>The most distant way in the world</p>
+						<p>is not the way from birth to the end</p>
+					</div>
 				</panel>
 			</div>
 			<div class="demo-pannel">
 				<!-- 演示 折叠面板 -->
-				<panel show="false" title="折叠面板" type="fold">
-					<div>测试一下</div>
+				<panel show="false" title="folding panel" type="fold">
+					<div>
+						<p>The most distant way in the world</p>
+						<p>is not the way from birth to the end</p>
+					</div>
 				</panel>
 			</div>
 		</div>
@@ -27,7 +33,10 @@
 			<code class="language-markup">
 				<script type="language-mark-up">
 <panel type="normal" title="title">
-	...code...
+	<div>
+		<p>The most distant way in the world</p>
+		<p>is not the way from birth to the end</p>
+	</div>
 </panel>				
 				</script>
 			</code>
@@ -47,22 +56,28 @@ new Vue({
 	
 	<table class="info__opt">
 		<tr>
-			<th>名称</th>
-			<th>类型</th>
-			<th>说明</th>
+			<th>Name</th>
+			<th>type</th>
+			<th>default</th>
+			<th>description</th>
 		</tr>
 		<tr>
 			<td>type</td>
 			<td>String</td>
-			<td>面板类型<i>可选</i>默认值为normal<br/>normal-默认面板<br/>fold-折叠面板</td>
+			<td>normal</td>
+			<td>
+				<p>type of panel <i>optional</i></p>
+				<p>normal : normal panel</p>
+				<p>flod : folding panel</p>
+			</td>
 		</tr>
 		<tr>
 			<td>title</td>
 			<td>String</td>
-			<td>面板标题</td>
+			<td></td>
+			<td>Title of this component</td>
 		</tr>
 	</table>
-	<div class="hint"><i>说明:</i>正文内容可添加在<i>panel</i>标签内</div>
 
 </div>
 </template>

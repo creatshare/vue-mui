@@ -16,6 +16,7 @@ html,body{
 	color: #fff;
 	cursor: pointer;
 	border-radius: 3px;
+	font-size: 12px;
 
 	&-blue{
 		background-color: #4c9cee;
@@ -38,7 +39,7 @@ i{
 	background-color: #ddd;
 }
 .hint{
-	font-size: 14px;
+	font-size: 12px;
     margin-top: 20px;
     line-height: 30px;
     color: @s54;
@@ -57,6 +58,7 @@ i{
 		}
 		p{
 			color: @s54;
+			font-size:14px;
 			padding: @base-padding;
 		}
 	}
@@ -67,6 +69,13 @@ i{
 			font-weight: 700;
 			font-size: 16px;
 			line-height: 2;
+		}
+
+		&--hint{
+			margin-bottom: 10px;
+			line-height: 1.5;
+			font-size: 12px;
+			color: @s54;
 		}
 	}
 
@@ -82,10 +91,10 @@ i{
 		width: 100%;
 		margin: 20px auto;
 		border: 1px solid @border-color;
-		font-size: 14px;
+		font-size: 12px;
 
 		tr{
-			line-height: 32px;
+			line-height: 40px;
 		}
 
 		tr+tr{
@@ -105,6 +114,10 @@ i{
 		td{
 			padding: 0 10px;
 			color: @s54;
+
+			p{
+				line-height: 2;
+			}
 		}
 	}
 }
@@ -124,8 +137,8 @@ i{
 <menu></menu>
 <div class="info">
 	<div class="info__header" id="m-modal">
-		<h1>Modal</h1>
-		<p>模态框，用来模拟浏览器的<i>alert</i><i>confirm</i></p>
+		<h1>Modals</h1>
+		<p>Modals for the browser. <i>alert</i><i>confirm</i><i>prompt</i></p>
 	</div>
 	
 	<alert></alert>
@@ -139,8 +152,8 @@ i{
 </div>
 <div class="info">
 	<div class="info__header" id="m-panel">
-		<h1>Panel</h1>
-		<p>面板，包含<i>普通面板</i><i>折叠面板</i>等。</p>
+		<h1>Panels</h1>
+		<p>include<i>default panel</i><i>folding panel</i></p>
 	</div>
 	
 	<panel></panel>
@@ -150,8 +163,7 @@ i{
 
 <div class="info">
 	<div class="info__header" id="m-btn">
-		<h1>Button</h1>
-		<p>一组按钮</p>
+		<h1>Buttons</h1>
 	</div>
 	
 	<btn></btn>
@@ -161,7 +173,6 @@ i{
 <div class="info">
 	<div class="info__header" id="m-progress">
 		<h1>Progress</h1>
-		<p>进度条</p>
 	</div>
 	
 	<progress></progress>

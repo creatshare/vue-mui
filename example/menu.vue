@@ -5,7 +5,7 @@
 	left: 0;
 	width: 200px;
 	height: 100%;
-	font-size: 14px;
+	font-size: 12px;
 
 	h2{
 		padding: 20px 20px 0;
@@ -66,7 +66,7 @@ module.exports = {
 	data : function(){
 		return {
 			list : [{
-				name : 'Modal 组件',
+				name : 'Modal',
 				id : 'modal',
 				show : true,
 				children : [{
@@ -81,7 +81,7 @@ module.exports = {
 					}
 				]
 			},{
-				name : 'Panel 组件',
+				name : 'Panel',
 				id : 'panel',
 				show : false,
 				children : [{
@@ -93,7 +93,7 @@ module.exports = {
 					}
 				]
 			},{
-				name : 'Button 组件',
+				name : 'Button',
 				id : 'btn',
 				show : false,
 				children : [{
@@ -102,11 +102,11 @@ module.exports = {
 					}
 				]
 			},{
-				name : 'Progress 组件',
+				name : 'Progress',
 				id : 'progress',
 				show : false,
 				children : [{
-						name : 'button',
+						name : 'progress bar',
 						id : 'bar'
 					}
 				]

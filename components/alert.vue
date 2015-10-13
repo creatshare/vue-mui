@@ -21,6 +21,7 @@ module.exports = {
 	props : {
 		show : {
 			type : Boolean,
+			default : false,
 			twoWay : true
 		},
 		title : {

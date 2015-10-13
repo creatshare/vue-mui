@@ -6,7 +6,8 @@
 
 <template>
 <div class="info__bd" id="m-modal-alert">
-	<h2>模拟Alert</h2>
+	<h2>Alert</h2>
+	<p class="info__bd--hint">A rendered 'alert' with title, content, and set of actions in the footer.</p>
 	<div class="info__demo">
 		
 		<a class="test-btn test-btn-alert" v-on="click:show=true">alert</a>
@@ -18,8 +19,8 @@
 				<script type="language-mark-up">
 <div class="t-dimmer" v-show="show"></div>
 <alert show="{{@show}}" 
-   title="{{title}}" 
-   content="{{content}}"></alert>
+   	   title="{{title}}" 
+   	   content="{{content}}"></alert>
 				</script>
 			</code>
 		</pre>
@@ -27,42 +28,46 @@
 			<code class="language-javascript">
 var Alert = require(components/alert.vue');
 
-module.exports = {
+new Vue({
 	data : function(){
 		return {
 			show : false,
-			title : '测试标题',
-			content : '测试内容'
+			title : 'This is title',
+			content : 'This is content'
 		}
 	},
 	components : {
 		'alert' : Alert
 	}
-}
+})
 			</code>
 		</pre>
 	</div>
 
 	<table class="info__opt">
 		<tr>
-			<th>名称</th>
-			<th>类型</th>
-			<th>说明</th>
+			<th>Name</th>
+			<th>type</th>
+			<th>default</th>
+			<th>description</th>
 		</tr>
 		<tr>
 			<td>show</td>
 			<td>Boolean</td>
-			<td>是否显示组件</td>
+			<td><i>false</i></td>
+			<td>Whether to show this component</td>
 		</tr>
 		<tr>
 			<td>title</td>
-			<td>String（可选）</td>
-			<td>alert 标题</td>
+			<td>String</td>
+			<td></td>
+			<td><i>(optional)</i>Title of component</td>
 		</tr>
 		<tr>
 			<td>content</td>
 			<td>String</td>
-			<td>alert 内容</td>
+			<td></td>
+			<td>Content of component</td>
 		</tr>
 	</table>
 </div>

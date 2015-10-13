@@ -57,7 +57,7 @@ module.exports = {
 		</pre>
 	</div>
 	
-	<div class="hint"><i>说明:</i>accordion依赖panel组件,建议在创建时便将除第一个外的<i>panel</i>的<i>show</i>设置为false</div>
+	<div class="hint"><i>notice:</i>must import 'panel' component</div>
 
 </div>
 </template>

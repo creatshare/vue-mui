@@ -43,24 +43,24 @@ new Vue({
 
 	<table class="info__opt">
 		<tr>
-			<th>名称</th>
-			<th>类型</th>
-			<th>说明</th>
+			<th>Name</th>
+			<th>type</th>
+			<th>default</th>
+			<th>description</th>
 		</tr>
 		<tr>
 			<td>status</td>
 			<td>String</td>
-			<td>进度条状态 <i>hide</i><i>start</i><i>done</i><br/>默认<i>hide</i></td>
+			<td>hide</td>
+			<td>whether to show progress<i>hide</i><i>start</i><i>done</i></td>
 		</tr>
 		<tr>
 			<td>num</td>
 			<td>Number</td>
-			<td>进度条的进度<i>可选</i></td>
+			<td>0</td>
+			<td><i>(optional)</i></td>
 		</tr>
 	</table>
-
-	<div class="hint"><i>说明:</i>直接更改status属性便可触发进度条</div>
-
 </div>
 </template>
 

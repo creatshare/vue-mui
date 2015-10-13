@@ -46,24 +46,24 @@ module.exports = {
 
 	<table class="info__opt">
 		<tr>
-			<th>名称</th>
-			<th>类型</th>
-			<th>说明</th>
+			<th>Name</th>
+			<th>type</th>
+			<th width="350">description</th>
 		</tr>
 		<tr>
 			<td>type</td>
 			<td>String</td>
-			<td>按钮类型 <i>normal</i><i>warn</i><i>default</i></td>
+			<td>Type of button <i>normal</i><i>warn</i><i>default</i></td>
 		</tr>
 		<tr>
-			<td>onClick</td>
+			<td>on-click</td>
 			<td>Function</td>
-			<td>按钮点击后执行的函数</td>
+			<td><p>A callback Function when you click the button component</p></td>
 		</tr>
 		<tr>
 			<td>opt</td>
-			<td>任意类型</td>
-			<td>回调函数的参数<i>可选</i></td>
+			<td></td>
+			<td><i>(optional)</i>The parameter of callback function</td>
 		</tr>
 	</table>
 </div>
