@@ -8,13 +8,13 @@
 	<div class="info__demo">
 		
 		<div class="info__demo--show">		
-			<btn></btn>
+			<btn on-click="{{handle}}" opt="Click normal button"></btn>
 		</div>
 		<div class="info__demo--show">
-			<btn type="warn"></btn>
+			<btn type="warn" on-click="{{handle}}"></btn>
 		</div>
 		<div class="info__demo--show">
-			<btn type="default"></btn>
+			<btn type="default" on-click="{{handle}}"></btn>
 		</div>
 
 		<pre>
@@ -22,7 +22,7 @@
 				<script type="language-mark-up">
 <btn></btn>
 <btn type="warn"></btn>
-<btn type="default" on-click="callback"></btn>
+<btn type="default" on-click="callback" opt="test"></btn>
 				</script>
 			</code>
 		</pre>
@@ -60,6 +60,11 @@ module.exports = {
 			<td>Function</td>
 			<td>按钮点击后执行的函数</td>
 		</tr>
+		<tr>
+			<td>opt</td>
+			<td>任意类型</td>
+			<td>回调函数的参数<i>可选</i></td>
+		</tr>
 	</table>
 </div>
 </template>
@@ -70,6 +75,13 @@ var Btn = require('../../components/button.vue');
 module.exports = {
 	components : {
 		'btn' : Btn
+	},
+	methods : {
+		handle : function(data){
+			if (data) {
+				alert(data);
+			}
+		}
 	}
 }
 </script>

@@ -3,7 +3,7 @@
 </style>
 
 <template>
-<a class="t-btn" v-class="'t-btn--'+type" v-on="click:onClick">button</a>
+<a class="t-btn" v-class="'t-btn--'+type" v-on="click:callback">button</a>
 </template>
 
 <script>
@@ -15,6 +15,15 @@ module.exports = {
 		},
 		onClick : {
 			type : Function
+		},
+		opt : {
+			type : null,
+			default : ''
+		}
+	},
+	methods : {
+		callback : function(){
+			this.opt === '' ? this.onClick() : this.onClick(this.opt);
 		}
 	}
 }

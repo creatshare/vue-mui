@@ -15,9 +15,14 @@ html,body{
 	text-align: center;
 	color: #fff;
 	cursor: pointer;
+	border-radius: 3px;
 
 	&-blue{
 		background-color: #4c9cee;
+	}
+
+	&-ilb{
+		display: inline-block;
 	}
 }
 i{
@@ -153,6 +158,16 @@ i{
 
 </div>
 
+<div class="info">
+	<div class="info__header" id="m-progress">
+		<h1>Progress</h1>
+		<p>进度条,loading弹窗等</p>
+	</div>
+	
+	<progress></progress>
+
+</div>
+
 </template>
 
 <script>
@@ -170,6 +185,8 @@ var panelTest = require(dir + 'panelTest.vue');
 var accordionTest = require(dir + 'accordionTest.vue');
 //button
 var btnTest = require(dir + 'btnTest.vue');
+//progress
+var progressTest = require(dir + 'progressTest.vue');
 
 
 module.exports = {
@@ -181,7 +198,8 @@ module.exports = {
 		'prompt' : promptTest,
 		'panel' : panelTest,
 		'accordion' : accordionTest,
-		'btn' : btnTest
+		'btn' : btnTest,
+		'progress' : progressTest
 	}
 }
 </script>
