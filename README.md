@@ -2,7 +2,7 @@
 mobile components for Vue.js
 
 ## Document ##
-[Here](http://mui.yaobieting.com/example/index.html)
+[Here](http://mui.yaobieting.com/document/index.html)
 
 ## Usage ##
 import mui.css
