@@ -16,6 +16,7 @@
 		padding: 20px;
 
 		&>li{
+			margin-bottom: 10px;
 			cursor: pointer;
 
 			a{
@@ -31,7 +32,7 @@
 	}
 
 	&__children{
-		padding: 10px 20px;
+		padding: 10px 20px 0;
 		li{
 			margin-bottom: 10px;
 			a{
@@ -46,49 +47,13 @@
 <template>
 <div class="menu">
 <h2>目录</h2>
-<ul class="menu__index">
-	<li>
-		<a href="#m-modal">Modal 组件</a>
+<ul class="menu__index" v-el="menu">
+	<li v-repeat="item : list">
+		<a v-attr="href:'#m-'+item.id" v-on="click:toggle(item)" v-text="item.name"></a>
 
-		<ul class="menu__index menu__children">
-			<li>
-				<a href="#m-modal-alert">alert</a>
-			</li>
-			<li>
-				<a href="#m-modal-confirm">confirm</a>
-			</li>
-			<li>
-				<a href="#m-modal-prompt">prompt</a>
-			</li>
-		</ul>
-	</li>
-	<li>
-		<a href="#m-panel">Panel 组件</a>
-
-		<ul class="menu__index menu__children">
-			<li>
-				<a href="#m-panel-panel">panel</a>
-			</li>
-			<li>
-				<a href="#m-panel-accordion">accordion</a>
-			</li>
-		</ul>
-	</li>
-	<li>
-		<a href="#m-btn">Button 组件</a>
-
-		<ul class="menu__index menu__children">
-			<li>
-				<a href="#m-btn-btn">button</a>
-			</li>
-		</ul>
-	</li>
-	<li>
-		<a href="#m-progress">Progress 组件</a>
-
-		<ul class="menu__index menu__children">
-			<li>
-				<a href="#m-progress-bar">progress bar</a>
+		<ul class="menu__index menu__children" v-show="item.show">
+			<li v-repeat="its : item.children">
+				<a href="#m-progress-bar" v-attr="href:'#m-'+item.id+'-'+its.id" v-text="its.name"></a>
 			</li>
 		</ul>
 	</li>
@@ -97,5 +62,69 @@
 </template>
 
 <script>
-	
+module.exports = {
+	data : function(){
+		return {
+			list : [{
+				name : 'Modal 组件',
+				id : 'modal',
+				show : true,
+				children : [{
+						name : 'alert',
+						id : 'alert'
+					},{
+						name : 'confirm',
+						id : 'confirm'
+					},{
+						name : 'prompt',
+						id : 'prompt'
+					}
+				]
+			},{
+				name : 'Panel 组件',
+				id : 'panel',
+				show : false,
+				children : [{
+						name : 'panel',
+						id : 'panel'
+					},{
+						name : 'accordion',
+						id : 'accordion'
+					}
+				]
+			},{
+				name : 'Button 组件',
+				id : 'btn',
+				show : false,
+				children : [{
+						name : 'button',
+						id : 'btn'
+					}
+				]
+			},{
+				name : 'Progress 组件',
+				id : 'progress',
+				show : false,
+				children : [{
+						name : 'button',
+						id : 'bar'
+					}
+				]
+			}]
+		}
+	},
+	methods : {
+		toggle : function(that){
+			that.show = !that.show;
+			this.hide(that);
+		},
+		hide : function(target){
+			this.list.forEach(function(x){
+				if (target !== x) {
+					x.show = false;
+				}
+			})
+		}
+	}
+}
 </script>

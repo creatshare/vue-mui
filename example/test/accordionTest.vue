@@ -44,7 +44,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Panel = require('../../components/pannel.vue');
+var Panel = require('../../components/panel.vue');
 var Accordion = require('../../components/accordion.vue');
 
 module.exports = {
@@ -63,7 +63,7 @@ module.exports = {
 </template>
 
 <script>
-var Panel = require('../../components/pannel.vue');
+var Panel = require('../../components/panel.vue');
 var Accordion = require('../../components/accordion.vue');
 
 module.exports = {

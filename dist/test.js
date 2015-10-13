@@ -10794,7 +10794,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".menu {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 200px;\n  height: 100%;\n  font-size: 14px;\n}\n.menu h2 {\n  padding: 20px 20px 0;\n  color: #fff;\n}\n.menu__index {\n  padding: 20px;\n}\n.menu__index > li {\n  cursor: pointer;\n}\n.menu__index > li a {\n  display: block;\n  padding-left: 10px;\n  color: #fff;\n  border-left: 4px solid #4c9cee;\n}\n.menu__children {\n  padding: 10px 20px;\n}\n.menu__children li {\n  margin-bottom: 10px;\n}\n.menu__children li a {\n  border-left: 2px solid #4c9;\n}\n", ""]);
+	exports.push([module.id, ".menu {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 200px;\n  height: 100%;\n  font-size: 14px;\n}\n.menu h2 {\n  padding: 20px 20px 0;\n  color: #fff;\n}\n.menu__index {\n  padding: 20px;\n}\n.menu__index > li {\n  margin-bottom: 10px;\n  cursor: pointer;\n}\n.menu__index > li a {\n  display: block;\n  padding-left: 10px;\n  color: #fff;\n  border-left: 4px solid #4c9cee;\n}\n.menu__children {\n  padding: 10px 20px 0;\n}\n.menu__children li {\n  margin-bottom: 10px;\n}\n.menu__children li a {\n  border-left: 2px solid #4c9;\n}\n", ""]);
 	
 	// exports
 
@@ -10803,13 +10803,77 @@
 /* 99 */
 /***/ function(module, exports) {
 
-
+	module.exports = {
+		data : function(){
+			return {
+				list : [{
+					name : 'Modal 组件',
+					id : 'modal',
+					show : true,
+					children : [{
+							name : 'alert',
+							id : 'alert'
+						},{
+							name : 'confirm',
+							id : 'confirm'
+						},{
+							name : 'prompt',
+							id : 'prompt'
+						}
+					]
+				},{
+					name : 'Panel 组件',
+					id : 'panel',
+					show : false,
+					children : [{
+							name : 'panel',
+							id : 'panel'
+						},{
+							name : 'accordion',
+							id : 'accordion'
+						}
+					]
+				},{
+					name : 'Button 组件',
+					id : 'btn',
+					show : false,
+					children : [{
+							name : 'button',
+							id : 'btn'
+						}
+					]
+				},{
+					name : 'Progress 组件',
+					id : 'progress',
+					show : false,
+					children : [{
+							name : 'button',
+							id : 'bar'
+						}
+					]
+				}]
+			}
+		},
+		methods : {
+			toggle : function(that){
+				that.show = !that.show;
+				this.hide(that);
+			},
+			hide : function(target){
+				this.list.forEach(function(x){
+					if (target !== x) {
+						x.show = false;
+					}
+				})
+			}
+		}
+	}
 
 /***/ },
 /* 100 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"menu\">\n<h2>目录</h2>\n<ul class=\"menu__index\">\n\t<li>\n\t\t<a href=\"#m-modal\">Modal 组件</a>\n\n\t\t<ul class=\"menu__index menu__children\">\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-alert\">alert</a>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-confirm\">confirm</a>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-modal-prompt\">prompt</a>\n\t\t\t</li>\n\t\t</ul>\n\t</li>\n\t<li>\n\t\t<a href=\"#m-panel\">Panel 组件</a>\n\n\t\t<ul class=\"menu__index menu__children\">\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-panel-panel\">panel</a>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-panel-accordion\">accordion</a>\n\t\t\t</li>\n\t\t</ul>\n\t</li>\n\t<li>\n\t\t<a href=\"#m-btn\">Button 组件</a>\n\n\t\t<ul class=\"menu__index menu__children\">\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-btn-btn\">button</a>\n\t\t\t</li>\n\t\t</ul>\n\t</li>\n\t<li>\n\t\t<a href=\"#m-progress\">Progress 组件</a>\n\n\t\t<ul class=\"menu__index menu__children\">\n\t\t\t<li>\n\t\t\t\t<a href=\"#m-progress-bar\">progress bar</a>\n\t\t\t</li>\n\t\t</ul>\n\t</li>\n</ul>\n</div>";
+	module.exports = "<div class=\"menu\">\n<h2>目录</h2>\n<ul class=\"menu__index\" v-el=\"menu\">\n\t<li v-repeat=\"item : list\">\n\t\t<a v-attr=\"href:'#m-'+item.id\" v-on=\"click:toggle(item)\" v-text=\"item.name\"></a>\n\n\t\t<ul class=\"menu__index menu__children\" v-show=\"item.show\">\n\t\t\t<li v-repeat=\"its : item.children\">\n\t\t\t\t<a href=\"#m-progress-bar\" v-attr=\"href:'#m-'+item.id+'-'+its.id\" v-text=\"its.name\"></a>\n\t\t\t</li>\n\t\t</ul>\n\t</li>\n</ul>\n</div>";
 
 /***/ },
 /* 101 */
@@ -11506,8 +11570,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./pannel.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./pannel.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./panel.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./panel.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11589,7 +11653,7 @@
 /* 143 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-panel-panel\">\n\t<h2>panel</h2>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 普通面板 -->\n\t\t\t\t<panel show=\"false\" title=\"普通面板\">\n\t\t\t\t\t<div>测试一下</div>\n\t\t\t\t</panel>\n\t\t\t</div>\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 折叠面板 -->\n\t\t\t\t<panel show=\"false\" title=\"折叠面板\" type=\"fold\">\n\t\t\t\t\t<div>测试一下</div>\n\t\t\t\t</panel>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<panel type=\"normal\" title=\"title\">\n\t...code...\n</panel>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('../../components/pannel.vue');\n\nnew Vue({\n\tcomponents : {\n\t\t'panel' : Panel\n\t}\n})\t\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>名称</th>\n\t\t\t<th>类型</th>\n\t\t\t<th>说明</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>type</td>\n\t\t\t<td>String</td>\n\t\t\t<td>面板类型<i>可选</i>默认值为normal<br/>normal-默认面板<br/>fold-折叠面板</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td>面板标题</td>\n\t\t</tr>\n\t</table>\n\t<div class=\"hint\"><i>说明:</i>正文内容可添加在<i>panel</i>标签内</div>\n\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-panel-panel\">\n\t<h2>panel</h2>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 普通面板 -->\n\t\t\t\t<panel show=\"false\" title=\"普通面板\">\n\t\t\t\t\t<div>测试一下</div>\n\t\t\t\t</panel>\n\t\t\t</div>\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 折叠面板 -->\n\t\t\t\t<panel show=\"false\" title=\"折叠面板\" type=\"fold\">\n\t\t\t\t\t<div>测试一下</div>\n\t\t\t\t</panel>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<panel type=\"normal\" title=\"title\">\n\t...code...\n</panel>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('../../components/panel.vue');\n\nnew Vue({\n\tcomponents : {\n\t\t'panel' : Panel\n\t}\n})\t\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>名称</th>\n\t\t\t<th>类型</th>\n\t\t\t<th>说明</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>type</td>\n\t\t\t<td>String</td>\n\t\t\t<td>面板类型<i>可选</i>默认值为normal<br/>normal-默认面板<br/>fold-折叠面板</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td>面板标题</td>\n\t\t</tr>\n\t</table>\n\t<div class=\"hint\"><i>说明:</i>正文内容可添加在<i>panel</i>标签内</div>\n\n</div>";
 
 /***/ },
 /* 144 */
@@ -11724,7 +11788,7 @@
 /* 152 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-panel-accordion\">\n\t<h2>accordion</h2>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<!-- accordion -->\n\t\t\t<accordion>\n\t\t\t\t<panel type=\"fold\" title=\"Title 1\">\n\t\t\t\t\t<div>Test Content 1</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 2\" show=\"false\">\n\t\t\t\t\t<div>Test Content 2</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 3\" show=\"false\">\n\t\t\t\t\t<div>Test Content 3</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 4\" show=\"false\">\n\t\t\t\t\t<div>Test Content 4</div>\n\t\t\t\t</panel>\n\t\t\t</accordion>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<accordion>\n\t<panel type=\"fold\" title=\"Title 1\">\n\t\t<div>Test Content 1</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 2\" show=\"false\">\n\t\t<div>Test Content 2</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 3\" show=\"false\">\n\t\t<div>Test Content 3</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 4\" show=\"false\">\n\t\t<div>Test Content 4</div>\n\t</panel>\n</accordion>\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('../../components/pannel.vue');\nvar Accordion = require('../../components/accordion.vue');\n\nmodule.exports = {\n\tcomponents : {\n\t\t'panel' : Panel,\n\t\t'accordion' : Accordion\n\t}\n}\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<div class=\"hint\"><i>说明:</i>accordion依赖panel组件,建议在创建时便将除第一个外的<i>panel</i>的<i>show</i>设置为false</div>\n\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-panel-accordion\">\n\t<h2>accordion</h2>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<!-- accordion -->\n\t\t\t<accordion>\n\t\t\t\t<panel type=\"fold\" title=\"Title 1\">\n\t\t\t\t\t<div>Test Content 1</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 2\" show=\"false\">\n\t\t\t\t\t<div>Test Content 2</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 3\" show=\"false\">\n\t\t\t\t\t<div>Test Content 3</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 4\" show=\"false\">\n\t\t\t\t\t<div>Test Content 4</div>\n\t\t\t\t</panel>\n\t\t\t</accordion>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<accordion>\n\t<panel type=\"fold\" title=\"Title 1\">\n\t\t<div>Test Content 1</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 2\" show=\"false\">\n\t\t<div>Test Content 2</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 3\" show=\"false\">\n\t\t<div>Test Content 3</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 4\" show=\"false\">\n\t\t<div>Test Content 4</div>\n\t</panel>\n</accordion>\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('../../components/panel.vue');\nvar Accordion = require('../../components/accordion.vue');\n\nmodule.exports = {\n\tcomponents : {\n\t\t'panel' : Panel,\n\t\t'accordion' : Accordion\n\t}\n}\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<div class=\"hint\"><i>说明:</i>accordion依赖panel组件,建议在创建时便将除第一个外的<i>panel</i>的<i>show</i>设置为false</div>\n\n</div>";
 
 /***/ },
 /* 153 */
