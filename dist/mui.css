@@ -204,7 +204,8 @@
 }
 
 header,
-a {
+a,
+li {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .t-panel {

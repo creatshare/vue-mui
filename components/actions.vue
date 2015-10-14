@@ -1,7 +1,7 @@
 <style lang="less">
 .actions-transition{
-	-webkit-transition : all ease .5s;
-	transition : all ease .5s;
+	-webkit-transition : all ease .3s;
+	transition : all ease .3s;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
