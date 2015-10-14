@@ -9,7 +9,6 @@
 	<div class="info__demo">
 		
 		<a class="test-btn test-btn-blue" v-on="click:show=true">prompt</a>
-		<div class="t-dimmer" v-show="show"></div>
 		<prompt show="{{@show}}" title="{{title}}" content="{{content}}" on-confirm="{{onConfirm}}" on-cancel="{{onCancel}}"></prompt>
 
 		<pre>

@@ -14,6 +14,20 @@
 .btn-active {
   background-color: #ddd;
 }
+.border-top {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  heiht: 1px;
+  border-top: 1px solid #ddd;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  z-index: 1001;
+}
 .t-dimmer {
   position: fixed;
   width: 100%;
@@ -56,16 +70,17 @@
   border-collapse: collapse;
 }
 .t-modal__footer:before {
-  display: block;
   content: '';
   position: absolute;
+  display: block;
   top: 0;
   left: 0;
   width: 100%;
-  height: 1px;
+  heiht: 1px;
   border-top: 1px solid #ddd;
   -webkit-transform: scaleY(0.5);
   transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   z-index: 1001;
 }
@@ -91,4 +106,53 @@
   -webkit-transform: scaleX(0.5);
   transform: scaleX(0.5);
   transform-origin: 0 0;
+}
+.t-actions {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  z-index: 1001;
+}
+.t-actions__list {
+  color: rgba(0, 0, 0, 0.54);
+  background-color: #fafafa;
+}
+.t-actions__list--tt {
+  color: rgba(0, 0, 0, 0.87);
+}
+.t-actions__list li {
+  position: relative;
+  display: block;
+  height: 46px;
+  line-height: 46px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.t-actions__list li + li:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  heiht: 1px;
+  border-top: 1px solid #ddd;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  z-index: 1001;
+}
+.t-actions__cancel {
+  display: block;
+  margin-top: 10px;
+  height: 46px;
+  line-height: 46px;
+  color: #fff;
+  background-color: #4c9cee;
 }

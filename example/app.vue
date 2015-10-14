@@ -147,8 +147,7 @@ i{
 
 	<prompt></prompt>
 
-
-
+	<actions></actions>
 </div>
 <div class="info">
 	<div class="info__header" id="m-panel">
@@ -184,17 +183,18 @@ i{
 
 <script>
 var dir = './test/';
-var aside = require('./aside.vue');
-var menu = require('./menu.vue');
-var prismcss = require('./lib/prism.css')
-var prismjs = require('./lib/prism.js'); //语法高亮
+var aside = require('./aside.vue'),
+	menu = require('./menu.vue'),
+	prismcss = require('./lib/prism.css'),
+	prismjs = require('./lib/prism.js'); //语法高亮
 
-var alertTest = require(dir + 'alertTest.vue');
-var confirmTest = require(dir + 'confirmTest.vue');
-var promptTest = require(dir + 'promptTest.vue');
+var alertTest = require(dir + 'alertTest.vue'),
+	confirmTest = require(dir + 'confirmTest.vue'),
+	promptTest = require(dir + 'promptTest.vue'),
+	actionsTest = require(dir + 'actionsTest.vue');
 //panel
-var panelTest = require(dir + 'panelTest.vue');
-var accordionTest = require(dir + 'accordionTest.vue');
+var panelTest = require(dir + 'panelTest.vue'),
+	accordionTest = require(dir + 'accordionTest.vue');
 //button
 var btnTest = require(dir + 'btnTest.vue');
 //progress
@@ -208,6 +208,7 @@ module.exports = {
 		'alert' : alertTest,
 		'confirm' : confirmTest,
 		'prompt' : promptTest,
+		'actions' : actionsTest,
 		'panel' : panelTest,
 		'accordion' : accordionTest,
 		'btn' : btnTest,

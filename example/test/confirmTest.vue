@@ -11,7 +11,6 @@
 	<div class="info__demo">
 		
 		<a class="test-btn test-btn-confirm" v-on="click:show=true">confirm</a>
-		<div class="t-dimmer" v-show="show"></div>
 		<confirm show="{{@show}}" title="{{title}}" content="{{content}}" on-confirm="{{onConfirm}}" on-cancel="{{onCancel}}"></confirm>
 
 		<pre>

@@ -78,6 +78,9 @@ module.exports = {
 					},{
 						name : 'prompt',
 						id : 'prompt'
+					},{
+						name : 'actions',
+						id : 'actions'
 					}
 				]
 			},{

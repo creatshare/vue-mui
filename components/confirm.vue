@@ -1,5 +1,6 @@
 <template>
-<div class="t-modal" v-show="show" v-el="modal">
+<div class="t-dimmer" v-show="show"></div>
+<div class="t-modal" v-show="show">
 	<div class="t-modal__header">
 		<h3 class="t-modal__header--tt" v-show="title !== ''" v-text="title"></h3>
 		<p class="t-modal__header--ct" v-text="content"></p>

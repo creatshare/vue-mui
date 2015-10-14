@@ -1,4 +1,5 @@
 @import 'base.less';
+@btn-height: 46px;
 /**
  * 模态框组件
  */
@@ -14,6 +15,20 @@
 }
 .btn-active{
 	background-color: #ddd;
+}
+.border-top{
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	heiht: 1px;
+	border-top: 1px solid @border-color;
+	-webkit-transform: scaleY(.5);
+	transform: scaleY(.5);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	z-index: 1001;
 }
 .t-dimmer{
 	position: fixed;
@@ -60,18 +75,8 @@
 		border-collapse: collapse;
 
 		&:before{
-			display: block;
 			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 1px;
-			border-top: 1px solid @border-color;
-			-webkit-transform: scaleY(.5);
-			transform: scaleY(.5);
-			transform-origin: 0 0;
-			z-index: 1001;
+			.border-top;
 		}
 
 		&--btn{
@@ -98,5 +103,49 @@
 				transform-origin: 0 0;
 			}
 		}
+	}
+}
+.t-actions{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	font-size: 14px;
+	text-align: center;
+	z-index: 1001;
+
+	&__list{
+		color: @font-color-54;
+		background-color: @base-color;
+
+		&--tt{
+			color: @font-color-87;
+		}
+
+		li{
+			position: relative;
+			display: block;
+			height: @btn-height;
+			line-height: @btn-height;
+			overflow: hidden;
+    		text-overflow: ellipsis;
+			word-wrap: normal;
+    		white-space: nowrap;
+		}
+		li+li{
+			&:before{
+				content : '';
+				.border-top;
+			}
+		}
+	}
+
+	&__cancel{
+		display: block;
+		margin-top: 10px;
+		height: @btn-height;
+		line-height: @btn-height;
+		color: #fff;
+		background-color: @color-blue;
 	}
 }
