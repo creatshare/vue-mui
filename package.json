@@ -42,7 +42,8 @@
     "vue",
     "vue-components",
     "vue-mui",
-    "vue-mobile"
+    "vue-mobile",
+    "mobile components"
   ],
   "bugs": {
     "url": "https://github.com/mennghao/vue-mui/issues"
