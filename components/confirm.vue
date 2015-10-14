@@ -13,6 +13,11 @@
 
 <script>
 module.exports = {
+	data : function(){
+		return {
+			name : 'fix-position'
+		}
+	},
 	props : {
 		show : {
 			type : Boolean,

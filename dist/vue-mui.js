@@ -130,6 +130,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = {
+		data : function(){
+			return {
+				name : 'fix-position'
+			}
+		},
 		props : {
 			show : {
 				type : Boolean,
@@ -501,7 +506,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = {
 		data : function(){
 			return {
-				key : ''
+				key : '',
+				name : 'fix-position'
 			}
 		},
 		props : {

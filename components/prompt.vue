@@ -31,7 +31,8 @@
 module.exports = {
 	data : function(){
 		return {
-			key : ''
+			key : '',
+			name : 'fix-position'
 		}
 	},
 	props : {

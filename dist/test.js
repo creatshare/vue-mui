@@ -11188,6 +11188,11 @@
 /***/ function(module, exports) {
 
 	module.exports = {
+		data : function(){
+			return {
+				name : 'fix-position'
+			}
+		},
 		props : {
 			show : {
 				type : Boolean,
@@ -11389,7 +11394,8 @@
 	module.exports = {
 		data : function(){
 			return {
-				key : ''
+				key : '',
+				name : 'fix-position'
 			}
 		},
 		props : {
