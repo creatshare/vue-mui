@@ -17,3 +17,8 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+.aside-fix {
+  position: fixed;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
