@@ -7,11 +7,11 @@
 </style>
 
 <template>
-<div class="info__bd" id="m-aside-aside">
-	<h2>Aside</h2>
+<div class="info__bd" id="m-aside-sidebar">
+	<h2>Sidebar</h2>
 	<div class="info__demo">
 		
-		<a class="test-btn test-btn-alert" v-on="click:show=true">aside</a>
+		<a class="test-btn test-btn-alert" v-on="click:show=true">sidebar</a>
 		<sidebar show="{{@show}}">
 			<div class="aside-test">
 				<p>The most distant way in the world</p>
@@ -22,7 +22,7 @@
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
-<a v-on="click:show=true">aside</a>
+<a v-on="click:show=true">sidebar</a>
 
 <sidebar show="{{@show}}">
 	<div>

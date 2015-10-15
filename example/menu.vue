@@ -118,8 +118,8 @@ module.exports = {
 				id : 'aside',
 				show : false,
 				children : [{
-						name : 'aside',
-						id : 'aside'
+						name : 'sidebar',
+						id : 'sidebar'
 				}]
 			}]
 		}

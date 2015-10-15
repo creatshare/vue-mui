@@ -246,6 +246,7 @@ li {
   background-color: #252525;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  z-index: 1011;
 }
 .aside-fix {
   position: fixed;

@@ -55,14 +55,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-		Alert : __webpack_require__(9),
-		Confirm : __webpack_require__(12),
-		Prompt : __webpack_require__(15),
-		Actions : __webpack_require__(22),
-		Panel : __webpack_require__(27),
-		Accordion : __webpack_require__(32),
-		Button : __webpack_require__(37),
-		Progress : __webpack_require__(42)
+		Alert : __webpack_require__(10),
+		Confirm : __webpack_require__(13),
+		Prompt : __webpack_require__(16),
+		Actions : __webpack_require__(23),
+		Panel : __webpack_require__(28),
+		Accordion : __webpack_require__(33),
+		Button : __webpack_require__(38),
+		Progress : __webpack_require__(43),
+		Sidebar : __webpack_require__(48)
 	}
 
 /***/ },
@@ -74,15 +75,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 6 */,
 /* 7 */,
 /* 8 */,
-/* 9 */
+/* 9 */,
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(10)
-	module.exports.template = __webpack_require__(11)
+	module.exports = __webpack_require__(11)
+	module.exports.template = __webpack_require__(12)
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -114,21 +116,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-dimmer\" v-show=\"show\"></div>\n<div class=\"t-modal\" v-show=\"show\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(13)
-	module.exports.template = __webpack_require__(14)
+	module.exports = __webpack_require__(14)
+	module.exports.template = __webpack_require__(15)
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -166,31 +168,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-dimmer\" v-show=\"show\"></div>\n<div class=\"t-modal\" v-show=\"show\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onCancel\">取消</a>\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onConfirm\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(16)
-	module.exports = __webpack_require__(20)
-	module.exports.template = __webpack_require__(21)
+	__webpack_require__(17)
+	module.exports = __webpack_require__(21)
+	module.exports.template = __webpack_require__(22)
 
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(17);
+	var content = __webpack_require__(18);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(19)(content, {});
+	var update = __webpack_require__(20)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -207,10 +209,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(19)();
 	// imports
 	
 	
@@ -221,7 +223,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports) {
 
 	/*
@@ -277,7 +279,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -502,7 +504,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -547,31 +549,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-dimmer\" v-show=\"show\"></div>\n<div class=\"t-modal\" v-show=\"show\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-prompt-ipt\">\n\t\t<input type=\"text\" v-model=\"key\">\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onCancel\">取消</a>\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: fnConfirm\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(23)
-	module.exports = __webpack_require__(25)
-	module.exports.template = __webpack_require__(26)
+	__webpack_require__(24)
+	module.exports = __webpack_require__(26)
+	module.exports.template = __webpack_require__(27)
 
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(24);
+	var content = __webpack_require__(25);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(19)(content, {});
+	var update = __webpack_require__(20)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -588,10 +590,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(19)();
 	// imports
 	
 	
@@ -602,7 +604,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -630,31 +632,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-dimmer\" v-show=\"show\"></div>\n<div class=\"t-actions\" v-show=\"show\" v-transition=\"actions\">\n\t<ul class=\"t-actions__list\">\n\t\t<li class=\"t-actions__list--tt\" v-if=\"title\" v-text=\"title\"></li>\n\t\t<content></content>\n\t</ul>\n\t<a class=\"t-actions__cancel\" v-on=\"click:show=false\">取消</a>\n</div>";
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(28)
-	module.exports = __webpack_require__(30)
-	module.exports.template = __webpack_require__(31)
+	__webpack_require__(29)
+	module.exports = __webpack_require__(31)
+	module.exports.template = __webpack_require__(32)
 
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(29);
+	var content = __webpack_require__(30);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(19)(content, {});
+	var update = __webpack_require__(20)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -671,10 +673,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(19)();
 	// imports
 	
 	
@@ -685,7 +687,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -734,31 +736,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-panel\">\n\t<header class=\"t-panel__hd\" v-on=\"click:toggle\" v-text=\"title\"></header>\n\t<div class=\"t-panel__bd\" v-el=\"panel\" v-show=\"show\" v-transition=\"toggle\">\n\t\t<div class=\"t-panel__bd--ct\">\n\t\t\t<content></content>\t\n\t\t</div>\n\t</div>\n</div>";
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(33)
-	module.exports = __webpack_require__(35)
-	module.exports.template = __webpack_require__(36)
+	__webpack_require__(34)
+	module.exports = __webpack_require__(36)
+	module.exports.template = __webpack_require__(37)
 
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(34);
+	var content = __webpack_require__(35);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(19)(content, {});
+	var update = __webpack_require__(20)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -775,10 +777,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(19)();
 	// imports
 	
 	
@@ -789,7 +791,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -820,31 +822,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-accordion\">\n\t<content></content>\n</div>";
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(38)
-	module.exports = __webpack_require__(40)
-	module.exports.template = __webpack_require__(41)
+	__webpack_require__(39)
+	module.exports = __webpack_require__(41)
+	module.exports.template = __webpack_require__(42)
 
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(39);
+	var content = __webpack_require__(40);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(19)(content, {});
+	var update = __webpack_require__(20)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -861,10 +863,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(19)();
 	// imports
 	
 	
@@ -875,7 +877,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -900,31 +902,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports) {
 
 	module.exports = "<a class=\"t-btn\" v-class=\"'t-btn--'+type\" v-on=\"click:callback\">button</a>";
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(43)
-	module.exports = __webpack_require__(45)
-	module.exports.template = __webpack_require__(46)
+	__webpack_require__(44)
+	module.exports = __webpack_require__(46)
+	module.exports.template = __webpack_require__(47)
 
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(44);
+	var content = __webpack_require__(45);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(19)(content, {});
+	var update = __webpack_require__(20)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -941,10 +943,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(19)();
 	// imports
 	
 	
@@ -955,7 +957,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1047,10 +1049,153 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-progress-bar\" v-style=\"background-color:color,\n\t\t\t\t\t\t\t\t\t transform:'translate3d(-100%,0,0)',\n\t\t\t\t\t\t\t\t\t display:'none'\"></div>";
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(49)
+	module.exports = __webpack_require__(51)
+	module.exports.template = __webpack_require__(52)
+
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(50);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(20)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./sidebar.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./sidebar.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 50 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(19)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".ani-sidebar-transition{\n\t-webkit-transition: -webkit-transform .3s ease-in-out;\n    transition: transform .3s ease-in-out;\n    -webkit-transform: translateX(0);\n    transform: translateX(0);\n}\n.ani-sidebar-enter,\n.ani-sidebar-leave{\n\t-webkit-transform: translateX(-100%);\n    transform: translateX(-100%);\n}", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 51 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		data : function(){
+			return {
+				name : 'aside-fix',
+				top : 0
+			}
+		},
+		props : {
+			show : {
+				type : Boolean,
+				default : false
+			}
+		},
+		watch : {
+			'show' : function(val){
+				if (val) {
+					this.fix(val);
+				}
+			}
+		},
+		methods : {
+			/**
+			 * [close this component]
+			 * @param  {[type]} e [description]
+			 * @return {[type]}   [description]
+			 */
+			close : function(e){
+				var that = this;
+				console.log(e.target)
+				if (e.target.className === 't-aside-dimmer') {
+					that.show = false;
+					this.fix(false);
+				}
+			},
+			/**
+			 * [As the aside opened, fix body position]
+			 * @return {[type]} [description]
+			 */
+			fix : function(data){
+				var that = this,
+					_html = document.documentElement,
+					_body = document.body;
+	
+				if (data) {
+	
+					that.top = _body.scrollTop;
+	
+					_html.style.marginTop = '-' + that.top + 'px';
+	
+					that.setBodyStyle(_body, _html.getBoundingClientRect().width, window.screen.height);
+				} else {
+	
+					//wait transiton end
+					setTimeout(function(){
+						_html.style.marginTop = '';
+						that.setBodyStyle.call(that, _body, '','',that.top);
+					}, 300);
+					
+				}
+				
+	
+			},
+			/**
+			 * [setBodyStyle description]
+			 * @param {[type]} w [width]
+			 * @param {[type]} h [height]
+			 * @param {[type]} t [scrollTop]
+			 */
+			setBodyStyle : function(b, w, h, t){
+				
+				if (t) {				
+					b.style.cssText = '';
+					b.classList.remove(this.name);
+					b.scrollTop = t;
+				} else {
+					b.style.width = w + 'px';
+					b.style.height = h + 'px';
+					b.classList.add(this.name);
+				}
+			}
+		}
+	
+	}
+
+/***/ },
+/* 52 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"t-aside\" v-show=\"show\" v-transition=\"ani-sidebar\">\n\t<content></content>\n</div>\n<div class=\"t-aside-dimmer\" v-show=\"show\" v-on=\"click:close($event)\"></div>";
 
 /***/ }
 /******/ ])

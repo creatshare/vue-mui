@@ -13,10 +13,10 @@
 </style>
 
 <template>
-<div class="t-aside-dimmer" v-show="show" v-on="click:close($event)"></div>
 <div class="t-aside" v-show="show" v-transition="ani-sidebar">
 	<content></content>
 </div>
+<div class="t-aside-dimmer" v-show="show" v-on="click:close($event)"></div>
 </template>
 
 <script>
@@ -35,7 +35,9 @@ module.exports = {
 	},
 	watch : {
 		'show' : function(val){
-			this.fix(val);
+			if (val) {
+				this.fix(val);
+			}
 		}
 	},
 	methods : {
@@ -46,8 +48,10 @@ module.exports = {
 		 */
 		close : function(e){
 			var that = this;
+			console.log(e.target)
 			if (e.target.className === 't-aside-dimmer') {
 				that.show = false;
+				this.fix(false);
 			}
 		},
 		/**
@@ -85,12 +89,14 @@ module.exports = {
 		 * @param {[type]} t [scrollTop]
 		 */
 		setBodyStyle : function(b, w, h, t){
-			b.style.width = w + 'px';
-			b.style.height = h + 'px';
-			if (t) {
+			
+			if (t) {				
+				b.style.cssText = '';
 				b.classList.remove(this.name);
 				b.scrollTop = t;
 			} else {
+				b.style.width = w + 'px';
+				b.style.height = h + 'px';
 				b.classList.add(this.name);
 			}
 		}

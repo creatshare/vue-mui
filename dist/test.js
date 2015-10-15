@@ -10868,8 +10868,8 @@
 					id : 'aside',
 					show : false,
 					children : [{
-							name : 'aside',
-							id : 'aside'
+							name : 'sidebar',
+							id : 'sidebar'
 					}]
 				}]
 			}
@@ -12550,7 +12550,9 @@
 		},
 		watch : {
 			'show' : function(val){
-				this.fix(val);
+				if (val) {
+					this.fix(val);
+				}
 			}
 		},
 		methods : {
@@ -12561,8 +12563,10 @@
 			 */
 			close : function(e){
 				var that = this;
+				console.log(e.target)
 				if (e.target.className === 't-aside-dimmer') {
 					that.show = false;
+					this.fix(false);
 				}
 			},
 			/**
@@ -12600,12 +12604,14 @@
 			 * @param {[type]} t [scrollTop]
 			 */
 			setBodyStyle : function(b, w, h, t){
-				b.style.width = w + 'px';
-				b.style.height = h + 'px';
-				if (t) {
+				
+				if (t) {				
+					b.style.cssText = '';
 					b.classList.remove(this.name);
 					b.scrollTop = t;
 				} else {
+					b.style.width = w + 'px';
+					b.style.height = h + 'px';
 					b.classList.add(this.name);
 				}
 			}
@@ -12617,13 +12623,13 @@
 /* 199 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"t-aside-dimmer\" v-show=\"show\" v-on=\"click:close($event)\"></div>\n<div class=\"t-aside\" v-show=\"show\" v-transition=\"ani-sidebar\">\n\t<content></content>\n</div>";
+	module.exports = "<div class=\"t-aside\" v-show=\"show\" v-transition=\"ani-sidebar\">\n\t<content></content>\n</div>\n<div class=\"t-aside-dimmer\" v-show=\"show\" v-on=\"click:close($event)\"></div>";
 
 /***/ },
 /* 200 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-aside-aside\">\n\t<h2>Aside</h2>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-alert\" v-on=\"click:show=true\">aside</a>\n\t\t<sidebar show=\"{{@show}}\">\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<a v-on=\"click:show=true\">aside</a>\n\n<sidebar show=\"{{@show}}\">\n\t<div>\n\t\t<p>The most distant way in the world</p>\n\t\t<p>is not the way from birth to the end</p>\n\t</div>\n</sidebar>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Sidebar = require('../../components/sidebar.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false\n\t\t}\n\t},\n\tcomponents : {\n\t\t'sidebar' : Sidebar\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t</table>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-aside-sidebar\">\n\t<h2>Sidebar</h2>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-alert\" v-on=\"click:show=true\">sidebar</a>\n\t\t<sidebar show=\"{{@show}}\">\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<a v-on=\"click:show=true\">sidebar</a>\n\n<sidebar show=\"{{@show}}\">\n\t<div>\n\t\t<p>The most distant way in the world</p>\n\t\t<p>is not the way from birth to the end</p>\n\t</div>\n</sidebar>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Sidebar = require('../../components/sidebar.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false\n\t\t}\n\t},\n\tcomponents : {\n\t\t'sidebar' : Sidebar\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
 /* 201 */
