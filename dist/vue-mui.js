@@ -1135,7 +1135,6 @@ return /******/ (function(modules) { // webpackBootstrap
 			 */
 			close : function(e){
 				var that = this;
-				console.log(e.target)
 				if (e.target.className === 't-aside-dimmer') {
 					that.show = false;
 					this.fix(false);
