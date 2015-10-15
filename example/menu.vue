@@ -113,6 +113,14 @@ module.exports = {
 						id : 'bar'
 					}
 				]
+			},{
+				name : 'Aside',
+				id : 'aside',
+				show : false,
+				children : [{
+						name : 'aside',
+						id : 'aside'
+				}]
 			}]
 		}
 	},

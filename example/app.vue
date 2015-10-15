@@ -179,6 +179,16 @@ i{
 
 </div>
 
+<div class="info">
+	<div class="info__header" id="m-aside">
+		<h1>Aside</h1>
+	</div>
+	
+	<sidebar></sidebar>
+
+
+</div>
+
 </template>
 
 <script>
@@ -199,6 +209,8 @@ var panelTest = require(dir + 'panelTest.vue'),
 var btnTest = require(dir + 'btnTest.vue');
 //progress
 var progressTest = require(dir + 'progressTest.vue');
+//aside
+var sidebarTest = require(dir + 'sidebarTest.vue');
 
 
 module.exports = {
@@ -213,6 +225,7 @@ module.exports = {
 		'accordion' : accordionTest,
 		'btn' : btnTest,
 		'progress' : progressTest,
+		'sidebar' : sidebarTest
 	}
 }
 </script>
