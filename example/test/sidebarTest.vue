@@ -11,20 +11,28 @@
 	<h2>Sidebar</h2>
 	<div class="info__demo">
 		
-		<a class="test-btn test-btn-alert" v-on="click:show=true">sidebar</a>
-		<sidebar show="{{@show}}">
+		<a class="test-btn test-btn-bar test-btn-ilb" v-on="click:showLeft=true">sidebar Left</a>
+		<a class="test-btn test-btn-bar test-btn-ilb" v-on="click:showRight=true">sidebar Right</a>
+		<sidebar show="{{@showLeft}}" from="left">
 			<div class="aside-test">
 				<p>The most distant way in the world</p>
 				<p>is not the way from birth to the end</p>
 			</div>
 		</sidebar>
-
+		
+		<sidebar show="{{@showRight}}" from="right">
+			<div class="aside-test">
+				<p>The most distant way in the world</p>
+				<p>is not the way from birth to the end</p>
+			</div>
+		</sidebar>
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
 <a v-on="click:show=true">sidebar</a>
 
-<sidebar show="{{@show}}">
+<sidebar show="{{@show}}"
+		 from="left">
 	<div>
 		<p>The most distant way in the world</p>
 		<p>is not the way from birth to the end</p>
@@ -40,7 +48,7 @@ var Sidebar = require('../../components/sidebar.vue');
 new Vue({
 	data : function(){
 		return {
-			show : false
+			show : false,
 		}
 	},
 	components : {
@@ -64,6 +72,15 @@ new Vue({
 			<td><i>false</i></td>
 			<td>Whether to show this component</td>
 		</tr>
+		<tr>
+			<td>from</td>
+			<td>String</td>
+			<td><i>left</i></td>
+			<td>
+				<p>How to position the sidebar</p>
+				<p>one of <i>left</i><i>right</i></p>
+			</td>
+		</tr>
 	</table>
 </div>
 </template>
@@ -74,7 +91,8 @@ var Sidebar = require('../../components/sidebar.vue');
 module.exports = {
 	data : function(){
 		return {
-			show : false
+			showLeft : false,
+			showRight : false
 		}
 	},
 	components : {

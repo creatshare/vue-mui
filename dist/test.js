@@ -12474,7 +12474,8 @@
 	module.exports = {
 		data : function(){
 			return {
-				show : false
+				showLeft : false,
+				showRight : false
 			}
 		},
 		components : {
@@ -12526,7 +12527,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".ani-sidebar-transition{\n\t-webkit-transition: -webkit-transform .3s ease-in-out;\n    transition: transform .3s ease-in-out;\n    -webkit-transform: translateX(0);\n    transform: translateX(0);\n}\n.ani-sidebar-enter,\n.ani-sidebar-leave{\n\t-webkit-transform: translateX(-100%);\n    transform: translateX(-100%);\n}", ""]);
+	exports.push([module.id, ".ani-open-left-transition,\n.ani-open-right-transition{\n\t-webkit-transition: -webkit-transform .3s ease-in-out;\n    transition: transform .3s ease-in-out;\n    -webkit-transform: translateX(0);\n    transform: translateX(0);\n}\n.ani-open-left-enter,\n.ani-open-left-leave{\n\t-webkit-transform: translateX(-100%);\n    transform: translateX(-100%);\n}\n.ani-open-right-enter,\n.ani-open-right-leave{\n\t-webkit-transform: translateX(100%);\n    transform: translateX(100%);\n}", ""]);
 	
 	// exports
 
@@ -12546,6 +12547,15 @@
 			show : {
 				type : Boolean,
 				default : false
+			},
+			//push or open
+			type : {
+				type : String,
+				default : 'open'
+			},
+			from : {
+				type : String,
+				default : 'left'
 			}
 		},
 		watch : {
@@ -12622,13 +12632,13 @@
 /* 199 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"t-aside\" v-show=\"show\" v-transition=\"ani-sidebar\">\n\t<content></content>\n</div>\n<div class=\"t-aside-dimmer\" v-show=\"show\" v-on=\"click:close($event)\"></div>";
+	module.exports = "<div class=\"t-aside\" v-class=\"'t-aside--'+from\" v-show=\"show\" v-transition=\"ani-open-{{from}}\">\n\t<content></content>\n</div>\n<div class=\"t-aside-dimmer\" v-show=\"show\" v-on=\"click:close($event)\"></div>";
 
 /***/ },
 /* 200 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-aside-sidebar\">\n\t<h2>Sidebar</h2>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-alert\" v-on=\"click:show=true\">sidebar</a>\n\t\t<sidebar show=\"{{@show}}\">\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<a v-on=\"click:show=true\">sidebar</a>\n\n<sidebar show=\"{{@show}}\">\n\t<div>\n\t\t<p>The most distant way in the world</p>\n\t\t<p>is not the way from birth to the end</p>\n\t</div>\n</sidebar>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Sidebar = require('../../components/sidebar.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false\n\t\t}\n\t},\n\tcomponents : {\n\t\t'sidebar' : Sidebar\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t</table>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-aside-sidebar\">\n\t<h2>Sidebar</h2>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-bar test-btn-ilb\" v-on=\"click:showLeft=true\">sidebar Left</a>\n\t\t<a class=\"test-btn test-btn-bar test-btn-ilb\" v-on=\"click:showRight=true\">sidebar Right</a>\n\t\t<sidebar show=\"{{@showLeft}}\" from=\"left\">\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\t\t\n\t\t<sidebar show=\"{{@showRight}}\" from=\"right\">\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<a v-on=\"click:show=true\">sidebar</a>\n\n<sidebar show=\"{{@show}}\"\n\t\t from=\"left\">\n\t<div>\n\t\t<p>The most distant way in the world</p>\n\t\t<p>is not the way from birth to the end</p>\n\t</div>\n</sidebar>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Sidebar = require('../../components/sidebar.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t}\n\t},\n\tcomponents : {\n\t\t'sidebar' : Sidebar\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>from</td>\n\t\t\t<td>String</td>\n\t\t\t<td><i>left</i></td>\n\t\t\t<td>\n\t\t\t\t<p>How to position the sidebar</p>\n\t\t\t\t<p>one of <i>left</i><i>right</i></p>\n\t\t\t</td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
 /* 201 */

@@ -10,13 +10,18 @@
 .t-aside {
   position: fixed;
   top: 0;
-  left: 0;
   bottom: 0;
   width: 250px;
   background-color: #252525;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   z-index: 1011;
+}
+.t-aside--left {
+  left: 0;
+}
+.t-aside--right {
+  right: 0;
 }
 .aside-fix {
   position: fixed;
