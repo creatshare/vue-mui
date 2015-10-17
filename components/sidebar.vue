@@ -103,7 +103,7 @@ module.exports = {
 
 					that.setHtmlStyle(_html);
 					that.setBodyStyle.call(that, _body);
-				}, 300);
+				}, 400);
 				
 			}			
 
