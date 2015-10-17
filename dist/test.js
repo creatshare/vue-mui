@@ -12587,24 +12587,29 @@
 					_html = document.documentElement,
 					_body = document.body;
 	
+	
 				if (data) {
 	
-					that.top = _body.scrollTop;
+					that.top = _body.scrollTop; //cache scrollTop
 	
-					_html.style.marginTop = '-' + that.top + 'px';
+					that.setHtmlStyle(_html, that.top);
 	
 					that.setBodyStyle(_body, _html.getBoundingClientRect().width, window.screen.height);
+					
 				} else {
 	
 					//wait transiton end
 					setTimeout(function(){
-						_html.style.marginTop = '';
-						that.setBodyStyle.call(that, _body, '','',that.top);
+	
+						that.setHtmlStyle(_html);
+						that.setBodyStyle.call(that, _body);
 					}, 300);
 					
-				}
-				
+				}			
 	
+			},
+			setHtmlStyle : function(target, top){
+				target.style.marginTop = top ? '' : '-' + top + 'px';
 			},
 			/**
 			 * [setBodyStyle description]
@@ -12612,17 +12617,17 @@
 			 * @param {[type]} h [height]
 			 * @param {[type]} t [scrollTop]
 			 */
-			setBodyStyle : function(b, w, h, t){
+			setBodyStyle : function(b, w, h){
 				
-				if (t) {				
+				if (w) {		
 					b.style.cssText = '';
 					b.classList.remove(this.name);
-					b.scrollTop = t;
+					b.scrollTop = this.top;
 				} else {
 					b.style.width = w + 'px';
 					b.style.height = h + 'px';
 					b.classList.add(this.name);
-				}
+				};
 			}
 		}
 	
