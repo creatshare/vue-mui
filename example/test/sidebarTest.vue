@@ -13,6 +13,7 @@
 		
 		<a class="test-btn test-btn-bar test-btn-ilb" v-on="click:showLeft=true">sidebar Left</a>
 		<a class="test-btn test-btn-bar test-btn-ilb" v-on="click:showRight=true">sidebar Right</a>
+		<a class="test-btn test-btn-bar test-btn-ilb" v-on="click:openPush">Push</a>
 		<sidebar show="{{@showLeft}}" from="left">
 			<div class="aside-test">
 				<p>The most distant way in the world</p>
@@ -26,6 +27,13 @@
 				<p>is not the way from birth to the end</p>
 			</div>
 		</sidebar>
+		<sidebar show="{{@showPush}}"
+				 type='{{type}}'>
+			<div class="aside-test">
+				<p>The most distant way in the world</p>
+				<p>is not the way from birth to the end</p>
+			</div>
+		</sidebar>
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
@@ -34,6 +42,16 @@
 <sidebar show="{{@show}}"
 		 from="left">
 	<div>
+		<p>The most distant way in the world</p>
+		<p>is not the way from birth to the end</p>
+	</div>
+</sidebar>
+
+----OR----
+
+<sidebar show="{{@showPush}}"
+		 type="push">
+	<div class="aside-test">
 		<p>The most distant way in the world</p>
 		<p>is not the way from birth to the end</p>
 	</div>
@@ -92,11 +110,19 @@ module.exports = {
 	data : function(){
 		return {
 			showLeft : false,
-			showRight : false
+			showRight : false,
+			showPush : false,
+			type : 'open'
 		}
 	},
 	components : {
 		'sidebar' : Sidebar
+	},
+	methods : {
+		openPush : function(){
+			this.showPush = true;
+			this.type = 'push';
+		}
 	}
 }
 

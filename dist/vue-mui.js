@@ -1111,7 +1111,8 @@ return /******/ (function(modules) { // webpackBootstrap
 		data : function(){
 			return {
 				name : 'aside-fix',
-				top : 0
+				top : 0,
+				sidebarWidth : 0
 			}
 		},
 		props : {
@@ -1132,9 +1133,15 @@ return /******/ (function(modules) { // webpackBootstrap
 		watch : {
 			'show' : function(val){
 				if (val) {
-					this.fix(val);
+	
+					if (!this.sidebarWidth) this.sidebarWidth = this.$$.sidebar.getBoundingClientRect().width;
+	
+					this.fix(val);	
 				}
 			}
+		},
+		created : function(){
+			if (this.type === 'push') this.from = 'left';
 		},
 		methods : {
 			/**
@@ -1166,9 +1173,12 @@ return /******/ (function(modules) { // webpackBootstrap
 					that.setHtmlStyle(_html, that.top);
 	
 					that.setBodyStyle(_body, _html.getBoundingClientRect().width, window.screen.height);
+	
+					if (that.type === 'push') that.setPush(_body);
 					
 				} else {
 	
+					if (that.type === 'push') that.setPush(_body, 1);;
 					//wait transiton end
 					setTimeout(function(){
 	
@@ -1178,6 +1188,13 @@ return /******/ (function(modules) { // webpackBootstrap
 					
 				}			
 	
+			},
+			/**
+			 * [setPush description]
+			 * @param {[type]} b [document.body]
+			 */
+			setPush : function(b, s){
+				b.style.marginLeft = s ? 0 : this.sidebarWidth + 'px';
 			},
 			setHtmlStyle : function(target, top){
 				target.style.marginTop = top ? '-' + top + 'px' : '';
@@ -1210,7 +1227,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 52 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"t-aside\" v-class=\"'t-aside--'+from\" v-show=\"show\" v-transition=\"ani-open-{{from}}\">\n\t<content></content>\n</div>\n<div class=\"t-aside-dimmer\" v-show=\"show\" v-on=\"click:close($event)\"></div>";
+	module.exports = "<div class=\"t-aside\" v-class=\"'t-aside--'+from\" v-show=\"show\" v-transition=\"ani-open-{{from}}\" v-el=\"sidebar\">\n\t<content></content>\n</div>\n<div class=\"t-aside-dimmer\" v-show=\"show\" v-on=\"click:close($event)\"></div>";
 
 /***/ }
 /******/ ])
