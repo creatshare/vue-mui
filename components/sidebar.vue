@@ -99,7 +99,7 @@ module.exports = {
 
 		},
 		setHtmlStyle : function(target, top){
-			target.style.marginTop = top ? '' : '-' + top + 'px';
+			target.style.marginTop = top ? '-' + top + 'px' : '';
 		},
 		/**
 		 * [setBodyStyle description]
@@ -110,13 +110,15 @@ module.exports = {
 		setBodyStyle : function(b, w, h){
 			
 			if (w) {		
-				b.style.cssText = '';
-				b.classList.remove(this.name);
-				b.scrollTop = this.top;
-			} else {
+			
 				b.style.width = w + 'px';
 				b.style.height = h + 'px';
 				b.classList.add(this.name);
+			} else {
+
+				b.style.cssText = '';
+				b.classList.remove(this.name);
+				b.scrollTop = this.top;
 			};
 		}
 	}
