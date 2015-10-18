@@ -1,6 +1,7 @@
 <style lang="less">
 .toggle-transition{
-	transition: height .5s ease;
+	-webkit-transition: height .3s ease;
+	transition: height .3s ease;
 	overflow: hidden;
 }
 .toggle-enter,
