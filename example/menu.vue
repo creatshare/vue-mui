@@ -102,6 +102,9 @@ module.exports = {
 				children : [{
 						name : 'button',
 						id : 'btn'
+					},{
+						name : 'switch',
+						id : 'switch'
 					}
 				]
 			},{
