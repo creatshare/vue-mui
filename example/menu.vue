@@ -105,6 +105,9 @@ module.exports = {
 					},{
 						name : 'switch',
 						id : 'switch'
+					},{
+						name : 'hamburger',
+						id : 'hamburger'
 					}
 				]
 			},{

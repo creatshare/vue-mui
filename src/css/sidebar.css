@@ -16,6 +16,8 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   z-index: 1011;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .t-aside--left {
   left: 0;

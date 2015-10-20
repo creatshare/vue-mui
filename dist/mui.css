@@ -43,6 +43,207 @@
   border-radius: 6px;
   box-sizing: border-box;
 }
+/**
+ * Hamburger
+ */
+.t-hamburger-common {
+  display: block;
+  list-style: none;
+  height: 5px;
+  margin-bottom: 7px;
+  background-color: #fff;
+}
+.t-hamburger {
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  background-color: #4c9cee;
+}
+.t-hamburger li {
+  display: block;
+  list-style: none;
+  height: 5px;
+  margin-bottom: 7px;
+  background-color: #fff;
+}
+.t-hamburger:before,
+.t-hamburger:after {
+  content: '';
+  display: block;
+  list-style: none;
+  height: 5px;
+  margin-bottom: 7px;
+  background-color: #fff;
+}
+.t-hamburger:before {
+  -webkit-animation: hb-top-close 400ms ease-out forwards;
+  animation: hb-top-close 400ms ease-out forwards;
+}
+.t-hamburger:after {
+  -webkit-animation: hb-bottom-close 400ms ease-out forwards;
+  animation: hb-bottom-close 400ms ease-out forwards;
+}
+.t-hamburger li {
+  -webkit-animation: hb-middle-close 400ms ease-out forwards;
+  animation: hb-middle-close 400ms ease-out forwards;
+}
+.t-hamburger.open:before {
+  -webkit-animation: hb-top 400ms ease-out forwards;
+  animation: hb-top 400ms ease-out forwards;
+}
+.t-hamburger.open:after {
+  -webkit-animation: hb-bottom 400ms ease-out forwards;
+  animation: hb-bottom 400ms ease-out forwards;
+}
+.t-hamburger.open li {
+  -webkit-animation: hb-middle 400ms ease-out forwards;
+  animation: hb-middle 400ms ease-out forwards;
+}
+@-webkit-keyframes hb-top {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 12px, 0) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+}
+@keyframes hb-top {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 12px, 0) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+}
+@-webkit-keyframes hb-top-close {
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 12px, 0) rotate(0);
+  }
+  0% {
+    -webkit-transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+}
+@keyframes hb-top-close {
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 12px, 0) rotate(0);
+  }
+  0% {
+    -webkit-transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+}
+@-webkit-keyframes hb-bottom {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -12px, 0) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -12px, 0) rotate(-45deg);
+  }
+}
+@keyframes hb-bottom {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -12px, 0) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -12px, 0) rotate(-45deg);
+  }
+}
+@-webkit-keyframes hb-bottom-close {
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -12px, 0) rotate(0);
+  }
+  0% {
+    -webkit-transform: translate3d(0, -12px, 0) rotate(-45deg);
+  }
+}
+@keyframes hb-bottom-close {
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -12px, 0) rotate(0);
+  }
+  0% {
+    -webkit-transform: translate3d(0, -12px, 0) rotate(-45deg);
+  }
+}
+@-webkit-keyframes hb-middle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hb-middle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes hb-middle-close {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hb-middle-close {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /**
  * 模态框组件
@@ -247,6 +448,8 @@ div {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   z-index: 1011;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .t-aside--left {
   left: 0;

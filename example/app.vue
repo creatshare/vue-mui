@@ -169,6 +169,8 @@ i{
 
 	<switch></switch>
 
+	<hamburger></hamburger>
+
 </div>
 
 <div class="info">
@@ -209,7 +211,8 @@ var panelTest = require(dir + 'panelTest.vue'),
 	accordionTest = require(dir + 'accordionTest.vue');
 //button
 var btnTest = require(dir + 'btnTest.vue'),
-	switchTest = require(dir + 'switchTest.vue');
+	switchTest = require(dir + 'switchTest.vue'),
+	hamburgerTest = require(dir + 'hamburgerTest.vue');
 //progress
 var progressTest = require(dir + 'progressTest.vue');
 //aside
@@ -228,6 +231,7 @@ module.exports = {
 		'accordion' : accordionTest,
 		'btn' : btnTest,
 		'switch' : switchTest,
+		'hamburger' : hamburgerTest,
 		'progress' : progressTest,
 		'sidebar' : sidebarTest
 	}
