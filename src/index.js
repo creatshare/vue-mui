@@ -7,6 +7,7 @@ module.exports = {
 	Accordion : require('../components/accordion.vue'),
 	Button : require('../components/button.vue'),
 	Switch : require('../components/switch.vue'),
+	Hamburger : require('../components/hamburger.vue'),
 	Progress : require('../components/progress.vue'),
 	Sidebar : require('../components/sidebar.vue')
 }
