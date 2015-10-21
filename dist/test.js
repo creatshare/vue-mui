@@ -12930,7 +12930,7 @@
 	
 	
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "#demo-slide-warn {\n  display: none;\n  color: #f92672;\n}\n@media screen and (min-width: 1000px) {\n  #demo-slide-warn {\n    display: block;\n  }\n  #demo-slide {\n    display: none;\n  }\n}\n", ""]);
 	
 	// exports
 
@@ -13071,7 +13071,7 @@
 /* 229 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-slide-slider\">\n\t<h2>slide</h2>\n\t<p class=\"info__bd--hint\" style=\"color:#f92672;\">Touch events only</p>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<slide list=\"{{list}}\"></slide>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<slide list=\"{{list}}\"></slide>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Slide = require('components/slide.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tlist : [{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner5.png',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t},{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner6.jpg',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t},{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner1.jpg',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t}]\n\t\t}\n\t},\n\tcomponents : {\n\t\t'slide' : Slide\n\t}\n})\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>list</td>\n\t\t\t<td>array</td>\n\t\t\t<td></td>\n\t\t\t<td>\n\t\t\t\t<p>pictures url set</p>\n\t\t\t</td>\n\t\t</tr>\n\t</table>\n\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-slide-slider\">\n\t<h2>slide</h2>\n\t<p class=\"info__bd--hint\" id=\"demo-slide-warn\">Touch events only, you can be tested on the your mobile phone</p>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\" id=\"demo-slide\">\n\t\t\t<slide list=\"{{list}}\"></slide>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<slide list=\"{{list}}\"></slide>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Slide = require('components/slide.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tlist : [{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner5.png',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t},{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner6.jpg',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t},{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner1.jpg',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t}]\n\t\t}\n\t},\n\tcomponents : {\n\t\t'slide' : Slide\n\t}\n})\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>list</td>\n\t\t\t<td>array</td>\n\t\t\t<td></td>\n\t\t\t<td>\n\t\t\t\t<p>pictures url set</p>\n\t\t\t</td>\n\t\t</tr>\n\t</table>\n\n</div>";
 
 /***/ },
 /* 230 */

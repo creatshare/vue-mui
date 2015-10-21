@@ -1,12 +1,24 @@
 <style lang="less">
+#demo-slide-warn{
+	display: none;
+	color: #f92672;
+}
+@media screen and (min-width : 1000px) {
+	#demo-slide-warn{
+		display: block;
+	}
+	#demo-slide{
+		display: none;
+	}
+}
 </style>
 
 <template>
 <div class="info__bd" id="m-slide-slider">
 	<h2>slide</h2>
-	<p class="info__bd--hint" style="color:#f92672;">Touch events only</p>
+	<p class="info__bd--hint" id="demo-slide-warn">Touch events only, you can be tested on the your mobile phone</p>
 	<div class="info__demo">
-		<div class="info__demo--show">
+		<div class="info__demo--show" id="demo-slide">
 			<slide list="{{list}}"></slide>
 		</div>
 		<!-- code -->
