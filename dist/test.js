@@ -12978,14 +12978,8 @@
 			return {
 				index : 0,
 				width : 0,
-				xy :{
-					x : 0,
-					y : 0
-				},
-				zz : {
-					x : 0,
-					y : 0
-				}
+				xy : 0, //start position
+				zz : 0 //move distance
 			}
 		},
 		props : {
@@ -12996,16 +12990,30 @@
 		ready : function(){
 			var len = this.list.length;
 	
+			/**
+			 * [Cache parent container width at first]
+			 * @type {[type]}
+			 */
 			this.width = this.$$.box.getBoundingClientRect().width;
 	
 			this.initInner(len)
 				.initImg(len);
 		},
 		methods : {
+			/**
+			 * [Set the width of the inner by list length]
+			 * @param  {[type]} len [Length of the image set]
+			 * @return {[type]}     [description]
+			 */
 			initInner : function(len){
 				this.$$.inner.style.width = len * this.width + 'px';
 				return this;
 			},
+			/**
+			 * [init the width of each list item]
+			 * @param  {[type]} len [Length of the image set]
+			 * @return {[type]}     [description]
+			 */
 			initImg : function(len){
 				var $img = this.$$.inner.children,
 					w =  this.width + 'px';
@@ -13026,27 +13034,36 @@
 				$inner.style.webkitTransform = 'translate3d('+d+'px, 0, 0)';
 				$inner.style.transform = 'translate3d('+d+'px, 0, 0)';
 			},
+			/**
+			 * [Record start position]
+			 * @param  {[type]} e [description]
+			 * @return {[type]}   [description]
+			 */
 			touchstart : function(e){
 				e.preventDefault();
 	
 				var $touches = e.touches[0];
-				this.zz.y = 0;
-				this.xy.x = $touches.clientX;
-				this.xy.y = $touches.clientY;
+				this.zz = 0;
+				this.xy = $touches.clientX;
 			},
+			/**
+			 * [Record moving distance]
+			 * @param  {[type]} e [description]
+			 * @return {[type]}   [description]
+			 */
 			touchmove : function(e){
 				e.preventDefault();
 				var $touches = e.touches[0];
 	
-				this.zz.x = $touches.clientX - this.xy.x;
-				this.zz.y = $touches.clientY - this.xy.y;
-	
-				this.moveInner(this.zz.x);
+				this.zz = $touches.clientX - this.xy;
+				
+				//Follow fingers
+				this.moveInner(this.zz);
 			},
 			touchend : function(e){
 				e.preventDefault();
 				var max = 60,
-					d = this.zz.x;
+					d = this.zz;
 	
 				if (d < -max) { //left
 	
