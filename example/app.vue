@@ -180,7 +180,6 @@ i{
 	
 	<progress></progress>
 
-
 </div>
 
 <div class="info">
@@ -190,6 +189,14 @@ i{
 	
 	<sidebar></sidebar>
 
+</div>
+
+<div class="info">
+	<div class="info__header" id="m-slide">
+		<h1>Slide</h1>
+	</div>
+	
+	<slide></slide>
 
 </div>
 
@@ -217,6 +224,8 @@ var btnTest = require(dir + 'btnTest.vue'),
 var progressTest = require(dir + 'progressTest.vue');
 //aside
 var sidebarTest = require(dir + 'sidebarTest.vue');
+//slide
+var slideTest = require(dir + 'slideTest.vue');
 
 
 module.exports = {
@@ -233,7 +242,8 @@ module.exports = {
 		'switch' : switchTest,
 		'hamburger' : hamburgerTest,
 		'progress' : progressTest,
-		'sidebar' : sidebarTest
+		'sidebar' : sidebarTest,
+		'slide' : slideTest
 	}
 }
 </script>

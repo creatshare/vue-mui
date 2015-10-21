@@ -9,5 +9,6 @@ module.exports = {
 	Switch : require('../components/switch.vue'),
 	Hamburger : require('../components/hamburger.vue'),
 	Progress : require('../components/progress.vue'),
-	Sidebar : require('../components/sidebar.vue')
+	Sidebar : require('../components/sidebar.vue'),
+	Slide : require('../components/slide.vue')
 }

@@ -127,6 +127,14 @@ module.exports = {
 						name : 'sidebar',
 						id : 'sidebar'
 				}]
+			},{
+				name : 'Slide',
+				id : 'slide',
+				show : false,
+				children : [{
+						name : 'slide',
+						id : 'slide'
+				}]
 			}]
 		}
 	},
