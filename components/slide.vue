@@ -7,6 +7,9 @@
 			</a>
 		</li>
 	</ul>
+	<div class="t-slide__indicator">
+		<span v-repeat="its:list" v-class="current:index===$index"></span>
+	</div>
 </div>
 </template>
 

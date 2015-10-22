@@ -1418,7 +1418,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 64 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"t-slide\" v-el=\"box\">\n\t<ul class=\"t-slide__inner\" v-el=\"inner\" v-on=\"touchstart:touchstart,touchmove:touchmove,touchend:touchend\">\n\t\t<li v-repeat=\"its:list\" class=\"t-slide__inner--img\">\n\t\t\t<a v-attr=\"href:its.link\">\n\t\t\t\t<img v-attr=\"src:its.img\">\n\t\t\t</a>\n\t\t</li>\n\t</ul>\n</div>";
+	module.exports = "<div class=\"t-slide\" v-el=\"box\">\n\t<ul class=\"t-slide__inner\" v-el=\"inner\" v-on=\"touchstart:touchstart,touchmove:touchmove,touchend:touchend\">\n\t\t<li v-repeat=\"its:list\" class=\"t-slide__inner--img\">\n\t\t\t<a v-attr=\"href:its.link\">\n\t\t\t\t<img v-attr=\"src:its.img\">\n\t\t\t</a>\n\t\t</li>\n\t</ul>\n\t<div class=\"t-slide__indicator\">\n\t\t<span v-repeat=\"its:list\" v-class=\"current:index===$index\"></span>\n\t</div>\n</div>";
 
 /***/ }
 /******/ ])
