@@ -5,6 +5,7 @@ module.exports = {
 	Actions : require('../components/actions.vue'),
 	Panel : require('../components/panel.vue'),
 	Accordion : require('../components/accordion.vue'),
+	TabPanel : require('../components/tab-panel.vue'),
 	Button : require('../components/button.vue'),
 	Switch : require('../components/switch.vue'),
 	Hamburger : require('../components/hamburger.vue'),

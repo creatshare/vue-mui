@@ -93,6 +93,9 @@ module.exports = {
 					},{
 						name : 'accordion',
 						id : 'accordion'
+					},{
+						name : 'tab-panel',
+						id : 'tab-panel'
 					}
 				]
 			},{

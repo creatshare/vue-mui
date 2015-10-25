@@ -156,7 +156,10 @@ i{
 	</div>
 	
 	<panel></panel>
+
 	<accordion></accordion>
+	
+	<tab-panel></tab-panel>
 
 </div>
 
@@ -215,7 +218,8 @@ var alertTest = require(dir + 'alertTest.vue'),
 	actionsTest = require(dir + 'actionsTest.vue');
 //panel
 var panelTest = require(dir + 'panelTest.vue'),
-	accordionTest = require(dir + 'accordionTest.vue');
+	accordionTest = require(dir + 'accordionTest.vue'),
+	tabPanelTest = require(dir + 'tab-panelTest.vue');
 //button
 var btnTest = require(dir + 'btnTest.vue'),
 	switchTest = require(dir + 'switchTest.vue'),
@@ -238,6 +242,7 @@ module.exports = {
 		'actions' : actionsTest,
 		'panel' : panelTest,
 		'accordion' : accordionTest,
+		'tab-panel' : tabPanelTest,
 		'btn' : btnTest,
 		'switch' : switchTest,
 		'hamburger' : hamburgerTest,
