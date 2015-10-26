@@ -81,6 +81,7 @@ function getConfig(opt){
 		module : {
 			loaders : [
 				{ test : /\.vue$/, loader : "vue"},
+				{ test : /\.json$/, loader : "json"},
 				{ test: /\.png$/, loader: "url-loader?mimetype=image/png" },
 				{ test: /\.css$/, loader: "style!css" },
 				{ test: /\.less$/, loader: "style!css!less" }

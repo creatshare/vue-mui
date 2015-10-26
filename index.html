@@ -8,6 +8,16 @@
 <meta name="description" content="mobile components for Vue.js"/>
 <link rel="stylesheet" href="./example/reset.css">
 <link rel="stylesheet" href="./dist/mui.min.css">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/fastclick/1.0.0/fastclick.min.js"></script>
+<script type="text/javascript">
+(function(){
+    if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            FastClick.attach(document.body);
+        }, false);
+    }
+}())
+</script>
 </head>
 <body>
 <div id="app"></div>
