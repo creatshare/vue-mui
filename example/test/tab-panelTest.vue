@@ -46,6 +46,23 @@ new Vue({
 		</pre>
 	</div>
 
+	<table class="info__opt">
+		<tr>
+			<th>Name</th>
+			<th>type</th>
+			<th>default</th>
+			<th>description</th>
+		</tr>
+		<tr>
+			<td>list</td>
+			<td>Array</td>
+			<td></td>
+			<td>
+				<p>To render the list</p>
+			</td>
+		</tr>
+	</table>
+
 </div>
 </template>
 
