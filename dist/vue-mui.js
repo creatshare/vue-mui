@@ -1438,9 +1438,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				if (link) {
 					window.location.href = link;
 				} else {
-					var next = e.target.nextElementSibling;
-	
-					next.style.display = next.style.display === 'block' ? 'none' : 'block';
+					e.target.classList.toggle('current');
 				}
 			}
 		}

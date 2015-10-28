@@ -294,6 +294,9 @@
   color: rgba(0, 0, 0, 0.87);
   cursor: pointer;
 }
+.t-menu a.current + ul {
+  display: block;
+}
 
 /**
  * 模态框组件
