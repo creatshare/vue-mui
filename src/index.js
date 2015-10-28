@@ -11,5 +11,6 @@ module.exports = {
 	Hamburger : require('../components/hamburger.vue'),
 	Progress : require('../components/progress.vue'),
 	Sidebar : require('../components/sidebar.vue'),
-	Slide : require('../components/slide.vue')
+	Slide : require('../components/slide.vue'),
+	MenuList : require('../components/menu.vue')
 }

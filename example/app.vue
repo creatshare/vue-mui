@@ -203,6 +203,14 @@ i{
 
 </div>
 
+<div class="info">
+	<div class="info__header" id="m-menu">
+		<h1>Menu</h1>
+	</div>
+	
+	<menulist></menulist>
+
+</div>
 </template>
 
 <script>
@@ -230,6 +238,8 @@ var progressTest = require(dir + 'progressTest.vue');
 var sidebarTest = require(dir + 'sidebarTest.vue');
 //slide
 var slideTest = require(dir + 'slideTest.vue');
+//menu
+var menuTest = require(dir + 'menuTest.vue');
 
 
 module.exports = {
@@ -248,7 +258,8 @@ module.exports = {
 		'hamburger' : hamburgerTest,
 		'progress' : progressTest,
 		'sidebar' : sidebarTest,
-		'slide' : slideTest
+		'slide' : slideTest,
+		'menulist' : menuTest
 	}
 }
 </script>

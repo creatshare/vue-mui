@@ -1,7 +1,3 @@
-<style lang="less">
-	
-</style>
-
 <template>
 <a class="t-btn" v-class="'t-btn--'+type" v-on="click:callback">button</a>
 </template>

@@ -127,7 +127,7 @@ module.exports = {
 				id : 'aside',
 				show : false,
 				children : [{
-						name : 'sidebar',
+						name : 'Sidebar',
 						id : 'sidebar'
 				}]
 			},{
@@ -135,8 +135,16 @@ module.exports = {
 				id : 'slide',
 				show : false,
 				children : [{
-						name : 'slide',
+						name : 'Slide',
 						id : 'slide'
+				}]
+			},{
+				name : 'Menu',
+				id : 'menu',
+				show : false,
+				children : [{
+						name : 'MenuList',
+						id : 'menu'
 				}]
 			}]
 		}
