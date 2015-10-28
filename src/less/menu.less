@@ -1,0 +1,58 @@
+@import 'base.less';
+@common-bg: #f1f1f1;
+
+.t-menu{
+	display : -webkit-flex;
+	display : flex;
+	text-align: center;
+	background-color: @common-bg;
+	border: 1px solid @border-color;
+	font-size: 12px;
+
+	&>li{
+		position: relative;
+		flex : 1;
+
+		&+li{
+			border-left: 1px solid @border-color;
+		}
+	}
+
+	&__child{
+		display: none;
+		position: absolute;
+		width: 100%;
+		top: -8px;
+		-webkit-transform: translate3d(0,-100%,0);
+		transform: translate3d(0,-100%,0);
+		background-color: @common-bg;
+		border: 1px solid @border-color;
+		border-radius: 3px;
+
+		&:after{
+			position: absolute;
+			bottom: -5px;
+			left : 50%;
+			content : '';
+			display: block;
+			width: 0;
+			height: 0;
+			border-top: 5px solid @border-color;
+			border-left : 5px solid transparent;
+			border-right : 5px solid transparent;
+			-webkit-transform : translate3d(-50%, 0, 0);
+			transform : translate3d(-50%, 0, 0);
+		}
+
+		&>li+li{
+			border-top: 1px solid @border-color;
+		}
+	}
+
+	a{
+		display : block;
+		line-height: 36px;
+		color: @font-color-87;
+		cursor: pointer;
+	}
+}
