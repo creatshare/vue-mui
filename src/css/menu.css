@@ -1,6 +1,16 @@
 .t-menu {
-  display: -webkit-flex;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-box-align: center;
+  -moz-box-align: justify;
+  -ms-flex-align: center;
+  justify-content: space-between;
   text-align: center;
   background-color: #f1f1f1;
   border: 1px solid #ddd;
@@ -8,6 +18,10 @@
 }
 .t-menu > li {
   position: relative;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 .t-menu > li + li {

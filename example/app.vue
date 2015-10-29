@@ -54,7 +54,7 @@ i{
 			line-height: 38px;
 			font-size: 30px;
 			font-weight: 700;
-			border-bottom: 1px solid @border-color;
+			border-bottom: 1px dashed @border-color;
 		}
 		p{
 			color: @s54;
