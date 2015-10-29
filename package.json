@@ -2,7 +2,7 @@
   "name": "vue-mui",
   "version": "0.0.1",
   "description": "mobile components for Vue.js",
-  "main": "index.js",
+  "main": "dist/vue-mui-min.js",
   "dependencies": {
     "gulp": "^3.9.0",
     "vue": "^0.12.16"
