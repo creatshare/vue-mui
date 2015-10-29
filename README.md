@@ -11,6 +11,9 @@ import mui.css
 ```
 
 ### CommonJS ###
+```
+➜ npm install vue-mui
+```
 example：
 ```HTML
 <template>
@@ -20,7 +23,7 @@ example：
 </template>
 ```
 ```JavaScript
-var Confirm = require('../../components/confirm.vue');
+var Confirm = require('vue-mui').Confirm;
 
 module.exports = {
 	data : function(){
