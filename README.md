@@ -57,10 +57,10 @@ module.exports = {
 ```HTML
 <div id="app"></div>
 <script type="text/javascript" src="./dist/vue.js"></script>
-<script type="text/javascript" src="./dist/vue-mui.js"></script>
+<script type="text/javascript" src="./dist/vue-mui-min.js"></script>
 ```
 ```JavaScript
-var Alert = vueMui.Alert
+var Alert = mui.Alert
 
 var app = new Vue({
     el : '#app',

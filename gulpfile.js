@@ -55,7 +55,7 @@ gulp.task('set', function(){
 			watch: true,
 			output: {
 				filename: 'vue-mui.js',
-				library: 'vue-mui',
+				library: 'mui',
         		libraryTarget: 'umd'
 			},
 		})))
