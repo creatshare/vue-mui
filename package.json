@@ -1,6 +1,6 @@
 {
   "name": "vue-mui",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "mobile components for Vue.js",
   "main": "dist/vue-mui-min.js",
   "dependencies": {
@@ -29,7 +29,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "menngha",
+  "author": "mennghao",
   "license": "MIT",
   "directories": {
     "example": "example"
