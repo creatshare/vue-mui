@@ -24,11 +24,6 @@
 
 <script>
 module.exports = {
-	data : function(){
-		return {
-			name : 'fix-position'
-		}
-	},
 	props : {
 		show : {
 			type : Boolean,
@@ -38,11 +33,6 @@ module.exports = {
 		title : {
 			type : String,
 			default : ''
-		}
-	},
-	watch : {
-		'show' : function(val){
-			console.log(val)
 		}
 	}
 }

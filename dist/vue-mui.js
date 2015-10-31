@@ -618,11 +618,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = {
-		data : function(){
-			return {
-				name : 'fix-position'
-			}
-		},
 		props : {
 			show : {
 				type : Boolean,
@@ -632,11 +627,6 @@ return /******/ (function(modules) { // webpackBootstrap
 			title : {
 				type : String,
 				default : ''
-			}
-		},
-		watch : {
-			'show' : function(val){
-				console.log(val)
 			}
 		}
 	}
