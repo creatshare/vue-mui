@@ -12405,6 +12405,17 @@
 	var Hamburger = __webpack_require__(206);
 	
 	module.exports = {
+		data : function(){
+			return {
+				status : false,
+				msg : '关'
+			}
+		},
+		watch : {
+			'status' : function(val){
+				this.msg = val ? '开' : '关';
+			}
+		},
 		components : {
 			'hamburger' : Hamburger
 		}
@@ -12423,9 +12434,11 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		data : function(){
-			return {
-				status : false
+		props : {
+			status: {
+				type : Boolean,
+				default : false,
+				twoWay : true
 			}
 		}
 	}
@@ -12440,7 +12453,7 @@
 /* 209 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-btn-hamburger\">\n\t<h2>Hamburger</h2>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<hamburger></hamburger>\n\t\t</div>\n\t\t\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<hamburger></hamburger>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Hamburger = require('components/hamburger.vue');\n\nnew Vue({\n\tcomponents : {\n\t\t'hamburger' : Hamburger\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-btn-hamburger\">\n\t<h2>Hamburger <span v-text=\"msg\" style=\"color: #4c9;\"></span></h2>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<hamburger status=\"{{@status}}\"></hamburger>\n\t\t</div>\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<hamburger status=\"{{@status}}\"></hamburger>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Hamburger = require('components/hamburger.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tstatus : false\n\t\t}\n\t},\n\twatch : {\n\t\t'status' : function(val){\n\t\t\t... ...\n\t\t}\n\t},\n\tcomponents : {\n\t\t'hamburger' : Hamburger\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n</div>";
 
 /***/ },
 /* 210 */

@@ -946,9 +946,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = {
-		data : function(){
-			return {
-				status : false
+		props : {
+			status: {
+				type : Boolean,
+				default : false,
+				twoWay : true
 			}
 		}
 	}
