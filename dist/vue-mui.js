@@ -915,14 +915,6 @@ return /******/ (function(modules) { // webpackBootstrap
 				type : Boolean,
 				default : false,
 				toWay : true
-			},
-			callback : {
-				type : Function
-			}
-		},
-		watch : {
-			'status' : function(){
-				this.callback(this.status);
 			}
 		}
 	}

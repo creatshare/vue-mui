@@ -1,7 +1,7 @@
 <template>
 
 <div class="info__bd" id="m-btn-switch">
-	<h2>Switch</h2>
+	<h2>Switch <span style="color:#4c9;" v-text="msg"></span></h2>
 	<div class="info__demo">
 		<div class="info__demo--show">
 			<switch status="{{@status}}" callback="{{toggle}}"></switch>
@@ -10,9 +10,7 @@
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
-<switch status="{{@status}}" 
-		callback="{{toggle}}">
-</switch>
+<switch status="{{@status}}"></switch>
 				</script>
 			</code>
 		</pre>
@@ -21,6 +19,16 @@
 var Switch = require('components/switch.vue');
 
 new Vue({
+	data : function(){
+		return {
+			status : false
+		}
+	},
+	watch : {
+		'status' : function(val){
+			...
+		}
+	},
 	components : {
 		'switch' : Switch
 	}
@@ -42,12 +50,6 @@ new Vue({
 			<td><i>false</i></td>
 			<td>is switch checked, true or false</td>
 		</tr>
-		<tr>
-			<td>callback</td>
-			<td>Function</td>
-			<td></td>
-			<td>A callback Function when you click</td>
-		</tr>
 	</table>
 </div>
 
@@ -59,15 +61,16 @@ var Switch = require('../../components/switch.vue');
 module.exports = {
 	data : function(){
 		return {
-			status : true
+			status : false,
+			msg : '关'
 		}
 	},
 	components : {
 		'switch' : Switch
 	},
-	methods : {
-		toggle : function(val){
-			console.log(val)
+	watch : {
+		'status' : function(val){
+			this.msg = val ? '开' : '关';
 		}
 	}
 }

@@ -12314,15 +12314,16 @@
 	module.exports = {
 		data : function(){
 			return {
-				status : true
+				status : false,
+				msg : '关'
 			}
 		},
 		components : {
 			'switch' : Switch
 		},
-		methods : {
-			toggle : function(val){
-				console.log(val)
+		watch : {
+			'status' : function(val){
+				this.msg = val ? '开' : '关';
 			}
 		}
 	}
@@ -12345,14 +12346,6 @@
 				type : Boolean,
 				default : false,
 				toWay : true
-			},
-			callback : {
-				type : Function
-			}
-		},
-		watch : {
-			'status' : function(){
-				this.callback(this.status);
 			}
 		}
 	}
@@ -12367,7 +12360,7 @@
 /* 202 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-btn-switch\">\n\t<h2>Switch</h2>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<switch status=\"{{@status}}\" callback=\"{{toggle}}\"></switch>\n\t\t</div>\n\t\t\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<switch status=\"{{@status}}\" \n\t\tcallback=\"{{toggle}}\">\n</switch>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Switch = require('components/switch.vue');\n\nnew Vue({\n\tcomponents : {\n\t\t'switch' : Switch\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>status</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>is switch checked, true or false</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>callback</td>\n\t\t\t<td>Function</td>\n\t\t\t<td></td>\n\t\t\t<td>A callback Function when you click</td>\n\t\t</tr>\n\t</table>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-btn-switch\">\n\t<h2>Switch <span style=\"color:#4c9;\" v-text=\"msg\"></span></h2>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<switch status=\"{{@status}}\" callback=\"{{toggle}}\"></switch>\n\t\t</div>\n\t\t\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<switch status=\"{{@status}}\"></switch>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Switch = require('components/switch.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tstatus : false\n\t\t}\n\t},\n\twatch : {\n\t\t'status' : function(val){\n\t\t\t...\n\t\t}\n\t},\n\tcomponents : {\n\t\t'switch' : Switch\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>status</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>is switch checked, true or false</td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
 /* 203 */
