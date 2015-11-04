@@ -1,4 +1,6 @@
 # vue-mui
+[![](https://img.shields.io/npm/dt/vue-mui.svg?style=flat-square)](https://www.npmjs.com/package/vue-mui)
+
 mobile components for Vue.js
 
 ## Documentation ##
