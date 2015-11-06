@@ -1,5 +1,5 @@
 <style lang="less">
-@base-color: #888;
+@base-color: #ddd;
 .aside{
 	position: fixed;
 	top: 50px;
@@ -24,7 +24,7 @@
 	}
 
 	a{
-		color: @base-color;
+		color: #888;
 		display: block;
 		line-height: 36px;
 		margin: 10px;
