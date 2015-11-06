@@ -2,11 +2,8 @@
 <div class="info__bd" id="m-menu-menu">
 	<a href="#m-menu-menu" data-scroll><h2>MenuList</h2></a>
 	<div class="info__demo">
-		
-		<div class="info__demo--show">
-			<menulist list="{{list}}"></menulist>		
-		</div>
-		
+		<menulist list="{{list}}"></menulist>		
+	</div>
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
@@ -46,7 +43,6 @@ new Vue({
 })
 			</code>
 		</pre>
-	</div>
 
 </div>
 

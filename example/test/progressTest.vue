@@ -7,7 +7,7 @@
 		<a class="test-btn test-btn-ilb test-btn-green" v-on="click:status='done'">Done</a>
 		<a class="test-btn test-btn-ilb test-btn-black" v-on="click:setNum">random</a>
 		<progress status="{{status}}" num="{{num}}"></progress>
-
+	</div>
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
@@ -26,7 +26,6 @@ new Vue({
 })
 			</code>
 		</pre>
-	</div>
 
 	<table class="info__opt">
 		<tr>

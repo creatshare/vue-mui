@@ -21,6 +21,7 @@
 		<div class="info__demo--show" id="demo-slide">
 			<slide list="{{list}}"></slide>
 		</div>
+	</div>
 		<!-- code -->
 		<pre>
 			<code class="language-markup">
@@ -54,7 +55,6 @@ new Vue({
 })			
 			</code>
 		</pre>
-	</div>
 	
 	<table class="info__opt">
 		<tr>

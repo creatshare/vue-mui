@@ -9,6 +9,7 @@
 			<li v-on="click:test(1)">alert 1</li>
 			<li v-on="click:test(2)">alert 2</li>
 		</actions>
+	</div>
 
 		<pre>
 			<code class="language-markup">
@@ -43,7 +44,6 @@ new Vue({
 })
 			</code>
 		</pre>
-	</div>
 
 	<table class="info__opt">
 		<tr>

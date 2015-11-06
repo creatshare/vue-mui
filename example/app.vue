@@ -15,7 +15,7 @@ html,body{
 	width: 100px;
 	height: 32px;
 	line-height: 32px;
-	margin: 10px;
+	margin-right: 10px;
 	text-align: center;
 	color: #fff;
 	cursor: pointer;
@@ -110,7 +110,7 @@ i{
 	}
 
 	&__demo{
-		overflow: hidden;
+		margin: 15px 0;
 
 		&--show{
 			padding: 10px 15px;

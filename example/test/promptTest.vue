@@ -5,6 +5,7 @@
 		
 		<a class="test-btn test-btn-blue" v-on="click:show=true">prompt</a>
 		<prompt show="{{@show}}" title="{{title}}" content="{{content}}" on-confirm="{{onConfirm}}" on-cancel="{{onCancel}}"></prompt>
+	</div>
 
 		<pre>
 			<code class="language-markup">
@@ -44,7 +45,6 @@ new Vue({
 })
 			</code>
 		</pre>
-	</div>
 	
 	<table class="info__opt">
 		<tr>

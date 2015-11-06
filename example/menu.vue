@@ -21,6 +21,11 @@
 		border-bottom: 1px solid @border-color;
 	    background: url(http://mui.yaobieting.com/src/images/logo.png) no-repeat center center;
     	background-size: auto 60%;
+
+    	a{
+    		display: block;
+    		height: 60px;
+    	}
 	}
 
 	&__index{
@@ -57,7 +62,7 @@
 
 <template>
 <div class="menu">
-<h2>vue-mui</h2>
+<h2><a href="http://mui.yaobieting.com/">vue-mui</a></h2>
 <ul class="menu__index" v-el="menu">
 	<li v-repeat="item : list">
 		<a data-scroll v-attr="href:'#m-'+item.id" v-on="click:toggle(item.id)" v-text="item.name" v-class="active:act==='m-'+item.id"></a>

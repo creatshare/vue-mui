@@ -34,6 +34,7 @@
 				<p>is not the way from birth to the end</p>
 			</div>
 		</sidebar>
+	</div>
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
@@ -75,7 +76,6 @@ new Vue({
 })
 			</code>
 		</pre>
-	</div>
 
 	<table class="info__opt">
 		<tr>

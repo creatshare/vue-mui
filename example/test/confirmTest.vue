@@ -6,7 +6,7 @@
 		
 		<a class="test-btn test-btn-green" v-on="click:show=true">confirm</a>
 		<confirm show="{{@show}}" title="{{title}}" content="{{content}}" on-confirm="{{onConfirm}}" on-cancel="{{onCancel}}"></confirm>
-
+	</div>
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
@@ -46,7 +46,6 @@ new Vue({
 })
 			</code>
 		</pre>
-	</div>
 	
 	<table class="info__opt">
 		<tr>

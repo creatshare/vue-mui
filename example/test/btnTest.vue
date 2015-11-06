@@ -12,7 +12,7 @@
 		<div class="info__demo--show">
 			<btn type="default" on-click="{{handle}}"></btn>
 		</div>
-
+	</div>
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
@@ -38,7 +38,6 @@ module.exports = {
 }
 			</code>
 		</pre>
-	</div>
 
 	<table class="info__opt">
 		<tr>

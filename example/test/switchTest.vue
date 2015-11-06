@@ -5,7 +5,7 @@
 		<div class="info__demo--show">
 			<switch status="{{@status}}" callback="{{toggle}}"></switch>
 		</div>
-		
+	</div>
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
@@ -34,7 +34,6 @@ new Vue({
 })
 			</code>
 		</pre>
-	</div>
 
 	<table class="info__opt">
 		<tr>

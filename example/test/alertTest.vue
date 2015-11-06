@@ -6,19 +6,19 @@
 		
 		<a class="test-btn test-btn-blue" data-color="blue" v-on="click:show=true">alert</a>
 		<alert show="{{@show}}" title="{{title}}" content="{{content}}"></alert>
-
-		<pre>
-			<code class="language-markup">
-				<script type="language-mark-up">
+	</div>
+	<pre>
+		<code class="language-markup">
+			<script type="language-mark-up">
 <div class="t-dimmer" v-show="show"></div>
 <alert show="{{@show}}" 
    	   title="{{title}}" 
    	   content="{{content}}"></alert>
-				</script>
-			</code>
-		</pre>
-		<pre>
-			<code class="language-javascript">
+			</script>
+		</code>
+	</pre>
+	<pre>
+		<code class="language-javascript">
 var Alert = require('vue-mui').Alert;
 
 new Vue({
@@ -33,9 +33,8 @@ new Vue({
 		'alert' : Alert
 	}
 })
-			</code>
-		</pre>
-	</div>
+		</code>
+	</pre>
 
 	<table class="info__opt">
 		<tr>

@@ -5,6 +5,7 @@
 		<div class="info__demo--show">
 			<hamburger status="{{@status}}"></hamburger>
 		</div>
+	</div>
 		<pre>
 			<code class="language-markup">
 				<script type="language-mark-up">
@@ -33,7 +34,6 @@ new Vue({
 })
 			</code>
 		</pre>
-	</div>
 </div>
 
 </template>

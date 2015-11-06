@@ -8,6 +8,7 @@
 				<tab-panel list="{{list}}"></tab-panel>
 			</div>
 		</div>
+	</div>
 		<!-- code -->
 		<pre>
 			<code class="language-markup">
@@ -38,7 +39,6 @@ new Vue({
 })				
 			</code>
 		</pre>
-	</div>
 
 	<table class="info__opt">
 		<tr>
