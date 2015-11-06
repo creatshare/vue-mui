@@ -151,6 +151,27 @@ i{
 		}
 	}
 }
+#back-top{
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 80px;
+	bottom: 40px;
+	background: url(http://mui.yaobieting.com/src/images/back.png) no-repeat center center;
+	background-size: 100%;
+}
+.backtop-transition{
+	-webkit-transition: transform .3s ease;
+	transition: transform .3s ease;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.backtop-enter,
+.backtop-leave{
+	-webkit-transform: translate3d(0, 80px, 0);
+	transform: translate3d(0, 80px, 0);
+}
 @media screen and (max-width : 600px) {
 	.main{
 		width: 100%;
@@ -243,6 +264,7 @@ i{
 
 	</div>
 </div>
+<a href="#m-modal" data-scroll id="back-top" v-show="back" v-transition="backtop"></a>
 </template>
 
 <script>
@@ -277,7 +299,8 @@ var menuTest = require(dir + 'menuTest.vue');
 module.exports = {
 	data : function(){
 		return {
-			id : 'm-modal'
+			id : 'm-modal',
+			back : false
 		}
 	},
 	components : {
@@ -318,6 +341,8 @@ module.exports = {
 				last;
 			top += 100;
 
+			this.setBackTop(top);
+
 			for (var i = 0; i < len; i++) {
 				var link = linkList[i];
 				if (link.offsetTop > top) {
@@ -332,6 +357,13 @@ module.exports = {
 		},
 		setActive : function(id){
 			this.id = id;
+		},
+		/**
+		 * [toggle back to top button]
+		 * @param {[type]} top [description]
+		 */
+		setBackTop : function(top){
+			this.back = top > 500 ? true : false;
 		}
 	}
 }

@@ -10381,7 +10381,7 @@
 	
 	
 	// module
-	exports.push([module.id, "html,\nbody {\n  background-color: #fff;\n  -webkit-font-smoothing: antialiased;\n}\n.test-btn {\n  display: block;\n  width: 100px;\n  height: 32px;\n  line-height: 32px;\n  margin-right: 10px;\n  text-align: center;\n  color: #fff;\n  cursor: pointer;\n  border-radius: 3px;\n  font-size: 12px;\n}\n.test-btn-blue {\n  background-color: #4c9cee;\n}\n.test-btn-green {\n  background-color: #4c9;\n}\n.test-btn-black {\n  background-color: #333;\n}\n.test-btn-ilb {\n  display: inline-block;\n}\ni {\n  display: inline-block;\n  padding: 3px 5px;\n  margin: 0 3px;\n  font-size: 12px;\n  line-height: 12px;\n  font-style: normal;\n  border-radius: 3px;\n  border: 1px solid #ddd;\n  color: #DC5E5E;\n  background-color: #eee;\n}\n.hint {\n  font-size: 12px;\n  margin-top: 20px;\n  line-height: 30px;\n  color: rgba(0, 0, 0, 0.54);\n}\n.main {\n  margin: 0 200px;\n  border-right: 1px solid #ddd;\n}\n.info {\n  background-color: #fff;\n}\n.info a[data-scroll] {\n  display: block;\n  color: rgba(0, 0, 0, 0.87);\n}\n.info__header h1 {\n  padding: 20px;\n  line-height: 20px;\n  font-size: 26px;\n  font-weight: 700;\n  border-bottom: 1px dashed #eee;\n}\n.info__header p {\n  color: rgba(0, 0, 0, 0.54);\n  font-size: 14px;\n  padding: 20px;\n}\n.info__bd {\n  padding: 20px;\n}\n.info__bd h2 {\n  font-weight: 700;\n  font-size: 14px;\n  line-height: 2;\n  margin-bottom: 10px;\n}\n.info__bd h2:before {\n  content: '#';\n  color: #4c9;\n  margin-right: 5px;\n}\n.info__bd h2:hover {\n  color: #4c9;\n}\n.info__bd--hint {\n  margin-bottom: 10px;\n  line-height: 1.5;\n  font-size: 12px;\n  color: rgba(0, 0, 0, 0.54);\n}\n.info__demo {\n  margin: 15px 0;\n}\n.info__demo--show {\n  padding: 10px 15px;\n}\n.info__opt {\n  width: 100%;\n  margin: 20px auto;\n  border: 1px solid #eee;\n  font-size: 12px;\n}\n.info__opt tr {\n  line-height: 40px;\n}\n.info__opt tr + tr {\n  border-top: 1px solid #eee;\n}\n.info__opt th {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.87);\n  font-weight: 700;\n}\n.info__opt th + th,\n.info__opt td + td {\n  border-left: 1px solid #eee;\n}\n.info__opt td {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.54);\n}\n.info__opt td p {\n  line-height: 2;\n}\n@media screen and (max-width: 600px) {\n  .main {\n    width: 100%;\n    margin: 0;\n  }\n  .aside,\n  .menu {\n    display: none;\n  }\n}\n", ""]);
+	exports.push([module.id, "html,\nbody {\n  background-color: #fff;\n  -webkit-font-smoothing: antialiased;\n}\n.test-btn {\n  display: block;\n  width: 100px;\n  height: 32px;\n  line-height: 32px;\n  margin-right: 10px;\n  text-align: center;\n  color: #fff;\n  cursor: pointer;\n  border-radius: 3px;\n  font-size: 12px;\n}\n.test-btn-blue {\n  background-color: #4c9cee;\n}\n.test-btn-green {\n  background-color: #4c9;\n}\n.test-btn-black {\n  background-color: #333;\n}\n.test-btn-ilb {\n  display: inline-block;\n}\ni {\n  display: inline-block;\n  padding: 3px 5px;\n  margin: 0 3px;\n  font-size: 12px;\n  line-height: 12px;\n  font-style: normal;\n  border-radius: 3px;\n  border: 1px solid #ddd;\n  color: #DC5E5E;\n  background-color: #eee;\n}\n.hint {\n  font-size: 12px;\n  margin-top: 20px;\n  line-height: 30px;\n  color: rgba(0, 0, 0, 0.54);\n}\n.main {\n  margin: 0 200px;\n  border-right: 1px solid #ddd;\n}\n.info {\n  background-color: #fff;\n}\n.info a[data-scroll] {\n  display: block;\n  color: rgba(0, 0, 0, 0.87);\n}\n.info__header h1 {\n  padding: 20px;\n  line-height: 20px;\n  font-size: 26px;\n  font-weight: 700;\n  border-bottom: 1px dashed #eee;\n}\n.info__header p {\n  color: rgba(0, 0, 0, 0.54);\n  font-size: 14px;\n  padding: 20px;\n}\n.info__bd {\n  padding: 20px;\n}\n.info__bd h2 {\n  font-weight: 700;\n  font-size: 14px;\n  line-height: 2;\n  margin-bottom: 10px;\n}\n.info__bd h2:before {\n  content: '#';\n  color: #4c9;\n  margin-right: 5px;\n}\n.info__bd h2:hover {\n  color: #4c9;\n}\n.info__bd--hint {\n  margin-bottom: 10px;\n  line-height: 1.5;\n  font-size: 12px;\n  color: rgba(0, 0, 0, 0.54);\n}\n.info__demo {\n  margin: 15px 0;\n}\n.info__demo--show {\n  padding: 10px 15px;\n}\n.info__opt {\n  width: 100%;\n  margin: 20px auto;\n  border: 1px solid #eee;\n  font-size: 12px;\n}\n.info__opt tr {\n  line-height: 40px;\n}\n.info__opt tr + tr {\n  border-top: 1px solid #eee;\n}\n.info__opt th {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.87);\n  font-weight: 700;\n}\n.info__opt th + th,\n.info__opt td + td {\n  border-left: 1px solid #eee;\n}\n.info__opt td {\n  padding: 0 10px;\n  color: rgba(0, 0, 0, 0.54);\n}\n.info__opt td p {\n  line-height: 2;\n}\n#back-top {\n  display: block;\n  width: 40px;\n  height: 40px;\n  position: fixed;\n  right: 80px;\n  bottom: 40px;\n  background: url(http://mui.yaobieting.com/src/images/back.png) no-repeat center center;\n  background-size: 100%;\n}\n.backtop-transition {\n  -webkit-transition: transform .3s ease;\n  transition: transform .3s ease;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n.backtop-enter,\n.backtop-leave {\n  -webkit-transform: translate3d(0, 80px, 0);\n  transform: translate3d(0, 80px, 0);\n}\n@media screen and (max-width: 600px) {\n  .main {\n    width: 100%;\n    margin: 0;\n  }\n  .aside,\n  .menu {\n    display: none;\n  }\n}\n", ""]);
 	
 	// exports
 
@@ -10702,7 +10702,8 @@
 	module.exports = {
 		data : function(){
 			return {
-				id : 'm-modal'
+				id : 'm-modal',
+				back : false
 			}
 		},
 		components : {
@@ -10743,6 +10744,8 @@
 					last;
 				top += 100;
 	
+				this.setBackTop(top);
+	
 				for (var i = 0; i < len; i++) {
 					var link = linkList[i];
 					if (link.offsetTop > top) {
@@ -10757,6 +10760,13 @@
 			},
 			setActive : function(id){
 				this.id = id;
+			},
+			/**
+			 * [toggle back to top button]
+			 * @param {[type]} top [description]
+			 */
+			setBackTop : function(top){
+				this.back = top > 500 ? true : false;
 			}
 		}
 	}
@@ -13077,7 +13087,7 @@
 /* 234 */
 /***/ function(module, exports) {
 
-	module.exports = "<aside></aside>\n<menu act=\"{{@id}}\"></menu>\n<div class=\"main\">\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-modal\">\n\t\t\t<a href=\"#m-modal\" data-scroll><h1>Modals</h1></a>\n\t\t\t<p>Modals for the browser. <i>alert</i><i>confirm</i><i>prompt</i></p>\n\t\t</div>\n\t\t\n\t\t<alert></alert>\n\n\t\t<confirm></confirm>\n\n\t\t<prompt></prompt>\n\n\t\t<actions></actions>\n\t</div>\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-panel\">\n\t\t\t<a href=\"#m-panel\" data-scroll><h1>Panels</h1></a>\n\t\t\t<p>include<i>default panel</i><i>folding panel</i></p>\n\t\t</div>\n\t\t\n\t\t<panel></panel>\n\n\t\t<accordion></accordion>\n\t\t\n\t\t<tab-panel></tab-panel>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-btn\">\n\t\t\t<a href=\"#m-btn\" data-scroll><h1>Buttons</h1></a>\n\t\t</div>\n\t\t\n\t\t<btn></btn>\n\n\t\t<switch></switch>\n\n\t\t<hamburger></hamburger>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-progress\">\n\t\t\t<a href=\"#m-progress\" data-scroll><h1>Progress</h1></a>\n\t\t</div>\n\t\t\n\t\t<progress></progress>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-aside\">\n\t\t\t<a href=\"#m-aside\" data-scroll><h1>Aside</h1></a>\n\t\t</div>\n\t\t\n\t\t<sidebar></sidebar>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-slide\">\n\t\t\t<a href=\"#m-slide\" data-scroll><h1>Slide</h1></a>\n\t\t</div>\n\t\t\n\t\t<slide></slide>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-menu\">\n\t\t\t<a href=\"#m-menu\" data-scroll><h1>Menu</h1></a>\n\t\t</div>\n\t\t\n\t\t<menulist></menulist>\n\n\t</div>\n</div>";
+	module.exports = "<aside></aside>\n<menu act=\"{{@id}}\"></menu>\n<div class=\"main\">\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-modal\">\n\t\t\t<a href=\"#m-modal\" data-scroll><h1>Modals</h1></a>\n\t\t\t<p>Modals for the browser. <i>alert</i><i>confirm</i><i>prompt</i></p>\n\t\t</div>\n\t\t\n\t\t<alert></alert>\n\n\t\t<confirm></confirm>\n\n\t\t<prompt></prompt>\n\n\t\t<actions></actions>\n\t</div>\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-panel\">\n\t\t\t<a href=\"#m-panel\" data-scroll><h1>Panels</h1></a>\n\t\t\t<p>include<i>default panel</i><i>folding panel</i></p>\n\t\t</div>\n\t\t\n\t\t<panel></panel>\n\n\t\t<accordion></accordion>\n\t\t\n\t\t<tab-panel></tab-panel>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-btn\">\n\t\t\t<a href=\"#m-btn\" data-scroll><h1>Buttons</h1></a>\n\t\t</div>\n\t\t\n\t\t<btn></btn>\n\n\t\t<switch></switch>\n\n\t\t<hamburger></hamburger>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-progress\">\n\t\t\t<a href=\"#m-progress\" data-scroll><h1>Progress</h1></a>\n\t\t</div>\n\t\t\n\t\t<progress></progress>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-aside\">\n\t\t\t<a href=\"#m-aside\" data-scroll><h1>Aside</h1></a>\n\t\t</div>\n\t\t\n\t\t<sidebar></sidebar>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-slide\">\n\t\t\t<a href=\"#m-slide\" data-scroll><h1>Slide</h1></a>\n\t\t</div>\n\t\t\n\t\t<slide></slide>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-menu\">\n\t\t\t<a href=\"#m-menu\" data-scroll><h1>Menu</h1></a>\n\t\t</div>\n\t\t\n\t\t<menulist></menulist>\n\n\t</div>\n</div>\n<a href=\"#m-modal\" data-scroll id=\"back-top\" v-show=\"back\" v-transition=\"backtop\"></a>";
 
 /***/ }
 /******/ ]);
