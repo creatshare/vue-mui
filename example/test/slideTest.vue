@@ -14,8 +14,8 @@
 </style>
 
 <template>
-<div class="info__bd" id="m-slide-slider">
-	<a href="#m-slide-slider" data-scroll><h2>slide</h2></a>
+<div class="info__bd" id="m-slide-slide">
+	<a href="#m-slide-slide" data-scroll><h2>slide</h2></a>
 	<p class="info__bd--hint" id="demo-slide-warn">Touch events only, you can be tested on the your mobile phone</p>
 	<div class="info__demo">
 		<div class="info__demo--show" id="demo-slide">
