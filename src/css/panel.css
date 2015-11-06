@@ -28,6 +28,7 @@ div {
  */
 .t-tab {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
 }
 .t-tab nav {
   width: 100%;
@@ -71,7 +72,7 @@ div {
   border-color: #eee;
 }
 .t-tab nav a.current {
-  background-color: #eee;
+  background-color: #f5f5f5;
   color: #333;
 }
 .t-tab nav a + a:before {
