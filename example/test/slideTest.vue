@@ -15,7 +15,7 @@
 
 <template>
 <div class="info__bd" id="m-slide-slider">
-	<h2>slide</h2>
+	<a href="#m-slide-slider" data-scroll><h2>slide</h2></a>
 	<p class="info__bd--hint" id="demo-slide-warn">Touch events only, you can be tested on the your mobile phone</p>
 	<div class="info__demo">
 		<div class="info__demo--show" id="demo-slide">

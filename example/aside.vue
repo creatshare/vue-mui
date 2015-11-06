@@ -1,9 +1,9 @@
 <style lang="less">
-@base-color: rgba(255,255,255,.54);
+@base-color: #888;
 .aside{
 	position: fixed;
 	top: 50px;
-	right: 10%;
+	right: 60px;
 	border: 1px solid @base-color;
 	border-radius: 3px;
 
@@ -30,7 +30,7 @@
 		margin: 10px;
 
 		&:hover{
-			color: rgba(255,255,255,1);
+			color: #333;
 		}
 	}
 

@@ -1,10 +1,14 @@
 <style lang="less">
 @border-color: #eee;
+@color-green : #4c9;
+@color-blue : #4c9cee;
+@color-black : #333;
 @base-padding: 20px;
 @s87 : rgba(0,0,0,.87);
 @s54 : rgba(0,0,0,.54);
 html,body{
-	background-color: #252528;
+	background-color: #fff;
+	-webkit-font-smoothing: antialiased;
 }
 .test-btn{
 	display: block;
@@ -19,7 +23,15 @@ html,body{
 	font-size: 12px;
 
 	&-blue{
-		background-color: #4c9cee;
+		background-color: @color-blue;
+	}
+
+	&-green{
+		background-color: @color-green;
+	}
+
+	&-black{
+		background-color: @color-black;
 	}
 
 	&-ilb{
@@ -44,15 +56,21 @@ i{
     line-height: 30px;
     color: @s54;
 }
+.main{
+	margin: 0 200px;
+	border-right: 1px solid #ddd;
+}
 .info{
-	width: 50%;
-	margin: 0 auto;
 	background-color: #fff;
+
+	a[data-scroll]{
+		color: @s87;
+	}
 	&__header{
 		h1{
 			padding: @base-padding;
-			line-height: 38px;
-			font-size: 30px;
+			line-height: 20px;
+			font-size: 26px;
 			font-weight: 700;
 			border-bottom: 1px dashed @border-color;
 		}
@@ -67,8 +85,19 @@ i{
 		padding: @base-padding;
 		h2{
 			font-weight: 700;
-			font-size: 16px;
+			font-size: 14px;
 			line-height: 2;
+			margin-bottom: 10px;
+
+			&:before{
+				content: '#';
+				color: @color-green;
+				margin-right: 5px;
+			}
+
+			&:hover{
+				color: @color-green;
+			}
 		}
 
 		&--hint{
@@ -135,81 +164,83 @@ i{
 <template>
 <aside></aside>
 <menu></menu>
-<div class="info">
-	<div class="info__header" id="m-modal">
-		<h1>Modals</h1>
-		<p>Modals for the browser. <i>alert</i><i>confirm</i><i>prompt</i></p>
+<div class="main">
+	<div class="info">
+		<div class="info__header" id="m-modal">
+			<a href="#m-modal" data-scroll><h1>Modals</h1></a>
+			<p>Modals for the browser. <i>alert</i><i>confirm</i><i>prompt</i></p>
+		</div>
+		
+		<alert></alert>
+
+		<confirm></confirm>
+
+		<prompt></prompt>
+
+		<actions></actions>
 	</div>
-	
-	<alert></alert>
+	<div class="info">
+		<div class="info__header" id="m-panel">
+			<a href="#m-panel" data-scroll><h1>Panels</h1></a>
+			<p>include<i>default panel</i><i>folding panel</i></p>
+		</div>
+		
+		<panel></panel>
 
-	<confirm></confirm>
+		<accordion></accordion>
+		
+		<tab-panel></tab-panel>
 
-	<prompt></prompt>
-
-	<actions></actions>
-</div>
-<div class="info">
-	<div class="info__header" id="m-panel">
-		<h1>Panels</h1>
-		<p>include<i>default panel</i><i>folding panel</i></p>
 	</div>
-	
-	<panel></panel>
 
-	<accordion></accordion>
-	
-	<tab-panel></tab-panel>
+	<div class="info">
+		<div class="info__header" id="m-btn">
+			<a href="#m-btn" data-scroll><h1>Buttons</h1></a>
+		</div>
+		
+		<btn></btn>
 
-</div>
+		<switch></switch>
 
-<div class="info">
-	<div class="info__header" id="m-btn">
-		<h1>Buttons</h1>
+		<hamburger></hamburger>
+
 	</div>
-	
-	<btn></btn>
 
-	<switch></switch>
+	<div class="info">
+		<div class="info__header" id="m-progress">
+			<a href="#m-progress" data-scroll><h1>Progress</h1></a>
+		</div>
+		
+		<progress></progress>
 
-	<hamburger></hamburger>
-
-</div>
-
-<div class="info">
-	<div class="info__header" id="m-progress">
-		<h1>Progress</h1>
 	</div>
-	
-	<progress></progress>
 
-</div>
+	<div class="info">
+		<div class="info__header" id="m-aside">
+			<a href="#m-aside" data-scroll><h1>Aside</h1></a>
+		</div>
+		
+		<sidebar></sidebar>
 
-<div class="info">
-	<div class="info__header" id="m-aside">
-		<h1>Aside</h1>
 	</div>
-	
-	<sidebar></sidebar>
 
-</div>
+	<div class="info">
+		<div class="info__header" id="m-slide">
+			<a href="#m-slide" data-scroll><h1>Slide</h1></a>
+		</div>
+		
+		<slide></slide>
 
-<div class="info">
-	<div class="info__header" id="m-slide">
-		<h1>Slide</h1>
 	</div>
-	
-	<slide></slide>
 
-</div>
+	<div class="info">
+		<div class="info__header" id="m-menu">
+			<a href="#m-menu" data-scroll><h1>Menu</h1></a>
+		</div>
+		
+		<menulist></menulist>
 
-<div class="info">
-	<div class="info__header" id="m-menu">
-		<h1>Menu</h1>
 	</div>
-	
-	<menulist></menulist>
-
 </div>
 </template>
 
@@ -260,6 +291,11 @@ module.exports = {
 		'sidebar' : sidebarTest,
 		'slide' : slideTest,
 		'menulist' : menuTest
+	},
+	ready : function(){
+		window.onscroll = function(){
+			console.log(1)
+		}
 	}
 }
 </script>

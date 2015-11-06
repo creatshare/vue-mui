@@ -1,29 +1,38 @@
 <style lang="less">
+@border-color: #ddd;
 .menu{
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 200px;
 	height: 100%;
-	font-size: 12px;
+	font-size: 14px;
+	background-color: #eee;
+	border-right: 1px solid @border-color;
 
 	h2{
-		padding: 20px 20px 0;
-		color: #fff;
+		height: 60px;
+		text-indent: -1000px;
+		border-bottom: 1px solid @border-color;
+	    background: url(http://mui.yaobieting.com/src/images/logo.png) no-repeat center center;
+    	background-size: auto 60%;
 	}
 
 	&__index{
 		padding: 20px;
 
 		&>li{
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 			cursor: pointer;
 
 			a{
 				display: block;
 	    		padding-left: 10px;
-				color: #fff;
-				border-left: 4px solid #4c9cee;
+				color: #333;
+
+				&:hover{
+					color: #4c9cee;
+				}
 			}
 
 
@@ -34,10 +43,7 @@
 	&__children{
 		padding: 10px 20px 0;
 		li{
-			margin-bottom: 10px;
-			a{
-				border-left: 2px solid #4c9;
-			}
+			margin-bottom: 20px;
 		}
 	}
 	
@@ -46,7 +52,7 @@
 
 <template>
 <div class="menu">
-<h2>目录</h2>
+<h2>vue-mui</h2>
 <ul class="menu__index" v-el="menu">
 	<li v-repeat="item : list">
 		<a v-attr="href:'#m-'+item.id" v-on="click:toggle(item)" v-text="item.name"></a>

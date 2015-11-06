@@ -1,8 +1,6 @@
-
-
 <template>
 <div class="info__bd" id="m-panel-accordion">
-	<h2>accordion</h2>
+	<a href="#m-panel-accordion" data-scroll><h2>accordion</h2></a>
 	<div class="info__demo">
 		<div class="info__demo--show">
 			<!-- accordion -->

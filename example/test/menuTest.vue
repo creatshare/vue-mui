@@ -1,6 +1,6 @@
 <template>
 <div class="info__bd" id="m-menu-menu">
-	<h2>MenuList</h2>
+	<a href="#m-menu-menu" data-scroll><h2>MenuList</h2></a>
 	<div class="info__demo">
 		
 		<div class="info__demo--show">

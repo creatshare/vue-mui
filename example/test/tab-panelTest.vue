@@ -1,12 +1,6 @@
-<style lang="less">
-.demo-pannel+.demo-pannel{
-	margin-top: 10px;
-}
-</style>
-
 <template>
 <div class="info__bd" id="m-panel-tab-panel">
-	<h2>tab-panel</h2>
+	<a href="#m-panel-tab-panel" data-scroll><h2>tab-panel</h2></a>
 	<div class="info__demo">
 		<div class="info__demo--show">
 			<div class="demo-pannel">

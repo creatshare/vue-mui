@@ -1,11 +1,6 @@
-<style lang="less">
-	
-</style>
-
 <template>
-
 <div class="info__bd" id="m-modal-prompt">
-	<h2>Prompt</h2>
+	<a href="#m-modal-prompt" data-scroll><h2>Prompt</h2></a>
 	<div class="info__demo">
 		
 		<a class="test-btn test-btn-blue" v-on="click:show=true">prompt</a>

@@ -1,25 +1,11 @@
-<style lang="less">
-.test-btn-bar{
-	&:first-child{
-		background-color: #4c9cee;
-	}
-	&:nth-child(2){
-		background-color: #4c9;
-	}
-	&:nth-child(3){
-		background-color: #333;
-	}
-}	
-</style>
-
 <template>
 <div class="info__bd" id="m-progress-bar">
-	<h2>Progress bar</h2>
+	<a href="#m-progress-bar" data-scroll><h2>Progress bar</h2></a>
 	<div class="info__demo">
 		
-		<a class="test-btn test-btn-ilb test-btn-bar" v-on="click:status='start'">Start</a>
-		<a class="test-btn test-btn-ilb test-btn-bar" v-on="click:status='done'">Done</a>
-		<a class="test-btn test-btn-ilb test-btn-bar" v-on="click:setNum">random</a>
+		<a class="test-btn test-btn-ilb test-btn-blue" v-on="click:status='start'">Start</a>
+		<a class="test-btn test-btn-ilb test-btn-green" v-on="click:status='done'">Done</a>
+		<a class="test-btn test-btn-ilb test-btn-black" v-on="click:setNum">random</a>
 		<progress status="{{status}}" num="{{num}}"></progress>
 
 		<pre>

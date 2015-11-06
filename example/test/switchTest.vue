@@ -1,7 +1,6 @@
 <template>
-
 <div class="info__bd" id="m-btn-switch">
-	<h2>Switch <span style="color:#4c9;" v-text="msg"></span></h2>
+	<a href="#m-btn-switch" data-scroll><h2>Switch <span style="color:#4c9;" v-text="msg"></span></h2></a>
 	<div class="info__demo">
 		<div class="info__demo--show">
 			<switch status="{{@status}}" callback="{{toggle}}"></switch>

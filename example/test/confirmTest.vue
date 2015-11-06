@@ -1,16 +1,10 @@
-<style lang="less">
-.test-btn-confirm{
-	background-color: #4c9;
-}
-</style>
-
 <template>
 <div class="info__bd" id="m-modal-confirm">
-	<h2>Confirm</h2>
+	<a href="#m-modal-confirm" data-scroll><h2>Confirm</h2></a>
 	<p class="info__bd--hint">A rendered 'confirm' with title, content, and set of actions in the footer.</p>
 	<div class="info__demo">
 		
-		<a class="test-btn test-btn-confirm" v-on="click:show=true">confirm</a>
+		<a class="test-btn test-btn-green" v-on="click:show=true">confirm</a>
 		<confirm show="{{@show}}" title="{{title}}" content="{{content}}" on-confirm="{{onConfirm}}" on-cancel="{{onCancel}}"></confirm>
 
 		<pre>

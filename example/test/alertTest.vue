@@ -1,16 +1,10 @@
-<style lang="less">
-.test-btn-alert{
-	background-color: #4c9cee;
-}
-</style>
-
 <template>
 <div class="info__bd" id="m-modal-alert">
-	<h2>Alert</h2>
+	<a href="#m-modal-alert" data-scroll><h2>Alert</h2></a>
 	<p class="info__bd--hint">A rendered 'alert' with title, content, and set of actions in the footer.</p>
 	<div class="info__demo">
 		
-		<a class="test-btn test-btn-alert" v-on="click:show=true">alert</a>
+		<a class="test-btn test-btn-blue" data-color="blue" v-on="click:show=true">alert</a>
 		<alert show="{{@show}}" title="{{title}}" content="{{content}}"></alert>
 
 		<pre>

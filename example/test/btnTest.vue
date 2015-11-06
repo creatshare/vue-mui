@@ -1,10 +1,6 @@
-<style>
-	
-</style>
-
 <template>
 <div class="info__bd" id="m-btn-btn">
-	<h2>botton</h2>
+	<a href="#m-btn-btn" data-scroll><h2>botton</h2></a>
 	<div class="info__demo">
 		
 		<div class="info__demo--show">		

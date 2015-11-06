@@ -6,7 +6,7 @@
 
 <template>
 <div class="info__bd" id="m-panel-panel">
-	<h2>panel</h2>
+	<a href="#m-panel-panel" data-scroll><h2>Panel</h2></a>
 	<div class="info__demo">
 		<div class="info__demo--show">
 			<div class="demo-pannel">

@@ -1,10 +1,6 @@
-<style lang="less">
-	
-</style>
-
 <template>
 <div class="info__bd" id="m-modal-actions">
-	<h2>Actions</h2>
+	<a href="#m-modal-actions" data-scroll><h2>Actions</h2></a>
 	<p class="info__bd--hint">simulate IOS action list</p>
 	<div class="info__demo">
 		

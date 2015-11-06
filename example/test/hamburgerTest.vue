@@ -1,7 +1,6 @@
 <template>
-
 <div class="info__bd" id="m-btn-hamburger">
-	<h2>Hamburger <span v-text="msg" style="color: #4c9;"></span></h2>
+	<a href="#m-btn-hamburger" data-scroll><h2>Hamburger <span v-text="msg" style="color: #4c9;"></span></h2></a>
 	<div class="info__demo">
 		<div class="info__demo--show">
 			<hamburger status="{{@status}}"></hamburger>

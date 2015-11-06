@@ -8,12 +8,12 @@
 
 <template>
 <div class="info__bd" id="m-aside-sidebar">
-	<h2>Sidebar</h2>
+	<a href="#m-aside-sidebar" data-scroll><h2>Sidebar</h2></a>
 	<div class="info__demo">
 		
-		<a class="test-btn test-btn-bar test-btn-ilb" v-on="click:showLeft=true">sidebar Left</a>
-		<a class="test-btn test-btn-bar test-btn-ilb" v-on="click:showRight=true">sidebar Right</a>
-		<a class="test-btn test-btn-bar test-btn-ilb" v-on="click:openPush">Push</a>
+		<a class="test-btn test-btn-blue test-btn-ilb" v-on="click:showLeft=true">from Left</a>
+		<a class="test-btn test-btn-green test-btn-ilb" v-on="click:showRight=true">from Right</a>
+		<a class="test-btn test-btn-black test-btn-ilb" v-on="click:openPush">Push</a>
 		<sidebar show="{{@showLeft}}" from="left">
 			<div class="aside-test">
 				<p>The most distant way in the world</p>
