@@ -22,7 +22,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Actions = require('../../components/actions.vue');
+var Actions = require('vue-mui').Actions;
 
 new Vue({
 	data : function(){

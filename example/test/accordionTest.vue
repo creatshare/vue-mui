@@ -42,15 +42,15 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Panel = require('../../components/panel.vue');
-var Accordion = require('../../components/accordion.vue');
+var Panel = require('vue-mui').Panel;
+var Accordion = require('vue-mui').Accordion;
 
-module.exports = {
+new Vue({
 	components : {
 		'panel' : Panel,
 		'accordion' : Accordion
 	}
-}			
+})	
 			</code>
 		</pre>
 	</div>

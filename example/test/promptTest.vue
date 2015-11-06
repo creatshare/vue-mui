@@ -20,7 +20,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Prompt = require('components/prompt.vue');
+var Prompt = require('vue-mui').Prompt;
 
 new Vue({
 	data : function(){

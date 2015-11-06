@@ -18,7 +18,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Panel = require('components/tab-panel.vue');
+var Panel = require('vue-mui').TabPanel;
 
 new Vue({
 	data : function(){

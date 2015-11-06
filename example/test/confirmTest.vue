@@ -21,7 +21,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Confirm = require('components/confirm.vue');
+var Confirm = require('vue-mui').Confirm;
 
 new Vue({
 	data : function(){

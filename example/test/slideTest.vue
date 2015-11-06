@@ -31,7 +31,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Slide = require('components/slide.vue');
+var Slide = require('vue-mui').Slide;
 
 new Vue({
 	data : function(){

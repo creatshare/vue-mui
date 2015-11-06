@@ -10343,7 +10343,7 @@
 
 	__webpack_require__(100)
 	module.exports = __webpack_require__(104)
-	module.exports.template = __webpack_require__(248)
+	module.exports.template = __webpack_require__(234)
 
 
 /***/ },
@@ -10678,25 +10678,25 @@
 		prismjs = __webpack_require__(117); //语法高亮
 	
 	var alertTest = __webpack_require__(118)(dir + 'alertTest.vue'),
-		confirmTest = __webpack_require__(127)(dir + 'confirmTest.vue'),
-		promptTest = __webpack_require__(136)(dir + 'promptTest.vue'),
-		actionsTest = __webpack_require__(147)(dir + 'actionsTest.vue');
+		confirmTest = __webpack_require__(125)(dir + 'confirmTest.vue'),
+		promptTest = __webpack_require__(132)(dir + 'promptTest.vue'),
+		actionsTest = __webpack_require__(141)(dir + 'actionsTest.vue');
 	//panel
-	var panelTest = __webpack_require__(158)(dir + 'panelTest.vue'),
-		accordionTest = __webpack_require__(177)(dir + 'accordionTest.vue'),
-		tabPanelTest = __webpack_require__(186)(dir + 'tab-panelTest.vue');
+	var panelTest = __webpack_require__(150)(dir + 'panelTest.vue'),
+		accordionTest = __webpack_require__(167)(dir + 'accordionTest.vue'),
+		tabPanelTest = __webpack_require__(176)(dir + 'tab-panelTest.vue');
 	//button
-	var btnTest = __webpack_require__(187)(dir + 'btnTest.vue'),
-		switchTest = __webpack_require__(196)(dir + 'switchTest.vue'),
-		hamburgerTest = __webpack_require__(203)(dir + 'hamburgerTest.vue');
+	var btnTest = __webpack_require__(177)(dir + 'btnTest.vue'),
+		switchTest = __webpack_require__(184)(dir + 'switchTest.vue'),
+		hamburgerTest = __webpack_require__(191)(dir + 'hamburgerTest.vue');
 	//progress
-	var progressTest = __webpack_require__(210)(dir + 'progressTest.vue');
+	var progressTest = __webpack_require__(198)(dir + 'progressTest.vue');
 	//aside
-	var sidebarTest = __webpack_require__(221)(dir + 'sidebarTest.vue');
+	var sidebarTest = __webpack_require__(207)(dir + 'sidebarTest.vue');
 	//slide
-	var slideTest = __webpack_require__(232)(dir + 'slideTest.vue');
+	var slideTest = __webpack_require__(218)(dir + 'slideTest.vue');
 	//menu
-	var menuTest = __webpack_require__(241)(dir + 'menuTest.vue');
+	var menuTest = __webpack_require__(227)(dir + 'menuTest.vue');
 	
 	
 	module.exports = {
@@ -11025,17 +11025,15 @@
 /* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(122)
-	module.exports.template = __webpack_require__(126)
+	module.exports = __webpack_require__(120)
+	module.exports.template = __webpack_require__(124)
 
 
 /***/ },
-/* 120 */,
-/* 121 */,
-/* 122 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Alert = __webpack_require__(123);
+	var Alert = __webpack_require__(121);
 	
 	module.exports = {
 		data : function(){
@@ -11051,15 +11049,15 @@
 	}
 
 /***/ },
-/* 123 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(124)
-	module.exports.template = __webpack_require__(125)
+	module.exports = __webpack_require__(122)
+	module.exports.template = __webpack_require__(123)
 
 
 /***/ },
-/* 124 */
+/* 122 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11091,23 +11089,23 @@
 	}
 
 /***/ },
-/* 125 */
+/* 123 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-dimmer\" v-show=\"show\"></div>\n<div class=\"t-modal\" v-show=\"show\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 126 */
+/* 124 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-modal-alert\">\n\t<a href=\"#m-modal-alert\" data-scroll><h2>Alert</h2></a>\n\t<p class=\"info__bd--hint\">A rendered 'alert' with title, content, and set of actions in the footer.</p>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-blue\" data-color=\"blue\" v-on=\"click:show=true\">alert</a>\n\t\t<alert show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\"></alert>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<alert show=\"{{@show}}\" \n   \t   title=\"{{title}}\" \n   \t   content=\"{{content}}\"></alert>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Alert = require('components/alert.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : 'This is title',\n\t\t\tcontent : 'This is content'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'alert' : Alert\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i>Title of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td>Content of component</td>\n\t\t</tr>\n\t</table>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-modal-alert\">\n\t<a href=\"#m-modal-alert\" data-scroll><h2>Alert</h2></a>\n\t<p class=\"info__bd--hint\">A rendered 'alert' with title, content, and set of actions in the footer.</p>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-blue\" data-color=\"blue\" v-on=\"click:show=true\">alert</a>\n\t\t<alert show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\"></alert>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<alert show=\"{{@show}}\" \n   \t   title=\"{{title}}\" \n   \t   content=\"{{content}}\"></alert>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Alert = require('vue-mui').Alert;\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : 'This is title',\n\t\t\tcontent : 'This is content'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'alert' : Alert\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i>Title of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td>Content of component</td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
-/* 127 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/confirmTest.vue": 128
+		"./test/confirmTest.vue": 126
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -11120,24 +11118,22 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 127;
+	webpackContext.id = 125;
 
 
 /***/ },
-/* 128 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(131)
-	module.exports.template = __webpack_require__(135)
+	module.exports = __webpack_require__(127)
+	module.exports.template = __webpack_require__(131)
 
 
 /***/ },
-/* 129 */,
-/* 130 */,
-/* 131 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Confirm = __webpack_require__(132);
+	var Confirm = __webpack_require__(128);
 	
 	module.exports = {
 		data : function(){
@@ -11170,15 +11166,15 @@
 	}
 
 /***/ },
-/* 132 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(133)
-	module.exports.template = __webpack_require__(134)
+	module.exports = __webpack_require__(129)
+	module.exports.template = __webpack_require__(130)
 
 
 /***/ },
-/* 133 */
+/* 129 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11216,23 +11212,23 @@
 	}
 
 /***/ },
-/* 134 */
+/* 130 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-dimmer\" v-show=\"show\"></div>\n<div class=\"t-modal\" v-show=\"show\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onCancel\">取消</a>\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onConfirm\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 135 */
+/* 131 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-modal-confirm\">\n\t<a href=\"#m-modal-confirm\" data-scroll><h2>Confirm</h2></a>\n\t<p class=\"info__bd--hint\">A rendered 'confirm' with title, content, and set of actions in the footer.</p>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-green\" v-on=\"click:show=true\">confirm</a>\n\t\t<confirm show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\" on-confirm=\"{{onConfirm}}\" on-cancel=\"{{onCancel}}\"></confirm>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<confirm show=\"{{@show}}\"\n\t\t title=\"{{title}}\" \n\t\t content=\"{{content}}\" \n\t\t on-confirm=\"{{onConfirm}}\" \n\t\t on-cancel=\"{{onCancel}}\"></confirm>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Confirm = require('components/confirm.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : 'This is title (optional)',\n\t\t\tcontent : 'This is content'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'confirm' : Confirm\n\t},\n\tmethods : {\n\t\tonConfirm : function(){\n\t\t\t...code...\n\t\t},\n\t\tonCancel : function(){\n\t\t\t...code...\n\t\t}\n\t}\n\t\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th width=\"300\">description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td>false</td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i> Title of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td>Content of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-confirm</td>\n\t\t\t<td>Function</td>\n\t\t\t<td></td>\n\t\t\t<td><p>A callback Function when you click the modal confirm button</p></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-cancel</td>\n\t\t\t<td>Function</td>\n\t\t\t<td></td>\n\t\t\t<td><p>A callback Function when you click the modal cancel button</p></td>\n\t\t</tr>\n\t</table>\n\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-modal-confirm\">\n\t<a href=\"#m-modal-confirm\" data-scroll><h2>Confirm</h2></a>\n\t<p class=\"info__bd--hint\">A rendered 'confirm' with title, content, and set of actions in the footer.</p>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-green\" v-on=\"click:show=true\">confirm</a>\n\t\t<confirm show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\" on-confirm=\"{{onConfirm}}\" on-cancel=\"{{onCancel}}\"></confirm>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<confirm show=\"{{@show}}\"\n\t\t title=\"{{title}}\" \n\t\t content=\"{{content}}\" \n\t\t on-confirm=\"{{onConfirm}}\" \n\t\t on-cancel=\"{{onCancel}}\"></confirm>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Confirm = require('vue-mui').Confirm;\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : 'This is title (optional)',\n\t\t\tcontent : 'This is content'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'confirm' : Confirm\n\t},\n\tmethods : {\n\t\tonConfirm : function(){\n\t\t\t...code...\n\t\t},\n\t\tonCancel : function(){\n\t\t\t...code...\n\t\t}\n\t}\n\t\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th width=\"300\">description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td>false</td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i> Title of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td>Content of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-confirm</td>\n\t\t\t<td>Function</td>\n\t\t\t<td></td>\n\t\t\t<td><p>A callback Function when you click the modal confirm button</p></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-cancel</td>\n\t\t\t<td>Function</td>\n\t\t\t<td></td>\n\t\t\t<td><p>A callback Function when you click the modal cancel button</p></td>\n\t\t</tr>\n\t</table>\n\n</div>";
 
 /***/ },
-/* 136 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/promptTest.vue": 137
+		"./test/promptTest.vue": 133
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -11245,24 +11241,22 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 136;
+	webpackContext.id = 132;
 
 
 /***/ },
-/* 137 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(140)
-	module.exports.template = __webpack_require__(146)
+	module.exports = __webpack_require__(134)
+	module.exports.template = __webpack_require__(140)
 
 
 /***/ },
-/* 138 */,
-/* 139 */,
-/* 140 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Prompt = __webpack_require__(141);
+	var Prompt = __webpack_require__(135);
 	
 	module.exports = {
 		data : function(){
@@ -11294,22 +11288,22 @@
 	}
 
 /***/ },
-/* 141 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(142)
-	module.exports = __webpack_require__(144)
-	module.exports.template = __webpack_require__(145)
+	__webpack_require__(136)
+	module.exports = __webpack_require__(138)
+	module.exports.template = __webpack_require__(139)
 
 
 /***/ },
-/* 142 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(143);
+	var content = __webpack_require__(137);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(103)(content, {});
@@ -11329,7 +11323,7 @@
 	}
 
 /***/ },
-/* 143 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(102)();
@@ -11343,7 +11337,7 @@
 
 
 /***/ },
-/* 144 */
+/* 138 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11388,23 +11382,23 @@
 	}
 
 /***/ },
-/* 145 */
+/* 139 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-dimmer\" v-show=\"show\"></div>\n<div class=\"t-modal\" v-show=\"show\">\n\t<div class=\"t-modal__header\">\n\t\t<h3 class=\"t-modal__header--tt\" v-show=\"title !== ''\" v-text=\"title\"></h3>\n\t\t<p class=\"t-modal__header--ct\" v-text=\"content\"></p>\n\t</div>\n\t<div class=\"t-prompt-ipt\">\n\t\t<input type=\"text\" v-model=\"key\">\n\t</div>\n\t<div class=\"t-modal__footer\">\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: onCancel\">取消</a>\n\t\t<a class=\"t-modal__footer--btn\" v-on=\"click:show=false, click: fnConfirm\">确定</a>\n\t</div>\n</div>";
 
 /***/ },
-/* 146 */
+/* 140 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-modal-prompt\">\n\t<a href=\"#m-modal-prompt\" data-scroll><h2>Prompt</h2></a>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-blue\" v-on=\"click:show=true\">prompt</a>\n\t\t<prompt show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\" on-confirm=\"{{onConfirm}}\" on-cancel=\"{{onCancel}}\"></prompt>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<prompt show=\"{{@show}}\" \n\t\ttitle=\"{{title}}\" \n\t\tcontent=\"{{content}}\" \n\t\ton-confirm=\"{{onConfirm}}\" \n\t\ton-cancel=\"{{onCancel}}\"></prompt>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Prompt = require('components/prompt.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : 'This is title (optional)',\n\t\t\tcontent : 'This is content'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'prompt' : Prompt\n\t},\n\tmethods : {\n\t\tonConfirm : function(data){\n\t\t\t...code...\n\t\t},\n\t\tonCancel : function(){\n\t\t\talert('Clicked the cancel button')\n\t\t}\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th width=\"300\">description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td>false</td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i> Title of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td>Content of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-confirm</td>\n\t\t\t<td>Function</td>\n\t\t\t<td></td>\n\t\t\t<td><p>A callback Function when you click the modal confirm button</p></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-cancel</td>\n\t\t\t<td>Function</td>\n\t\t\t<td></td>\n\t\t\t<td><p>A callback Function when you click the modal cancel button</p></td>\n\t\t</tr>\n\t</table>\n\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-modal-prompt\">\n\t<a href=\"#m-modal-prompt\" data-scroll><h2>Prompt</h2></a>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-blue\" v-on=\"click:show=true\">prompt</a>\n\t\t<prompt show=\"{{@show}}\" title=\"{{title}}\" content=\"{{content}}\" on-confirm=\"{{onConfirm}}\" on-cancel=\"{{onCancel}}\"></prompt>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<div class=\"t-dimmer\" v-show=\"show\"></div>\n<prompt show=\"{{@show}}\" \n\t\ttitle=\"{{title}}\" \n\t\tcontent=\"{{content}}\" \n\t\ton-confirm=\"{{onConfirm}}\" \n\t\ton-cancel=\"{{onCancel}}\"></prompt>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Prompt = require('vue-mui').Prompt;\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t\ttitle : 'This is title (optional)',\n\t\t\tcontent : 'This is content'\n\t\t}\n\t},\n\tcomponents : {\n\t\t'prompt' : Prompt\n\t},\n\tmethods : {\n\t\tonConfirm : function(data){\n\t\t\t...code...\n\t\t},\n\t\tonCancel : function(){\n\t\t\talert('Clicked the cancel button')\n\t\t}\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th width=\"300\">description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td>false</td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i> Title of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>content</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td>Content of component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-confirm</td>\n\t\t\t<td>Function</td>\n\t\t\t<td></td>\n\t\t\t<td><p>A callback Function when you click the modal confirm button</p></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-cancel</td>\n\t\t\t<td>Function</td>\n\t\t\t<td></td>\n\t\t\t<td><p>A callback Function when you click the modal cancel button</p></td>\n\t\t</tr>\n\t</table>\n\n</div>";
 
 /***/ },
-/* 147 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/actionsTest.vue": 148
+		"./test/actionsTest.vue": 142
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -11417,24 +11411,22 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 147;
+	webpackContext.id = 141;
 
 
 /***/ },
-/* 148 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(151)
-	module.exports.template = __webpack_require__(157)
+	module.exports = __webpack_require__(143)
+	module.exports.template = __webpack_require__(149)
 
 
 /***/ },
-/* 149 */,
-/* 150 */,
-/* 151 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Actions = __webpack_require__(152);
+	var Actions = __webpack_require__(144);
 	
 	module.exports = {
 		data : function(){
@@ -11455,22 +11447,22 @@
 	}
 
 /***/ },
-/* 152 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(153)
-	module.exports = __webpack_require__(155)
-	module.exports.template = __webpack_require__(156)
+	__webpack_require__(145)
+	module.exports = __webpack_require__(147)
+	module.exports.template = __webpack_require__(148)
 
 
 /***/ },
-/* 153 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(154);
+	var content = __webpack_require__(146);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(103)(content, {});
@@ -11490,7 +11482,7 @@
 	}
 
 /***/ },
-/* 154 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(102)();
@@ -11504,7 +11496,7 @@
 
 
 /***/ },
-/* 155 */
+/* 147 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11522,24 +11514,24 @@
 	}
 
 /***/ },
-/* 156 */
+/* 148 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-dimmer\" v-show=\"show\"></div>\n<div class=\"t-actions\" v-show=\"show\" v-transition=\"actions\">\n\t<ul class=\"t-actions__list\">\n\t\t<li class=\"t-actions__list--tt\" v-if=\"title\" v-text=\"title\"></li>\n\t\t<content></content>\n\t</ul>\n\t<a class=\"t-actions__cancel\" v-on=\"click:show=false\">取消</a>\n</div>";
 
 /***/ },
-/* 157 */
+/* 149 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-modal-actions\">\n\t<a href=\"#m-modal-actions\" data-scroll><h2>Actions</h2></a>\n\t<p class=\"info__bd--hint\">simulate IOS action list</p>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-blue\" v-on=\"click:show=true\">actions</a>\n\t\t<actions show=\"{{@show}}\" title=\"标题\">\n\t\t\t<li v-on=\"click:test(1)\">alert 1</li>\n\t\t\t<li v-on=\"click:test(2)\">alert 2</li>\n\t\t</actions>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<actions show=\"{{@show}}\" title=\"Title\">\n\t<li v-on=\"click:test(1)\">alert 1</li>\n\t<li v-on=\"click:test(2)\">alert 2</li>\n</actions>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Actions = require('../../components/actions.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false\n\t\t}\n\t},\n\tcomponents : {\n\t\t'actions' : Actions\n\t},\n\tmethods : {\n\t\ttest : function(data){\n\t\t\talert(data);\n\n\t\t\tthis.show = false;\n\t\t}\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i>Title of component</td>\n\t\t</tr>\n\t</table>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-modal-actions\">\n\t<a href=\"#m-modal-actions\" data-scroll><h2>Actions</h2></a>\n\t<p class=\"info__bd--hint\">simulate IOS action list</p>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-blue\" v-on=\"click:show=true\">actions</a>\n\t\t<actions show=\"{{@show}}\" title=\"标题\">\n\t\t\t<li v-on=\"click:test(1)\">alert 1</li>\n\t\t\t<li v-on=\"click:test(2)\">alert 2</li>\n\t\t</actions>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<actions show=\"{{@show}}\" title=\"Title\">\n\t<li v-on=\"click:test(1)\">alert 1</li>\n\t<li v-on=\"click:test(2)\">alert 2</li>\n</actions>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Actions = require('vue-mui').Actions;\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false\n\t\t}\n\t},\n\tcomponents : {\n\t\t'actions' : Actions\n\t},\n\tmethods : {\n\t\ttest : function(data){\n\t\t\talert(data);\n\n\t\t\tthis.show = false;\n\t\t}\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i>Title of component</td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
-/* 158 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/panelTest.vue": 159,
-		"./test/tab-panelTest.vue": 169
+		"./test/panelTest.vue": 151,
+		"./test/tab-panelTest.vue": 161
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -11552,26 +11544,26 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 158;
+	webpackContext.id = 150;
 
 
 /***/ },
-/* 159 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(160)
-	module.exports = __webpack_require__(162)
-	module.exports.template = __webpack_require__(168)
+	__webpack_require__(152)
+	module.exports = __webpack_require__(154)
+	module.exports.template = __webpack_require__(160)
 
 
 /***/ },
-/* 160 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(161);
+	var content = __webpack_require__(153);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(103)(content, {});
@@ -11591,7 +11583,7 @@
 	}
 
 /***/ },
-/* 161 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(102)();
@@ -11605,10 +11597,10 @@
 
 
 /***/ },
-/* 162 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Panel = __webpack_require__(163);
+	var Panel = __webpack_require__(155);
 	
 	module.exports = {
 		components : {
@@ -11617,22 +11609,22 @@
 	}
 
 /***/ },
-/* 163 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(164)
-	module.exports = __webpack_require__(166)
-	module.exports.template = __webpack_require__(167)
+	__webpack_require__(156)
+	module.exports = __webpack_require__(158)
+	module.exports.template = __webpack_require__(159)
 
 
 /***/ },
-/* 164 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(165);
+	var content = __webpack_require__(157);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(103)(content, {});
@@ -11652,7 +11644,7 @@
 	}
 
 /***/ },
-/* 165 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(102)();
@@ -11666,7 +11658,7 @@
 
 
 /***/ },
-/* 166 */
+/* 158 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11715,32 +11707,30 @@
 	}
 
 /***/ },
-/* 167 */
+/* 159 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-panel\">\n\t<header class=\"t-panel__hd\" v-on=\"click:toggle\" v-text=\"title\"></header>\n\t<div class=\"t-panel__bd\" v-el=\"panel\" v-show=\"show\" v-transition=\"toggle\">\n\t\t<div class=\"t-panel__bd--ct\">\n\t\t\t<content></content>\t\n\t\t</div>\n\t</div>\n</div>";
 
 /***/ },
-/* 168 */
+/* 160 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-panel-panel\">\n\t<a href=\"#m-panel-panel\" data-scroll><h2>Panel</h2></a>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 普通面板 -->\n\t\t\t\t<panel show=\"false\" title=\"default panel\">\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t\t\t</div>\n\t\t\t\t</panel>\n\t\t\t</div>\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 折叠面板 -->\n\t\t\t\t<panel show=\"false\" title=\"folding panel\" type=\"fold\">\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t\t\t</div>\n\t\t\t\t</panel>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<panel type=\"normal\" title=\"title\">\n\t<div>\n\t\t<p>The most distant way in the world</p>\n\t\t<p>is not the way from birth to the end</p>\n\t</div>\n</panel>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('../../components/panel.vue');\n\nnew Vue({\n\tcomponents : {\n\t\t'panel' : Panel\n\t}\n})\t\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>type</td>\n\t\t\t<td>String</td>\n\t\t\t<td>normal</td>\n\t\t\t<td>\n\t\t\t\t<p>type of panel <i>optional</i></p>\n\t\t\t\t<p>normal : normal panel</p>\n\t\t\t\t<p>flod : folding panel</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td>Title of this component</td>\n\t\t</tr>\n\t</table>\n\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-panel-panel\">\n\t<a href=\"#m-panel-panel\" data-scroll><h2>Panel</h2></a>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 普通面板 -->\n\t\t\t\t<panel show=\"false\" title=\"default panel\">\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t\t\t</div>\n\t\t\t\t</panel>\n\t\t\t</div>\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 折叠面板 -->\n\t\t\t\t<panel show=\"false\" title=\"folding panel\" type=\"fold\">\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t\t\t</div>\n\t\t\t\t</panel>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<panel type=\"normal\" title=\"title\">\n\t<div>\n\t\t<p>The most distant way in the world</p>\n\t\t<p>is not the way from birth to the end</p>\n\t</div>\n</panel>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('vue-mui').Panel;\n\nnew Vue({\n\tcomponents : {\n\t\t'panel' : Panel\n\t}\n})\t\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>type</td>\n\t\t\t<td>String</td>\n\t\t\t<td>normal</td>\n\t\t\t<td>\n\t\t\t\t<p>type of panel <i>optional</i></p>\n\t\t\t\t<p>normal : normal panel</p>\n\t\t\t\t<p>flod : folding panel</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>title</td>\n\t\t\t<td>String</td>\n\t\t\t<td></td>\n\t\t\t<td>Title of this component</td>\n\t\t</tr>\n\t</table>\n\n</div>";
 
 /***/ },
-/* 169 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(172)
-	module.exports.template = __webpack_require__(176)
+	module.exports = __webpack_require__(162)
+	module.exports.template = __webpack_require__(166)
 
 
 /***/ },
-/* 170 */,
-/* 171 */,
-/* 172 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var panel = __webpack_require__(173);
+	var panel = __webpack_require__(163);
 	
 	module.exports = {
 		data : function(){
@@ -11760,15 +11750,15 @@
 	}
 
 /***/ },
-/* 173 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(174)
-	module.exports.template = __webpack_require__(175)
+	module.exports = __webpack_require__(164)
+	module.exports.template = __webpack_require__(165)
 
 
 /***/ },
-/* 174 */
+/* 164 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11785,23 +11775,23 @@
 	}
 
 /***/ },
-/* 175 */
+/* 165 */
 /***/ function(module, exports) {
 
 	module.exports = "<section class=\"t-tab\">\n\t<nav>\n\t\t<a href=\"javascript:;\" v-repeat=\"its:list\" v-text=\"its.title\" v-class=\"current:index===$index\" v-on=\"click:index=$index\"></a>\n\t</nav>\n\t<div class=\"t-tab__bd\" v-repeat=\"its:list\" v-class=\"current:index===$index\">\n\t\t<p v-text=\"its.content\"></p>\n\t</div>\n</section>";
 
 /***/ },
-/* 176 */
+/* 166 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-panel-tab-panel\">\n\t<a href=\"#m-panel-tab-panel\" data-scroll><h2>tab-panel</h2></a>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 普通面板 -->\n\t\t\t\t<tab-panel list=\"{{list}}\"></tab-panel>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<tab-panel list=\"{{list}}\"></tab-panel>\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('components/tab-panel.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tlist : [{\n\t\t\t\ttitle : 'tab1',\n\t\t\t\tcontent : 'The most distant way in the world'\n\t\t\t},{\n\t\t\t\ttitle : 'tab2',\n\t\t\t\tcontent : 'is not the way from birth to the end'\n\t\t\t}]\n\t\t}\n\t},\n\tcomponents : {\n\t\t'tab-panel' : Panel\n\t}\n})\t\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>list</td>\n\t\t\t<td>Array</td>\n\t\t\t<td></td>\n\t\t\t<td>\n\t\t\t\t<p>To render the list</p>\n\t\t\t</td>\n\t\t</tr>\n\t</table>\n\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-panel-tab-panel\">\n\t<a href=\"#m-panel-tab-panel\" data-scroll><h2>tab-panel</h2></a>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<div class=\"demo-pannel\">\n\t\t\t\t<!-- 演示 普通面板 -->\n\t\t\t\t<tab-panel list=\"{{list}}\"></tab-panel>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<tab-panel list=\"{{list}}\"></tab-panel>\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('vue-mui').TabPanel;\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tlist : [{\n\t\t\t\ttitle : 'tab1',\n\t\t\t\tcontent : 'The most distant way in the world'\n\t\t\t},{\n\t\t\t\ttitle : 'tab2',\n\t\t\t\tcontent : 'is not the way from birth to the end'\n\t\t\t}]\n\t\t}\n\t},\n\tcomponents : {\n\t\t'tab-panel' : Panel\n\t}\n})\t\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>list</td>\n\t\t\t<td>Array</td>\n\t\t\t<td></td>\n\t\t\t<td>\n\t\t\t\t<p>To render the list</p>\n\t\t\t</td>\n\t\t</tr>\n\t</table>\n\n</div>";
 
 /***/ },
-/* 177 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/accordionTest.vue": 178
+		"./test/accordionTest.vue": 168
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -11814,23 +11804,23 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 177;
+	webpackContext.id = 167;
 
 
 /***/ },
-/* 178 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(179)
-	module.exports.template = __webpack_require__(185)
+	module.exports = __webpack_require__(169)
+	module.exports.template = __webpack_require__(175)
 
 
 /***/ },
-/* 179 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Panel = __webpack_require__(163);
-	var Accordion = __webpack_require__(180);
+	var Panel = __webpack_require__(155);
+	var Accordion = __webpack_require__(170);
 	
 	module.exports = {
 		components : {
@@ -11840,22 +11830,22 @@
 	}
 
 /***/ },
-/* 180 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(181)
-	module.exports = __webpack_require__(183)
-	module.exports.template = __webpack_require__(184)
+	__webpack_require__(171)
+	module.exports = __webpack_require__(173)
+	module.exports.template = __webpack_require__(174)
 
 
 /***/ },
-/* 181 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(182);
+	var content = __webpack_require__(172);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(103)(content, {});
@@ -11875,7 +11865,7 @@
 	}
 
 /***/ },
-/* 182 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(102)();
@@ -11889,7 +11879,7 @@
 
 
 /***/ },
-/* 183 */
+/* 173 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11920,23 +11910,23 @@
 	}
 
 /***/ },
-/* 184 */
+/* 174 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-accordion\">\n\t<content></content>\n</div>";
 
 /***/ },
-/* 185 */
+/* 175 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-panel-accordion\">\n\t<a href=\"#m-panel-accordion\" data-scroll><h2>accordion</h2></a>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<!-- accordion -->\n\t\t\t<accordion>\n\t\t\t\t<panel type=\"fold\" title=\"Title 1\">\n\t\t\t\t\t<div>Test Content 1</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 2\" show=\"false\">\n\t\t\t\t\t<div>Test Content 2</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 3\" show=\"false\">\n\t\t\t\t\t<div>Test Content 3</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 4\" show=\"false\">\n\t\t\t\t\t<div>Test Content 4</div>\n\t\t\t\t</panel>\n\t\t\t</accordion>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<accordion>\n\t<panel type=\"fold\" title=\"Title 1\">\n\t\t<div>Test Content 1</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 2\" show=\"false\">\n\t\t<div>Test Content 2</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 3\" show=\"false\">\n\t\t<div>Test Content 3</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 4\" show=\"false\">\n\t\t<div>Test Content 4</div>\n\t</panel>\n</accordion>\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('../../components/panel.vue');\nvar Accordion = require('../../components/accordion.vue');\n\nmodule.exports = {\n\tcomponents : {\n\t\t'panel' : Panel,\n\t\t'accordion' : Accordion\n\t}\n}\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<div class=\"hint\"><i>notice:</i>must import 'panel' component</div>\n\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-panel-accordion\">\n\t<a href=\"#m-panel-accordion\" data-scroll><h2>accordion</h2></a>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<!-- accordion -->\n\t\t\t<accordion>\n\t\t\t\t<panel type=\"fold\" title=\"Title 1\">\n\t\t\t\t\t<div>Test Content 1</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 2\" show=\"false\">\n\t\t\t\t\t<div>Test Content 2</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 3\" show=\"false\">\n\t\t\t\t\t<div>Test Content 3</div>\n\t\t\t\t</panel>\n\t\t\t\t<panel type=\"fold\" title=\"Title 4\" show=\"false\">\n\t\t\t\t\t<div>Test Content 4</div>\n\t\t\t\t</panel>\n\t\t\t</accordion>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<accordion>\n\t<panel type=\"fold\" title=\"Title 1\">\n\t\t<div>Test Content 1</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 2\" show=\"false\">\n\t\t<div>Test Content 2</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 3\" show=\"false\">\n\t\t<div>Test Content 3</div>\n\t</panel>\n\t<panel type=\"fold\" title=\"Title 4\" show=\"false\">\n\t\t<div>Test Content 4</div>\n\t</panel>\n</accordion>\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Panel = require('vue-mui').Panel;\nvar Accordion = require('vue-mui').Accordion;\n\nnew Vue({\n\tcomponents : {\n\t\t'panel' : Panel,\n\t\t'accordion' : Accordion\n\t}\n})\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<div class=\"hint\"><i>notice:</i>must import 'panel' component</div>\n\n</div>";
 
 /***/ },
-/* 186 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/tab-panelTest.vue": 169
+		"./test/tab-panelTest.vue": 161
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -11949,15 +11939,15 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 186;
+	webpackContext.id = 176;
 
 
 /***/ },
-/* 187 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/btnTest.vue": 188
+		"./test/btnTest.vue": 178
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -11970,24 +11960,22 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 187;
+	webpackContext.id = 177;
 
 
 /***/ },
-/* 188 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(191)
-	module.exports.template = __webpack_require__(195)
+	module.exports = __webpack_require__(179)
+	module.exports.template = __webpack_require__(183)
 
 
 /***/ },
-/* 189 */,
-/* 190 */,
-/* 191 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Btn = __webpack_require__(192);
+	var Btn = __webpack_require__(180);
 	
 	module.exports = {
 		components : {
@@ -12003,15 +11991,15 @@
 	}
 
 /***/ },
-/* 192 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(193)
-	module.exports.template = __webpack_require__(194)
+	module.exports = __webpack_require__(181)
+	module.exports.template = __webpack_require__(182)
 
 
 /***/ },
-/* 193 */
+/* 181 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12036,23 +12024,23 @@
 	}
 
 /***/ },
-/* 194 */
+/* 182 */
 /***/ function(module, exports) {
 
 	module.exports = "<a class=\"t-btn\" v-class=\"'t-btn--'+type\" v-on=\"click:callback\">button</a>";
 
 /***/ },
-/* 195 */
+/* 183 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-btn-btn\">\n\t<a href=\"#m-btn-btn\" data-scroll><h2>botton</h2></a>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<div class=\"info__demo--show\">\t\t\n\t\t\t<btn on-click=\"{{handle}}\" opt=\"Click normal button\"></btn>\n\t\t</div>\n\t\t<div class=\"info__demo--show\">\n\t\t\t<btn type=\"warn\" on-click=\"{{handle}}\"></btn>\n\t\t</div>\n\t\t<div class=\"info__demo--show\">\n\t\t\t<btn type=\"default\" on-click=\"{{handle}}\"></btn>\n\t\t</div>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<btn></btn>\n<btn type=\"warn\"></btn>\n<btn type=\"default\" on-click=\"callback\" opt=\"test\"></btn>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Btn = require(components/btn.vue');\n\nmodule.exports = {\n\tcomponents : {\n\t\t'btn' : Btn\n\t},\n\tmethods : {\n\t\tcallback : function(){\n\t\t\t....code....\n\t\t}\n\t}\n}\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th width=\"350\">description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>type</td>\n\t\t\t<td>String</td>\n\t\t\t<td>Type of button <i>normal</i><i>warn</i><i>default</i></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-click</td>\n\t\t\t<td>Function</td>\n\t\t\t<td><p>A callback Function when you click the button component</p></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>opt</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i>The parameter of callback function</td>\n\t\t</tr>\n\t</table>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-btn-btn\">\n\t<a href=\"#m-btn-btn\" data-scroll><h2>botton</h2></a>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<div class=\"info__demo--show\">\t\t\n\t\t\t<btn on-click=\"{{handle}}\" opt=\"Click normal button\"></btn>\n\t\t</div>\n\t\t<div class=\"info__demo--show\">\n\t\t\t<btn type=\"warn\" on-click=\"{{handle}}\"></btn>\n\t\t</div>\n\t\t<div class=\"info__demo--show\">\n\t\t\t<btn type=\"default\" on-click=\"{{handle}}\"></btn>\n\t\t</div>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<btn></btn>\n<btn type=\"warn\"></btn>\n<btn type=\"default\" on-click=\"callback\" opt=\"test\"></btn>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Btn = require('vue-mui').Button;\n\nmodule.exports = {\n\tcomponents : {\n\t\t'btn' : Btn\n\t},\n\tmethods : {\n\t\tcallback : function(){\n\t\t\t....code....\n\t\t}\n\t}\n}\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th width=\"350\">description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>type</td>\n\t\t\t<td>String</td>\n\t\t\t<td>Type of button <i>normal</i><i>warn</i><i>default</i></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>on-click</td>\n\t\t\t<td>Function</td>\n\t\t\t<td><p>A callback Function when you click the button component</p></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>opt</td>\n\t\t\t<td></td>\n\t\t\t<td><i>(optional)</i>The parameter of callback function</td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
-/* 196 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/switchTest.vue": 197
+		"./test/switchTest.vue": 185
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -12065,22 +12053,22 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 196;
+	webpackContext.id = 184;
 
 
 /***/ },
-/* 197 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(198)
-	module.exports.template = __webpack_require__(202)
+	module.exports = __webpack_require__(186)
+	module.exports.template = __webpack_require__(190)
 
 
 /***/ },
-/* 198 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Switch = __webpack_require__(199);
+	var Switch = __webpack_require__(187);
 	
 	module.exports = {
 		data : function(){
@@ -12100,15 +12088,15 @@
 	}
 
 /***/ },
-/* 199 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(200)
-	module.exports.template = __webpack_require__(201)
+	module.exports = __webpack_require__(188)
+	module.exports.template = __webpack_require__(189)
 
 
 /***/ },
-/* 200 */
+/* 188 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12122,23 +12110,23 @@
 	}
 
 /***/ },
-/* 201 */
+/* 189 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-switch\" v-class=\"open:status\" v-on=\"click:status=!status\">\n\t<div class=\"t-switch__btn\"></div>\n</div>";
 
 /***/ },
-/* 202 */
+/* 190 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-btn-switch\">\n\t<a href=\"#m-btn-switch\" data-scroll><h2>Switch <span style=\"color:#4c9;\" v-text=\"msg\"></span></h2></a>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<switch status=\"{{@status}}\" callback=\"{{toggle}}\"></switch>\n\t\t</div>\n\t\t\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<switch status=\"{{@status}}\"></switch>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Switch = require('components/switch.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tstatus : false\n\t\t}\n\t},\n\twatch : {\n\t\t'status' : function(val){\n\t\t\t...\n\t\t}\n\t},\n\tcomponents : {\n\t\t'switch' : Switch\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>status</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>is switch checked, true or false</td>\n\t\t</tr>\n\t</table>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-btn-switch\">\n\t<a href=\"#m-btn-switch\" data-scroll><h2>Switch <span style=\"color:#4c9;\" v-text=\"msg\"></span></h2></a>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<switch status=\"{{@status}}\" callback=\"{{toggle}}\"></switch>\n\t\t</div>\n\t\t\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<switch status=\"{{@status}}\"></switch>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Switch = require('vue-mui').Switch;\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tstatus : false\n\t\t}\n\t},\n\twatch : {\n\t\t'status' : function(val){\n\t\t\t...\n\t\t}\n\t},\n\tcomponents : {\n\t\t'switch' : Switch\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>status</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>is switch checked, true or false</td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
-/* 203 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/hamburgerTest.vue": 204
+		"./test/hamburgerTest.vue": 192
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -12151,22 +12139,22 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 203;
+	webpackContext.id = 191;
 
 
 /***/ },
-/* 204 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(205)
-	module.exports.template = __webpack_require__(209)
+	module.exports = __webpack_require__(193)
+	module.exports.template = __webpack_require__(197)
 
 
 /***/ },
-/* 205 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Hamburger = __webpack_require__(206);
+	var Hamburger = __webpack_require__(194);
 	
 	module.exports = {
 		data : function(){
@@ -12186,15 +12174,15 @@
 	}
 
 /***/ },
-/* 206 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(207)
-	module.exports.template = __webpack_require__(208)
+	module.exports = __webpack_require__(195)
+	module.exports.template = __webpack_require__(196)
 
 
 /***/ },
-/* 207 */
+/* 195 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12208,23 +12196,23 @@
 	}
 
 /***/ },
-/* 208 */
+/* 196 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul class=\"t-hamburger\" v-class=\"open:status\" v-on=\"click:status=!status\">\n  <li></li>\n</ul>";
 
 /***/ },
-/* 209 */
+/* 197 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-btn-hamburger\">\n\t<a href=\"#m-btn-hamburger\" data-scroll><h2>Hamburger <span v-text=\"msg\" style=\"color: #4c9;\"></span></h2></a>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<hamburger status=\"{{@status}}\"></hamburger>\n\t\t</div>\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<hamburger status=\"{{@status}}\"></hamburger>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Hamburger = require('components/hamburger.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tstatus : false\n\t\t}\n\t},\n\twatch : {\n\t\t'status' : function(val){\n\t\t\t... ...\n\t\t}\n\t},\n\tcomponents : {\n\t\t'hamburger' : Hamburger\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-btn-hamburger\">\n\t<a href=\"#m-btn-hamburger\" data-scroll><h2>Hamburger <span v-text=\"msg\" style=\"color: #4c9;\"></span></h2></a>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\">\n\t\t\t<hamburger status=\"{{@status}}\"></hamburger>\n\t\t</div>\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<hamburger status=\"{{@status}}\"></hamburger>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Hamburger = require('vue-mui').Hamburger;\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tstatus : false\n\t\t}\n\t},\n\twatch : {\n\t\t'status' : function(val){\n\t\t\t... ...\n\t\t}\n\t},\n\tcomponents : {\n\t\t'hamburger' : Hamburger\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n</div>";
 
 /***/ },
-/* 210 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/progressTest.vue": 211
+		"./test/progressTest.vue": 199
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -12237,24 +12225,22 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 210;
+	webpackContext.id = 198;
 
 
 /***/ },
-/* 211 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(214)
-	module.exports.template = __webpack_require__(220)
+	module.exports = __webpack_require__(200)
+	module.exports.template = __webpack_require__(206)
 
 
 /***/ },
-/* 212 */,
-/* 213 */,
-/* 214 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Progress = __webpack_require__(215);
+	var Progress = __webpack_require__(201);
 	
 	module.exports = {
 		data : function(){
@@ -12274,22 +12260,22 @@
 	}
 
 /***/ },
-/* 215 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(216)
-	module.exports = __webpack_require__(218)
-	module.exports.template = __webpack_require__(219)
+	__webpack_require__(202)
+	module.exports = __webpack_require__(204)
+	module.exports.template = __webpack_require__(205)
 
 
 /***/ },
-/* 216 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(217);
+	var content = __webpack_require__(203);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(103)(content, {});
@@ -12309,7 +12295,7 @@
 	}
 
 /***/ },
-/* 217 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(102)();
@@ -12323,7 +12309,7 @@
 
 
 /***/ },
-/* 218 */
+/* 204 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12415,23 +12401,23 @@
 	}
 
 /***/ },
-/* 219 */
+/* 205 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-progress-bar\" v-style=\"background-color:color,\n\t\t\t\t\t\t\t\t\t transform:'translate3d(-100%,0,0)',\n\t\t\t\t\t\t\t\t\t display:'none'\"></div>";
 
 /***/ },
-/* 220 */
+/* 206 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-progress-bar\">\n\t<a href=\"#m-progress-bar\" data-scroll><h2>Progress bar</h2></a>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-ilb test-btn-blue\" v-on=\"click:status='start'\">Start</a>\n\t\t<a class=\"test-btn test-btn-ilb test-btn-green\" v-on=\"click:status='done'\">Done</a>\n\t\t<a class=\"test-btn test-btn-ilb test-btn-black\" v-on=\"click:setNum\">random</a>\n\t\t<progress status=\"{{status}}\" num=\"{{num}}\"></progress>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<progress status=\"{{status}}\" num=\"{{num}}\"></progress>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Progress = require('../../components/progress.vue');\nnew Vue({\n\tcomponents : {\n\t\t'progress' : Progress\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>status</td>\n\t\t\t<td>String</td>\n\t\t\t<td>hide</td>\n\t\t\t<td>whether to show progress<i>hide</i><i>start</i><i>done</i></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>num</td>\n\t\t\t<td>Number</td>\n\t\t\t<td>0</td>\n\t\t\t<td><i>(optional)</i></td>\n\t\t</tr>\n\t</table>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-progress-bar\">\n\t<a href=\"#m-progress-bar\" data-scroll><h2>Progress bar</h2></a>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-ilb test-btn-blue\" v-on=\"click:status='start'\">Start</a>\n\t\t<a class=\"test-btn test-btn-ilb test-btn-green\" v-on=\"click:status='done'\">Done</a>\n\t\t<a class=\"test-btn test-btn-ilb test-btn-black\" v-on=\"click:setNum\">random</a>\n\t\t<progress status=\"{{status}}\" num=\"{{num}}\"></progress>\n\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<progress status=\"{{status}}\" num=\"{{num}}\"></progress>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Progress = require('vue-mui').Progress;\n\nnew Vue({\n\tcomponents : {\n\t\t'progress' : Progress\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>status</td>\n\t\t\t<td>String</td>\n\t\t\t<td>hide</td>\n\t\t\t<td>whether to show progress<i>hide</i><i>start</i><i>done</i></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>num</td>\n\t\t\t<td>Number</td>\n\t\t\t<td>0</td>\n\t\t\t<td><i>(optional)</i></td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
-/* 221 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/sidebarTest.vue": 222
+		"./test/sidebarTest.vue": 208
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -12444,26 +12430,26 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 221;
+	webpackContext.id = 207;
 
 
 /***/ },
-/* 222 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(223)
-	module.exports = __webpack_require__(225)
-	module.exports.template = __webpack_require__(231)
+	__webpack_require__(209)
+	module.exports = __webpack_require__(211)
+	module.exports.template = __webpack_require__(217)
 
 
 /***/ },
-/* 223 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(224);
+	var content = __webpack_require__(210);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(103)(content, {});
@@ -12483,7 +12469,7 @@
 	}
 
 /***/ },
-/* 224 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(102)();
@@ -12497,10 +12483,10 @@
 
 
 /***/ },
-/* 225 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Sidebar = __webpack_require__(226);
+	var Sidebar = __webpack_require__(212);
 	
 	module.exports = {
 		data : function(){
@@ -12523,22 +12509,22 @@
 	}
 
 /***/ },
-/* 226 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(227)
-	module.exports = __webpack_require__(229)
-	module.exports.template = __webpack_require__(230)
+	__webpack_require__(213)
+	module.exports = __webpack_require__(215)
+	module.exports.template = __webpack_require__(216)
 
 
 /***/ },
-/* 227 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(228);
+	var content = __webpack_require__(214);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(103)(content, {});
@@ -12558,7 +12544,7 @@
 	}
 
 /***/ },
-/* 228 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(102)();
@@ -12572,7 +12558,7 @@
 
 
 /***/ },
-/* 229 */
+/* 215 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12692,23 +12678,23 @@
 	}
 
 /***/ },
-/* 230 */
+/* 216 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-aside\" v-class=\"'t-aside--'+from\" v-show=\"show\" v-transition=\"ani-open-{{from}}\" v-el=\"sidebar\">\n\t<content></content>\n</div>\n<div class=\"t-aside-dimmer\" v-show=\"show\" v-on=\"click:close($event)\"></div>";
 
 /***/ },
-/* 231 */
+/* 217 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-aside-sidebar\">\n\t<a href=\"#m-aside-sidebar\" data-scroll><h2>Sidebar</h2></a>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-blue test-btn-ilb\" v-on=\"click:showLeft=true\">from Left</a>\n\t\t<a class=\"test-btn test-btn-green test-btn-ilb\" v-on=\"click:showRight=true\">from Right</a>\n\t\t<a class=\"test-btn test-btn-black test-btn-ilb\" v-on=\"click:openPush\">Push</a>\n\t\t<sidebar show=\"{{@showLeft}}\" from=\"left\">\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\t\t\n\t\t<sidebar show=\"{{@showRight}}\" from=\"right\">\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\t\t<sidebar show=\"{{@showPush}}\"\n\t\t\t\t type='{{type}}'>\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<a v-on=\"click:show=true\">sidebar</a>\n\n<sidebar show=\"{{@show}}\"\n\t\t from=\"left\">\n\t<div>\n\t\t<p>The most distant way in the world</p>\n\t\t<p>is not the way from birth to the end</p>\n\t</div>\n</sidebar>\n\n----OR----\n\n<sidebar show=\"{{@showPush}}\"\n\t\t type=\"push\">\n\t<div class=\"aside-test\">\n\t\t<p>The most distant way in the world</p>\n\t\t<p>is not the way from birth to the end</p>\n\t</div>\n</sidebar>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Sidebar = require('../../components/sidebar.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t}\n\t},\n\tcomponents : {\n\t\t'sidebar' : Sidebar\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>from</td>\n\t\t\t<td>String</td>\n\t\t\t<td><i>left</i></td>\n\t\t\t<td>\n\t\t\t\t<p>How to position the sidebar</p>\n\t\t\t\t<p>one of <i>left</i><i>right</i></p>\n\t\t\t</td>\n\t\t</tr>\n\t</table>\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-aside-sidebar\">\n\t<a href=\"#m-aside-sidebar\" data-scroll><h2>Sidebar</h2></a>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<a class=\"test-btn test-btn-blue test-btn-ilb\" v-on=\"click:showLeft=true\">from Left</a>\n\t\t<a class=\"test-btn test-btn-green test-btn-ilb\" v-on=\"click:showRight=true\">from Right</a>\n\t\t<a class=\"test-btn test-btn-black test-btn-ilb\" v-on=\"click:openPush\">Push</a>\n\t\t<sidebar show=\"{{@showLeft}}\" from=\"left\">\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\t\t\n\t\t<sidebar show=\"{{@showRight}}\" from=\"right\">\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\t\t<sidebar show=\"{{@showPush}}\"\n\t\t\t\t type='{{type}}'>\n\t\t\t<div class=\"aside-test\">\n\t\t\t\t<p>The most distant way in the world</p>\n\t\t\t\t<p>is not the way from birth to the end</p>\n\t\t\t</div>\n\t\t</sidebar>\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<a v-on=\"click:show=true\">sidebar</a>\n\n<sidebar show=\"{{@show}}\"\n\t\t from=\"left\">\n\t<div>\n\t\t<p>The most distant way in the world</p>\n\t\t<p>is not the way from birth to the end</p>\n\t</div>\n</sidebar>\n\n----OR----\n\n<sidebar show=\"{{@showPush}}\"\n\t\t type=\"push\">\n\t<div class=\"aside-test\">\n\t\t<p>The most distant way in the world</p>\n\t\t<p>is not the way from birth to the end</p>\n\t</div>\n</sidebar>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Sldebar = require('vue-mui').Sidebar;\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tshow : false,\n\t\t}\n\t},\n\tcomponents : {\n\t\t'sidebar' : Sidebar\n\t}\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>show</td>\n\t\t\t<td>Boolean</td>\n\t\t\t<td><i>false</i></td>\n\t\t\t<td>Whether to show this component</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>from</td>\n\t\t\t<td>String</td>\n\t\t\t<td><i>left</i></td>\n\t\t\t<td>\n\t\t\t\t<p>How to position the sidebar</p>\n\t\t\t\t<p>one of <i>left</i><i>right</i></p>\n\t\t\t</td>\n\t\t</tr>\n\t</table>\n</div>";
 
 /***/ },
-/* 232 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/slideTest.vue": 233
+		"./test/slideTest.vue": 219
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -12721,26 +12707,26 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 232;
+	webpackContext.id = 218;
 
 
 /***/ },
-/* 233 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(234)
-	module.exports = __webpack_require__(236)
-	module.exports.template = __webpack_require__(240)
+	__webpack_require__(220)
+	module.exports = __webpack_require__(222)
+	module.exports.template = __webpack_require__(226)
 
 
 /***/ },
-/* 234 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(235);
+	var content = __webpack_require__(221);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(103)(content, {});
@@ -12760,7 +12746,7 @@
 	}
 
 /***/ },
-/* 235 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(102)();
@@ -12774,10 +12760,10 @@
 
 
 /***/ },
-/* 236 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Slide = __webpack_require__(237);
+	var Slide = __webpack_require__(223);
 	
 	module.exports = {
 		data : function(){
@@ -12800,15 +12786,15 @@
 	}
 
 /***/ },
-/* 237 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(238)
-	module.exports.template = __webpack_require__(239)
+	module.exports = __webpack_require__(224)
+	module.exports.template = __webpack_require__(225)
 
 
 /***/ },
-/* 238 */
+/* 224 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12917,23 +12903,23 @@
 	}
 
 /***/ },
-/* 239 */
+/* 225 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"t-slide\" v-el=\"box\">\n\t<ul class=\"t-slide__inner\" v-el=\"inner\" v-on=\"touchstart:touchstart,touchmove:touchmove,touchend:touchend\">\n\t\t<li v-repeat=\"its:list\" class=\"t-slide__inner--img\">\n\t\t\t<a v-attr=\"href:its.link\">\n\t\t\t\t<img v-attr=\"src:its.img\">\n\t\t\t</a>\n\t\t</li>\n\t</ul>\n\t<div class=\"t-slide__indicator\">\n\t\t<span v-repeat=\"its:list\" v-class=\"current:index===$index\"></span>\n\t</div>\n</div>";
 
 /***/ },
-/* 240 */
+/* 226 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-slide-slider\">\n\t<a href=\"#m-slide-slider\" data-scroll><h2>slide</h2></a>\n\t<p class=\"info__bd--hint\" id=\"demo-slide-warn\">Touch events only, you can be tested on the your mobile phone</p>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\" id=\"demo-slide\">\n\t\t\t<slide list=\"{{list}}\"></slide>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<slide list=\"{{list}}\"></slide>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Slide = require('components/slide.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tlist : [{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner5.png',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t},{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner6.jpg',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t},{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner1.jpg',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t}]\n\t\t}\n\t},\n\tcomponents : {\n\t\t'slide' : Slide\n\t}\n})\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>list</td>\n\t\t\t<td>array</td>\n\t\t\t<td></td>\n\t\t\t<td>\n\t\t\t\t<p>pictures url set</p>\n\t\t\t</td>\n\t\t</tr>\n\t</table>\n\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-slide-slider\">\n\t<a href=\"#m-slide-slider\" data-scroll><h2>slide</h2></a>\n\t<p class=\"info__bd--hint\" id=\"demo-slide-warn\">Touch events only, you can be tested on the your mobile phone</p>\n\t<div class=\"info__demo\">\n\t\t<div class=\"info__demo--show\" id=\"demo-slide\">\n\t\t\t<slide list=\"{{list}}\"></slide>\n\t\t</div>\n\t\t<!-- code -->\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<slide list=\"{{list}}\"></slide>\t\t\t\t\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Slide = require('vue-mui').Slide;\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tlist : [{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner5.png',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t},{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner6.jpg',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t},{\n\t\t\t\timg : 'http://7u2iwk.com2.z0.glb.qiniucdn.com/banner1.jpg',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t}]\n\t\t}\n\t},\n\tcomponents : {\n\t\t'slide' : Slide\n\t}\n})\t\t\t\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\t\n\t<table class=\"info__opt\">\n\t\t<tr>\n\t\t\t<th>Name</th>\n\t\t\t<th>type</th>\n\t\t\t<th>default</th>\n\t\t\t<th>description</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>list</td>\n\t\t\t<td>array</td>\n\t\t\t<td></td>\n\t\t\t<td>\n\t\t\t\t<p>pictures url set</p>\n\t\t\t</td>\n\t\t</tr>\n\t</table>\n\n</div>";
 
 /***/ },
-/* 241 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./test/menuTest.vue": 242
+		"./test/menuTest.vue": 228
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -12946,22 +12932,22 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 241;
+	webpackContext.id = 227;
 
 
 /***/ },
-/* 242 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(243)
-	module.exports.template = __webpack_require__(247)
+	module.exports = __webpack_require__(229)
+	module.exports.template = __webpack_require__(233)
 
 
 /***/ },
-/* 243 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Menu = __webpack_require__(244);
+	var Menu = __webpack_require__(230);
 	
 	module.exports = {
 		data : function(){
@@ -12991,15 +12977,15 @@
 	}
 
 /***/ },
-/* 244 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(245)
-	module.exports.template = __webpack_require__(246)
+	module.exports = __webpack_require__(231)
+	module.exports.template = __webpack_require__(232)
 
 
 /***/ },
-/* 245 */
+/* 231 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -13021,19 +13007,19 @@
 	}
 
 /***/ },
-/* 246 */
+/* 232 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul class=\"t-menu\">\n\t<li v-repeat=\"its:list\">\n\t\t<a v-text=\"its.name\" v-on=\"click:handle($event,its.link)\"></a>\n\t\t<ul class=\"t-menu__child\" v-if=\"its.child\">\n\t\t\t<li v-repeat=\"items:its.child\">\n\t\t\t\t<a v-attr=\"href:items.link\" v-text=\"items.name\"></a>\n\t\t\t</li>\n\t\t</ul>\n\t</li>\n</ul>";
 
 /***/ },
-/* 247 */
+/* 233 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"info__bd\" id=\"m-menu-menu\">\n\t<a href=\"#m-menu-menu\" data-scroll><h2>MenuList</h2></a>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<div class=\"info__demo--show\">\n\t\t\t<menulist list=\"{{list}}\"></menulist>\t\t\n\t\t</div>\n\t\t\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<menulist list=\"{{list}}\"></menulist>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Menu = require('components/menu.vue');\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tlist : [{\n\t\t\t\tname : 'Hello',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t},{\n\t\t\t\tname : 'World',\n\t\t\t\tchild : [{\n\t\t\t\t\tname : 'test',\n\t\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t\t},{\n\t\t\t\t\tname : 'test2',\n\t\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t\t}]\n\t\t\t},{\n\t\t\t\tname : 'Test',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t}]\n\t\t}\n\t},\n\tcomponents : {\n\t\t'menulist' : Menu\n\t}\n\t\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n</div>";
+	module.exports = "<div class=\"info__bd\" id=\"m-menu-menu\">\n\t<a href=\"#m-menu-menu\" data-scroll><h2>MenuList</h2></a>\n\t<div class=\"info__demo\">\n\t\t\n\t\t<div class=\"info__demo--show\">\n\t\t\t<menulist list=\"{{list}}\"></menulist>\t\t\n\t\t</div>\n\t\t\n\t\t<pre>\n\t\t\t<code class=\"language-markup\">\n\t\t\t\t<script type=\"language-mark-up\">\n<menulist list=\"{{list}}\"></menulist>\n\t\t\t\t</script>\n\t\t\t</code>\n\t\t</pre>\n\t\t<pre>\n\t\t\t<code class=\"language-javascript\">\nvar Menu = require('vue-mui').MenuList;\n\nnew Vue({\n\tdata : function(){\n\t\treturn {\n\t\t\tlist : [{\n\t\t\t\tname : 'Hello',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t},{\n\t\t\t\tname : 'World',\n\t\t\t\tchild : [{\n\t\t\t\t\tname : 'test',\n\t\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t\t},{\n\t\t\t\t\tname : 'test2',\n\t\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t\t}]\n\t\t\t},{\n\t\t\t\tname : 'Test',\n\t\t\t\tlink : 'http://mui.yaobieting.com'\n\t\t\t}]\n\t\t}\n\t},\n\tcomponents : {\n\t\t'menulist' : Menu\n\t}\n\t\n})\n\t\t\t</code>\n\t\t</pre>\n\t</div>\n\n</div>";
 
 /***/ },
-/* 248 */
+/* 234 */
 /***/ function(module, exports) {
 
 	module.exports = "<aside></aside>\n<menu></menu>\n<div class=\"main\">\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-modal\">\n\t\t\t<a href=\"#m-modal\" data-scroll><h1>Modals</h1></a>\n\t\t\t<p>Modals for the browser. <i>alert</i><i>confirm</i><i>prompt</i></p>\n\t\t</div>\n\t\t\n\t\t<alert></alert>\n\n\t\t<confirm></confirm>\n\n\t\t<prompt></prompt>\n\n\t\t<actions></actions>\n\t</div>\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-panel\">\n\t\t\t<a href=\"#m-panel\" data-scroll><h1>Panels</h1></a>\n\t\t\t<p>include<i>default panel</i><i>folding panel</i></p>\n\t\t</div>\n\t\t\n\t\t<panel></panel>\n\n\t\t<accordion></accordion>\n\t\t\n\t\t<tab-panel></tab-panel>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-btn\">\n\t\t\t<a href=\"#m-btn\" data-scroll><h1>Buttons</h1></a>\n\t\t</div>\n\t\t\n\t\t<btn></btn>\n\n\t\t<switch></switch>\n\n\t\t<hamburger></hamburger>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-progress\">\n\t\t\t<a href=\"#m-progress\" data-scroll><h1>Progress</h1></a>\n\t\t</div>\n\t\t\n\t\t<progress></progress>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-aside\">\n\t\t\t<a href=\"#m-aside\" data-scroll><h1>Aside</h1></a>\n\t\t</div>\n\t\t\n\t\t<sidebar></sidebar>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-slide\">\n\t\t\t<a href=\"#m-slide\" data-scroll><h1>Slide</h1></a>\n\t\t</div>\n\t\t\n\t\t<slide></slide>\n\n\t</div>\n\n\t<div class=\"info\">\n\t\t<div class=\"info__header\" id=\"m-menu\">\n\t\t\t<a href=\"#m-menu\" data-scroll><h1>Menu</h1></a>\n\t\t</div>\n\t\t\n\t\t<menulist></menulist>\n\n\t</div>\n</div>";

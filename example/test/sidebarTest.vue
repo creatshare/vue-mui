@@ -61,7 +61,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Sidebar = require('../../components/sidebar.vue');
+var Sldebar = require('vue-mui').Sidebar;
 
 new Vue({
 	data : function(){

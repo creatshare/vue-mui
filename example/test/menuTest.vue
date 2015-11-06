@@ -16,7 +16,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Menu = require('components/menu.vue');
+var Menu = require('vue-mui').MenuList;
 
 new Vue({
 	data : function(){

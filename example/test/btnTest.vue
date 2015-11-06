@@ -24,7 +24,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Btn = require(components/btn.vue');
+var Btn = require('vue-mui').Button;
 
 module.exports = {
 	components : {

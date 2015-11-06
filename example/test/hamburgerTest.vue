@@ -14,7 +14,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Hamburger = require('components/hamburger.vue');
+var Hamburger = require('vue-mui').Hamburger;
 
 new Vue({
 	data : function(){

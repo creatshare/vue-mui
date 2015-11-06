@@ -19,7 +19,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Alert = require('components/alert.vue');
+var Alert = require('vue-mui').Alert;
 
 new Vue({
 	data : function(){

@@ -17,7 +17,8 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Progress = require('../../components/progress.vue');
+var Progress = require('vue-mui').Progress;
+
 new Vue({
 	components : {
 		'progress' : Progress

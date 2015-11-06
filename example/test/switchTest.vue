@@ -15,7 +15,7 @@
 		</pre>
 		<pre>
 			<code class="language-javascript">
-var Switch = require('components/switch.vue');
+var Switch = require('vue-mui').Switch;
 
 new Vue({
 	data : function(){
