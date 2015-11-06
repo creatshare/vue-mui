@@ -110,7 +110,7 @@ i{
 	}
 
 	&__demo{
-		border: 1px solid @border-color;
+		overflow: hidden;
 
 		&--show{
 			padding: 10px 15px;
