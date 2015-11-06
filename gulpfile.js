@@ -40,6 +40,7 @@ gulp.task('e', ['run'],function(){
 				filename: 'test.js'
 			},
 		})))
+		.pipe(minify())
 		.pipe(gulp.dest('dist/'))
 });
 
