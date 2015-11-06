@@ -22,8 +22,12 @@
 <body>
 <div id="app"></div>
 <script type="text/javascript" src="./dist/test.js"></script>
-<script type="text/javascript">
-document.body.addEventListener('touchstart', function(){});
+<script type="text/javascript" src="./example/lib/smooth-scroll.min.js"></script>
+<script>
+(function(){
+	document.body.addEventListener('touchstart', function(){});
+	smoothScroll.init();
+}())
 </script>
 </body>
 </html>

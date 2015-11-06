@@ -1,5 +1,6 @@
 <style lang="less">
 @border-color: #ddd;
+@color-blue : #4c9cee;
 .menu{
 	position: fixed;
 	top: 0;
@@ -9,6 +10,10 @@
 	font-size: 14px;
 	background-color: #eee;
 	border-right: 1px solid @border-color;
+
+	a.active{
+		color: @color-blue;
+	}
 
 	h2{
 		height: 60px;
@@ -31,7 +36,7 @@
 				color: #333;
 
 				&:hover{
-					color: #4c9cee;
+					color: @color-blue;
 				}
 			}
 
@@ -55,11 +60,11 @@
 <h2>vue-mui</h2>
 <ul class="menu__index" v-el="menu">
 	<li v-repeat="item : list">
-		<a v-attr="href:'#m-'+item.id" v-on="click:toggle(item)" v-text="item.name"></a>
+		<a data-scroll v-attr="href:'#m-'+item.id" v-on="click:toggle(item.id)" v-text="item.name" v-class="active:act==='m-'+item.id"></a>
 
-		<ul class="menu__index menu__children" v-show="item.show">
+		<ul class="menu__index menu__children" v-show="index===item.id">
 			<li v-repeat="its : item.children">
-				<a href="#m-progress-bar" v-attr="href:'#m-'+item.id+'-'+its.id" v-text="its.name"></a>
+				<a href="#m-progress-bar" data-scroll v-attr="href:'#m-'+item.id+'-'+its.id" v-text="its.name" v-class="active:act==='m-'+item.id+'-'+its.id"></a>
 			</li>
 		</ul>
 	</li>
@@ -71,6 +76,9 @@
 module.exports = {
 	data : function(){
 		return {
+			index : 'modal',
+			status : true,
+			timer : null,
 			list : [{
 				name : 'Modal',
 				id : 'modal',
@@ -155,17 +163,33 @@ module.exports = {
 			}]
 		}
 	},
+	props : {
+		act : {
+			type : String
+		}
+	},
+	watch : {
+		'act' : function(val){
+			if (this.status) {
+				var index;
+				val = val.substring(2);
+				index = val.indexOf('-');
+
+				this.index = index < 0 ? val : val.substr(0, index);
+			}
+		}
+	},
 	methods : {
-		toggle : function(that){
-			that.show = !that.show;
-			this.hide(that);
-		},
-		hide : function(target){
-			this.list.forEach(function(x){
-				if (target !== x) {
-					x.show = false;
-				}
-			})
+		toggle : function(id){
+			var that = this;
+			that.index = id;
+			that.status = false;
+
+			clearTimeout(that.timer);
+
+			that.timer = setTimeout(function(){
+				that.status = true;
+			}, 600)
 		}
 	}
 }

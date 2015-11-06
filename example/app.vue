@@ -46,9 +46,9 @@ i{
     line-height: 12px;
     font-style: normal;
     border-radius: 3px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     color: #DC5E5E;
-	background-color: #ddd;
+	background-color: #eee;
 }
 .hint{
 	font-size: 12px;
@@ -64,6 +64,7 @@ i{
 	background-color: #fff;
 
 	a[data-scroll]{
+		display: block;
 		color: @s87;
 	}
 	&__header{
@@ -151,9 +152,9 @@ i{
 	}
 }
 @media screen and (max-width : 600px) {
-	.info{
-		width: auto;
-		border: 0;
+	.main{
+		width: 100%;
+		margin: 0;
 	}
 	.aside,.menu{
 		display: none;
@@ -163,7 +164,7 @@ i{
 
 <template>
 <aside></aside>
-<menu></menu>
+<menu act="{{@id}}"></menu>
 <div class="main">
 	<div class="info">
 		<div class="info__header" id="m-modal">
@@ -274,6 +275,11 @@ var menuTest = require(dir + 'menuTest.vue');
 
 
 module.exports = {
+	data : function(){
+		return {
+			id : 'm-modal'
+		}
+	},
 	components : {
 		'aside' : aside,
 		'menu' : menu,
@@ -293,8 +299,39 @@ module.exports = {
 		'menulist' : menuTest
 	},
 	ready : function(){
-		window.onscroll = function(){
-			console.log(1)
+		var that = this,
+			d = document.documentElement,
+			b = document.body,
+			linkList,
+			len;
+
+		linkList = document.querySelectorAll('.main a[data-scroll]');
+		len = linkList.length;
+
+		window.addEventListener('scroll', function(){
+			that.updateSidebar.apply(that, [d, b, linkList, len]);
+		}, !1);
+	},
+	methods : {
+		updateSidebar : function(d, b, linkList, len){
+			var top = d && d.scrollTop || b.scrollTop,
+				last;
+			top += 100;
+
+			for (var i = 0; i < len; i++) {
+				var link = linkList[i];
+				if (link.offsetTop > top) {
+					if (!last) last = link;
+					break;
+				} else {
+					last = link;
+				}
+			}
+
+			if (last) this.setActive(last.hash.substring(1));
+		},
+		setActive : function(id){
+			this.id = id;
 		}
 	}
 }
