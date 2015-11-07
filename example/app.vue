@@ -47,7 +47,7 @@ i{
     font-style: normal;
     border-radius: 3px;
     border: 1px solid #ddd;
-    color: #DC5E5E;
+    color: #f92672;
 	background-color: #eee;
 }
 .hint{
@@ -189,8 +189,8 @@ i{
 <div class="main">
 	<div class="info">
 		<div class="info__header" id="m-modal">
-			<a href="#m-modal" data-scroll><h1>Modals</h1></a>
-			<p>Modals for the browser. <i>alert</i><i>confirm</i><i>prompt</i></p>
+			<a href="#m-modal" data-scroll><h1>Modal</h1></a>
+			<p>A set of modal window appearance effects with IOS style. <i>alert</i><i>confirm</i><i>prompt</i></p>
 		</div>
 		
 		<alert></alert>
