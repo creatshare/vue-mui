@@ -3,9 +3,11 @@
 .aside{
 	position: fixed;
 	top: 50px;
-	right: 60px;
+	right: 50px;
+	width: 100px;
 	border: 1px solid @base-color;
 	border-radius: 3px;
+	box-sizing: border-box;
 
 	&:before,
 	&:after{

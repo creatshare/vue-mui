@@ -10815,7 +10815,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".aside {\n  position: fixed;\n  top: 50px;\n  right: 60px;\n  border: 1px solid #ddd;\n  border-radius: 3px;\n}\n.aside:before,\n.aside:after {\n  position: absolute;\n  top: -50px;\n  left: 25%;\n  display: block;\n  content: '';\n  height: 50px;\n  border-left: 1px solid #ddd;\n}\n.aside:after {\n  right: 25%;\n  left: auto;\n}\n.aside a {\n  color: #888;\n  display: block;\n  line-height: 36px;\n  margin: 10px;\n}\n.aside a:hover {\n  color: #333;\n}\n", ""]);
+	exports.push([module.id, ".aside {\n  position: fixed;\n  top: 50px;\n  right: 50px;\n  width: 100px;\n  border: 1px solid #ddd;\n  border-radius: 3px;\n  box-sizing: border-box;\n}\n.aside:before,\n.aside:after {\n  position: absolute;\n  top: -50px;\n  left: 25%;\n  display: block;\n  content: '';\n  height: 50px;\n  border-left: 1px solid #ddd;\n}\n.aside:after {\n  right: 25%;\n  left: auto;\n}\n.aside a {\n  color: #888;\n  display: block;\n  line-height: 36px;\n  margin: 10px;\n}\n.aside a:hover {\n  color: #333;\n}\n", ""]);
 	
 	// exports
 
