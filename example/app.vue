@@ -3,6 +3,7 @@
 @color-green : #4c9;
 @color-blue : #4c9cee;
 @color-black : #333;
+@color-gray: #ddd;
 @base-padding: 20px;
 @s87 : rgba(0,0,0,.87);
 @s54 : rgba(0,0,0,.54);
@@ -58,7 +59,9 @@ i{
 }
 .main{
 	margin: 0 200px;
-	border-right: 1px solid #ddd;
+	border-left: 1px solid @color-gray;
+	border-right: 1px solid @color-gray;
+	box-shadow: 0px 0px 1px @color-gray;
 }
 .info{
 	background-color: #fff;

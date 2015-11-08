@@ -8,7 +8,6 @@
 	width: 200px;
 	height: 100%;
 	font-size: 14px;
-	border-right: 1px solid @border-color;
 
 	a.active{
 		color: @color-blue;
@@ -27,6 +26,45 @@
     	}
 	}
 
+	&>&__index>li{
+	    &>a{
+	    	padding-left: 0;
+
+	    	span{
+	    		display: inline-block;
+	    		vertical-align: middle;
+	    	}
+	    	
+
+	    	&:before{
+		    	content: '';
+			    display: block;
+			    width: 0;
+			    height: 0;
+			    margin-right: 10px;
+			    border-left: 5px solid #888;
+			    border-top: 5px solid transparent;
+			    border-bottom: 5px solid transparent;
+			    display: inline-block;
+			    vertical-align: middle;
+			    -webkit-transition: transform .2s linear;
+			    transition: transform .2s linear;
+		    }
+
+		    &.open{
+		    	&+ul{
+		    		display: block;
+		    	}
+		    	&:before{
+		    		-webkit-transform: rotate(90deg);
+		    		transform: rotate(90deg);
+		    	}
+		    }
+	    }
+
+	    
+	}
+
 	&__index{
 		padding: 20px;
 
@@ -37,7 +75,7 @@
 			a{
 				display: block;
 	    		padding-left: 10px;
-				color: #333;
+				color: #888;
 
 				&:hover{
 					color: @color-blue;
@@ -50,6 +88,7 @@
 	}
 
 	&__children{
+		display: none;
 		padding: 10px 20px 0;
 		li{
 			margin-bottom: 20px;
@@ -64,9 +103,9 @@
 <h2><a href="http://mui.yaobieting.com/">vue-mui</a></h2>
 <ul class="menu__index" v-el="menu">
 	<li v-repeat="item : list">
-		<a data-scroll v-attr="href:'#m-'+item.id" v-on="click:toggle(item.id)" v-text="item.name" v-class="active:act==='m-'+item.id"></a>
+		<a data-scroll v-attr="href:'#m-'+item.id" v-on="click:toggle(item.id)" v-class="active:act==='m-'+item.id,open:index===item.id"><span v-text="item.name"></span></a>
 
-		<ul class="menu__index menu__children" v-show="index===item.id">
+		<ul class="menu__index menu__children">
 			<li v-repeat="its : item.children">
 				<a href="#m-progress-bar" data-scroll v-attr="href:'#m-'+item.id+'-'+its.id" v-text="its.name" v-class="active:act==='m-'+item.id+'-'+its.id"></a>
 			</li>
