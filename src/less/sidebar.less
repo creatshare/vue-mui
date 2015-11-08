@@ -20,12 +20,17 @@
 	z-index: 1011;
 	-webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    will-change: transform;
 
 	&--left{
 		left: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
 	}
 	&--right{
 		right: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
 	}
 }
 .aside-fix{
