@@ -7,7 +7,7 @@
 @s87 : rgba(0,0,0,.87);
 @s54 : rgba(0,0,0,.54);
 html,body{
-	background-color: #fff;
+	background-color: #eee;
 	-webkit-font-smoothing: antialiased;
 }
 .test-btn{

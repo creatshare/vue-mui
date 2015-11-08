@@ -8,7 +8,6 @@
 	width: 200px;
 	height: 100%;
 	font-size: 14px;
-	background-color: #eee;
 	border-right: 1px solid @border-color;
 
 	a.active{
