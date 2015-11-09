@@ -17,6 +17,7 @@ html,body{
 	height: 32px;
 	line-height: 32px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 	text-align: center;
 	color: #fff;
 	cursor: pointer;

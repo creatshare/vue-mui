@@ -1,4 +1,3 @@
-
 <template>
 <div class="t-dimmer" v-show="show"></div>
 <div class="t-modal" v-show="show">
