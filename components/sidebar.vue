@@ -1,25 +1,16 @@
 <style>
-.ani-open-left-transition,
-.ani-open-right-transition{
+.t-aside{
 	-webkit-transition: -webkit-transform .3s ease-in-out;
     transition: transform .3s ease-in-out;
+}
+.t-aside.open{
     -webkit-transform: translateX(0);
     transform: translateX(0);
-}
-.ani-open-left-enter,
-.ani-open-left-leave{
-	-webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-}
-.ani-open-right-enter,
-.ani-open-right-leave{
-	-webkit-transform: translateX(100%);
-    transform: translateX(100%);
 }
 </style>
 
 <template>
-<div class="t-aside" v-class="'t-aside--'+from" v-show="show" v-transition="ani-open-{{from}}" v-el="sidebar">
+<div class="t-aside" v-class="'t-aside--'+from,open:show" v-el="sidebar">
 	<content></content>
 </div>
 <div class="t-aside-dimmer" v-show="show" v-on="click:close($event)"></div>

@@ -12617,7 +12617,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".ani-open-left-transition,\n.ani-open-right-transition{\n\t-webkit-transition: -webkit-transform .3s ease-in-out;\n    transition: transform .3s ease-in-out;\n    -webkit-transform: translateX(0);\n    transform: translateX(0);\n}\n.ani-open-left-enter,\n.ani-open-left-leave{\n\t-webkit-transform: translateX(-100%);\n    transform: translateX(-100%);\n}\n.ani-open-right-enter,\n.ani-open-right-leave{\n\t-webkit-transform: translateX(100%);\n    transform: translateX(100%);\n}", ""]);
+	exports.push([module.id, ".t-aside{\n\t-webkit-transition: -webkit-transform .3s ease-in-out;\n    transition: transform .3s ease-in-out;\n}\n.t-aside.open{\n    -webkit-transform: translateX(0);\n    transform: translateX(0);\n}", ""]);
 	
 	// exports
 
@@ -12746,7 +12746,7 @@
 /* 216 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"t-aside\" v-class=\"'t-aside--'+from\" v-show=\"show\" v-transition=\"ani-open-{{from}}\" v-el=\"sidebar\">\n\t<content></content>\n</div>\n<div class=\"t-aside-dimmer\" v-show=\"show\" v-on=\"click:close($event)\"></div>";
+	module.exports = "<div class=\"t-aside\" v-class=\"'t-aside--'+from,open:show\" v-el=\"sidebar\">\n\t<content></content>\n</div>\n<div class=\"t-aside-dimmer\" v-show=\"show\" v-on=\"click:close($event)\"></div>";
 
 /***/ },
 /* 217 */
