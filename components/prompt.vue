@@ -22,8 +22,8 @@
 		<input type="text" v-model="key">
 	</div>
 	<div class="t-modal__footer">
-		<a class="t-modal__footer--btn" v-on="click:show=false, click: onCancel">取消</a>
-		<a class="t-modal__footer--btn" v-on="click:show=false, click: fnConfirm">确定</a>
+		<a class="t-modal__footer--btn" @click.prevent="show=false" @click.prevent="onCancel">取消</a>
+		<a class="t-modal__footer--btn" @click.prevent="show=false" @click.prevent="onConfirm">确定</a>
 	</div>
 </div>
 </template>
@@ -33,7 +33,6 @@ module.exports = {
 	data : function(){
 		return {
 			key : '',
-			name : 'fix-position'
 		}
 	},
 	props : {
@@ -53,13 +52,6 @@ module.exports = {
 		},
 		onCancel : {
 			type : Function
-		}
-	},
-	watch : {
-		'show' : function(val){
-			var $body = document.body;
-
-			val === true ? $body.classList.add(this.name) : $body.classList.remove(this.name);
 		}
 	},
 	methods : {

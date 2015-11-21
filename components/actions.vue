@@ -18,7 +18,7 @@
 		<li class="t-actions__list--tt" v-if="title" v-text="title"></li>
 		<content></content>
 	</ul>
-	<a class="t-actions__cancel" v-on="click:show=false">取消</a>
+	<a class="t-actions__cancel" @click.prevent="show=false">取消</a>
 </div>
 </template>
 
