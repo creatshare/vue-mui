@@ -187,6 +187,7 @@ i{
 </style>
 <template>
 <asidebox></asidebox>
+<menubox :act.sync="id"></menubox>
 
 <div class="main">
 	<div class="info">
@@ -198,29 +199,171 @@ i{
 		<!-- alert start -->
 		<alert></alert>
 		<!-- alert end -->
+
 		<!-- confirm start -->
 		<confirm></confirm>
 		<!-- confirm end -->
+
 		<!-- prompt start -->
 		<prompt></prompt>
 		<!-- prompt end -->
 
+		<!-- actions start -->
+		<actions></actions>
+		<!-- actions end -->
+
 	</div>
+
+	<div class="info">
+		<div class="info__header" id="m-panel">
+			<a href="#m-panel" data-scroll><h1>Panels</h1></a>
+			<p>include<i>default panel</i><i>folding panel</i></p>
+		</div>
+		
+		<!-- panel start -->
+		<panel></panel>
+		<!-- panel end -->
+
+		<!-- accordion start -->
+		<accordion></accordion>
+		<!-- accordion end -->
+	
+		<!-- tabpanel start -->
+		<tabpanel></tabpanel>
+		<!-- tabpanel end -->
+
+	</div>
+
+	<div class="info">
+		<div class="info__header" id="m-btn">
+			<a href="#m-btn" data-scroll><h1>Buttons</h1></a>
+		</div>
+		
+		<btn></btn>
+
+		<sbtn></sbtn>
+
+	</div>
+
+	<div class="info">
+		<div class="info__header" id="m-progress">
+			<a href="#m-progress" data-scroll><h1>Progress</h1></a>
+		</div>
+		
+		<progress></progress>
+
+	</div>
+
+	<div class="info">
+		<div class="info__header" id="m-slide">
+			<a href="#m-slide" data-scroll><h1>Slide</h1></a>
+		</div>
+		
+		<slide></slide>
+
+	</div>
+
+	<div class="info">
+		<div class="info__header" id="m-menu">
+			<a href="#m-menu" data-scroll><h1>Menu</h1></a>
+		</div>
+		
+		<menubar></menubar>
+
+	</div>
+
 </div>
+<a href="#m-modal" data-scroll id="back-top" v-show="back" transition="backtop"></a>
 </template>
 <script>
 import asidebox from './aside.vue'
+import menubox 	from './menu.vue'
 
 import alert 	from './src/alertTest.vue'
 import confirm  from './src/confirmTest.vue'
 import prompt  	from './src/promptTest.vue'
+import actions 	from './src/actionsTest.vue'
+//panel
+import panel 	from './src/panelTest.vue'
+import accordion from './src/accordionTest.vue'
+import tabpanel from './src/tabPanelTest.vue'
+//btn
+import btn from './src/btnTest.vue'
+import sbtn from './src/switchTest.vue'
+//progress
+import progress from './src/progressTest.vue'
+//slide
+import slide from './src/slideTest.vue'
+//menu
+import menubar from './src/menuTest.vue'
 
 export default {
+	data() {
+		return {
+			id : 'm-modal',
+			back : false
+		}
+	},
 	components : {
 		asidebox,
+		menubox,
 		alert,
 		confirm,
-		prompt
+		prompt,
+		actions,
+		panel,
+		accordion,
+		tabpanel,
+		btn,
+		sbtn,
+		progress,
+		slide,
+		menubar
+	},
+	ready() {
+		let that = this,
+			d = document.documentElement,
+			b = document.body,
+			linkList,
+			len;
+
+		linkList = document.querySelectorAll('.main a[data-scroll]');
+		len = linkList.length;
+		console.log(linkList)
+		window.addEventListener('scroll', function(){
+			that.updateSidebar.apply(that, [d, b, linkList, len]);
+		}, !1);
+	},
+	methods : {
+		updateSidebar(d, b, linkList, len) {
+			let top = d && d.scrollTop || b.scrollTop,
+				last;
+			top += 100;
+
+			this.setBackTop(top);
+
+			for (var i = 0; i < len; i++) {
+				let link = linkList[i];
+				if (link.offsetTop > top) {
+					if (!last) last = link;
+					break;
+				} else {
+					last = link;
+				}
+			}
+
+			if (last) this.setActive(last.hash.substring(1));
+		},
+		setActive(id) {
+			this.id = id;
+		},
+		/**
+		 * [toggle back to top button]
+		 * @param {[type]} top [description]
+		 */
+		setBackTop(top) {
+			this.back = top > 500 ? true : false;
+		}
 	}
 }
 </script>

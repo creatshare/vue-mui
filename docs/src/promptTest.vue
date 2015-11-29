@@ -19,7 +19,7 @@
 	</pre>
 	<pre>
 		<code class="language-javascript">
-var prompt = require('vue-mui').confirm;
+var prompt = require('vue-mui').prompt;
 // or //
 import { prompt } from 'vue-mui'
 
