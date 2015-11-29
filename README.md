@@ -1,7 +1,7 @@
 # vue-mui
 [![](https://img.shields.io/npm/dt/vue-mui.svg?style=flat-square)](https://www.npmjs.com/package/vue-mui)
 
-mobile components for Vue.js
+mobile components for Vue.js 1.0.*
 
 ## Documentation ##
 [Here](http://mui.yaobieting.com/document/index.html)
@@ -19,62 +19,55 @@ import mui.css
 example：
 ```HTML
 <template>
-<a class="test-btn test-btn-confirm" v-on="click:show=true">confirm</a>
-<div class="t-dimmer" v-show="show"></div>
-<confirm show="{{@show}}"
-		 title="{{title}}"
-		 content="{{content}}"
-		 on-confirm="{{onConfirm}}"
-		 on-cancel="{{onCancel}}"></confirm>
+<a class="test-btn test-btn-confirm" @click.prevent="show=true">confirm</a>
+<confirm :show.sync="show"
+	     :title="title" 
+	     :content="content"></confirm>
 </template>
 ```
-```JavaScript
-var Confirm = require('vue-mui').Confirm;
 
-module.exports = {
-	data : function(){
+```JavaScript
+var confirm = require('vue-mui').confirm;
+// or //
+import { confirm } from 'vue-mui'
+
+export default {
+	data() {
 		return {
 			show : false,
-			title : '测试标题',
-			content : '测试内容'
+			title : 'This is title (optional)',
+			content : 'This is content'
 		}
 	},
 	components : {
-		'confirm' : Confirm
+		confirm
 	},
-	methods : {
-		/**
-		 * [点击确定之后的回调]
-		 * @return {[type]} [description]
-		 */
-		onConfirm : function(){
-			alert('点击了确定')
+	events : {
+		confirm() {
+			...code...
 		},
-		/**
-		 * [点击取消之后的回调]
-		 * @return {[type]} [description]
-		 */
-		onCancel : function(){
-			alert('点击了取消')
+		cancel() {
+			...code...
 		}
 	}
-	
 }
 ```
 
 ### Browser ###
 ```HTML
-<div id="app"></div>
+<div id="app">
+	<alert></alert>
+</div>
 <script type="text/javascript" src="./dist/vue.js"></script>
-<script type="text/javascript" src="./dist/vue-mui-min.js"></script>
+<script type="text/javascript" src="./dist/mui.js"></script>
 ```
 ```JavaScript
-var Alert = mui.Alert
+var alert = mui.alert
 
 var app = new Vue({
     el : '#app',
     components : {
-        'alert' : Alert
+        'alert' : alert
     }
 })
 ```

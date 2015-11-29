@@ -3,11 +3,14 @@ var webpack = require('webpack')
 module.exports = {
   entry: {
       test : './docs/index.js',
+      mui : './src/index.js'
   },
   output: {
     path: './dist',
     publicPath: 'dist/',
-    filename: '[name].js'
+    filename: '[name].js',
+    library: 'mui',
+    libraryTarget: 'umd'
   },
   module: {
     loaders: [
