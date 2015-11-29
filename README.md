@@ -4,7 +4,7 @@
 mobile components for Vue.js 1.0.*
 
 ## Documentation ##
-[Here](http://mui.yaobieting.com/document/index.html)
+[Here](http://mui.yaobieting.com/docs/index.html)
 
 ## Usage ##
 import mui.css
