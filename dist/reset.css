@@ -1,0 +1,103 @@
+@charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend,  textarea, p, blockquote, th, td/*input, button,*/ {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+input {
+  -webkit-appearance: none;
+  outline: 0;
+}
+fieldset, img, iframe {
+	border:0;
+}
+
+abbr, acronym {
+	border:0;
+	font-variant:normal;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0 none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th {
+    text-align: left;
+}
+
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+	font-style:normal;
+	font-weight:normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+
+input, button, textarea, select, optgroup, option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+/*to enable resizing for IE*/
+input, button, textarea, select, code, kbd, samp, tt {
+    *font-size: 100%;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+ul {
+	list-style:none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+:link, :visited {
+    text-decoration: none;
+}
+
+/* to preserve line-height and selector appearance */
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+sub, sup {
+    font-size: 60%;
+}
+
+/*because legend doesn't inherit in IE */
+legend {
+	color:#222;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body{
+	font-family:monaco, arial, "Microsoft YaHei";
+	background-color: #fff;
+}
+a{-webkit-tap-highlight-color:rgba(0,0,0,0); }
