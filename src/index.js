@@ -1,6 +1,6 @@
 module.exports = {
 	alert : require('./components/alert.vue'),
-	confrim : require('./components/confirm.vue'),
+	confirm : require('./components/confirm.vue'),
 	prompt : require('./components/prompt.vue'),
 	actions : require('./components/actions.vue'),
 	panel : require('./components/panel.vue'),
